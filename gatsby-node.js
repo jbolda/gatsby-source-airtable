@@ -6,15 +6,28 @@ exports.sourceNodes = async ({ boundActionCreators },
   // tables contain baseId, tableName, tableView, queryName, tableLinks
   const { createNode, setPluginStatus } = boundActionCreators
 
-  // TODO exit on invalid API key
-  const api = new Airtable({
-    apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey,
-  })
+  try {
+    const api = await new Airtable({
+      apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey,
+    })
+  }
+  catch(e) {
+    // airtable uses `assert` which doesn't exit the process,
+    //  but rather just makes gatsby hang. Warn, don't create any
+    //  nodes, but let gatsby continue working
+    console.warn("\nAPI key is required to connect to Airtable")
+    return
+  };
+
+  // exit if tables is not defined
+  if (tables === undefined || tables.length === 0) {
+    console.warn("\ntables is not defined for gatsby-source-airtable-linked in gatsby-config.js")
+    return
+  }
 
   console.time(`\nfetch all Airtable rows from ${tables.length} tables`)
 
   let queue = []
-  // TODO exit on undefined tables
   tables.forEach(tableOptions => {
     let base = api.base(tableOptions.baseId)
 
@@ -40,7 +53,7 @@ exports.sourceNodes = async ({ boundActionCreators },
     )
   ).catch(e => {
     throw e
-    process.exit(1)
+    return
   });
 
   console.timeEnd(`\nfetch all Airtable rows from ${tables.length} tables`)
