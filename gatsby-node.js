@@ -3,16 +3,18 @@ const crypto = require(`crypto`)
 
 exports.sourceNodes = async ({ boundActionCreators },
                              {apiKey, tables}) => {
-  // tables contains baseId, tableName, tableView, queryName
+  // tables contain baseId, tableName, tableView, queryName, tableLinks
   const { createNode, setPluginStatus } = boundActionCreators
 
+  // TODO exit on invalid API key
   const api = new Airtable({
     apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey,
   })
 
-  console.time(`fetch all Airtable rows from ${tables.length} tables`)
+  console.time(`\nfetch all Airtable rows from ${tables.length} tables`)
 
   let queue = []
+  // TODO exit on undefined tables
   tables.forEach(tableOptions => {
     let base = api.base(tableOptions.baseId)
 
@@ -23,13 +25,16 @@ exports.sourceNodes = async ({ boundActionCreators },
     })
 
     queue.push(new Promise((resolve, reject) => {
-      resolve(query.all())
+      resolve(query.all().map(row => {
+        row.queryName = tableOptions.queryName
+        return row
+      }))
     }));
   })
 
-  // queue has array of promises, and when resolve becomes nested arrays
-  // we flatten the array to all rows from all tables
-  const all = await Promise.all(queue).then(all => all.reduce(
+  // queue has array of promises and when resolved becomes nested arrays
+  // we flatten the array to return all rows from all tables
+  const allRows = await Promise.all(queue).then(all => all.reduce(
     (accumulator, currentValue ) => accumulator.concat(currentValue),
     []
     )
@@ -38,7 +43,7 @@ exports.sourceNodes = async ({ boundActionCreators },
     process.exit(1)
   });
 
-  console.timeEnd(`fetch all Airtable rows from ${tables.length} tables`)
+  console.timeEnd(`\nfetch all Airtable rows from ${tables.length} tables`)
 
   setPluginStatus({
     status: {
@@ -46,13 +51,14 @@ exports.sourceNodes = async ({ boundActionCreators },
     },
   })
 
-  all.forEach(row => {
+  allRows.forEach(row => {
     let processedData = processData(row._table.name, row.fields, tables)
 
     const gatsbyNode = {
       id: `Airtable_${row.id}`,
       parent: null,
       table: row._table.name,
+      queryName: row.queryName,
       children: [],
       internal: {
         type: `AirtableLinked`,
