@@ -6,5 +6,13 @@
   "repository": "git@github.com:jbolda/gatsby-source-airtable-linked.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "license": "MIT",
-  "keywords": ["gatsby", "gatsby-plugin", "gatsby-source", "airtable"]
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source",
+    "airtable"
+  ],
+  "dependencies": {
+    "airtable": "^0.5.4"
+  }
 }
