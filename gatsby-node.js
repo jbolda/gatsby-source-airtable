@@ -7,7 +7,8 @@ exports.sourceNodes = async ({ boundActionCreators },
   const { createNode, setPluginStatus } = boundActionCreators
 
   try {
-    const api = await new Airtable({
+    // hoist api so we can use in scope outside of this block
+    var api = await new Airtable({
       apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey,
     })
   }
@@ -37,21 +38,26 @@ exports.sourceNodes = async ({ boundActionCreators },
       view: tableOptions.tableView,
     })
 
-    queue.push(new Promise((resolve, reject) => {
-      resolve(query.all().map(row => {
-        row.queryName = tableOptions.queryName
-        return row
-      }))
-    }));
+    // query.all() returns a promise, pass an array for each table with
+    // both our promise and the queryName and then map reduce at the
+    // final promise resolution to get queryName onto each row
+    queue.push(Promise.all([query.all(),tableOptions.queryName]))
   })
 
   // queue has array of promises and when resolved becomes nested arrays
-  // we flatten the array to return all rows from all tables
-  const allRows = await Promise.all(queue).then(all => all.reduce(
-    (accumulator, currentValue ) => accumulator.concat(currentValue),
-    []
+  // we flatten the array to return all rows from all tables after mapping
+  // the queryName to each row
+  const allRows = await Promise.all(queue).then(all => {
+    return all.reduce((accumulator, currentValue ) => {
+      return accumulator.concat(currentValue[0].map(row => {
+          row.queryName = currentValue[1] // this will be queryName from tableOptions above
+          return row
+        })
+      )
+    },
+      []
     )
-  ).catch(e => {
+  }).catch(e => {
     throw e
     return
   });
