@@ -12,6 +12,8 @@ Gatsby source plugin for pulling rows from an Airtable. This plugin will allow m
 
 Below is an example showing two tables. `tables` is always specified as an array. The tables may or may not be part of the same base. If you are using a field type of `Link to a Record`, you may specify the field name in `tableLinks` (matching the name shown in Airtable, not the escaped version) and this plugin will create the graphql links for you.
 
+Additionally you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format. This is particularly useful if you would like to have gatsby pick up the fields for transforming, e.g. `text/markdown`.
+
 ```javascript
 // In gatsby-config.js
 plugins: [
@@ -25,13 +27,14 @@ plugins: [
           tableName: `YOUR_AIRTABLE_NAME`,
           tableView: `YOUR_AIRTABLE_VIEW_NAME`,
           queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
+          mapping: {'COLUMN NAME AS SEEN IN AIRTABLE': `VALUE_FORMAT`} // optional
           tableLinks: [`ARRAY_OF_STRINGS_REPRESENTING_COLUMN_NAMES`] //optional
         },
         {
           baseId: `YOUR_AIRTABLE_BASE_ID`,
           tableName: `YOUR_AIRTABLE_NAME`,
-          tableView: `YOUR_AIRTABLE_VIEW_NAME`,
-          queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE` // optional
+          tableView: `YOUR_AIRTABLE_VIEW_NAME`
+          // can leave off queryName, mapping or tableLinks if not needed
         }
       ]
     }
@@ -47,7 +50,7 @@ Note: If you add or your change your API key in an environment variable at the s
 
 ## How to Query
 
-If you are looking for an array of rows, your query may look like below. You can optionally filter based on the table name, etc. if you only want rows from specific tables or bases.
+If you are looking for an array of rows, your query may look like below. You can optionally filter based on the table name, etc. if you only want rows from specific tables and/or bases.
 
 ```
 {
@@ -68,7 +71,7 @@ If you are looking for an array of rows, your query may look like below. You can
 }
 ```
 
-If you are looking for a single record, your query may look like below. It will always only return one record. You can filter down to one specific record. Otherwise, if your filters return more than one record, it will only return the first record.
+If you are looking for a single record, your query may look like below. It will always only return one record. You can filter down to one specific record as shown in the example. Otherwise, if your filters would return more than one record, it will instead only return the first record.
 
 ```
 {

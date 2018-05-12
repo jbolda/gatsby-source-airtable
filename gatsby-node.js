@@ -3,7 +3,7 @@ const crypto = require(`crypto`)
 
 exports.sourceNodes = async ({ boundActionCreators },
                              {apiKey, tables}) => {
-  // tables contain baseId, tableName, tableView, queryName, tableLinks
+  // tables contain baseId, tableName, tableView, queryName, mapping, tableLinks
   const { createNode, setPluginStatus } = boundActionCreators
 
   try {
@@ -41,7 +41,12 @@ exports.sourceNodes = async ({ boundActionCreators },
     // query.all() returns a promise, pass an array for each table with
     // both our promise and the queryName and then map reduce at the
     // final promise resolution to get queryName onto each row
-    queue.push(Promise.all([query.all(),tableOptions.queryName]))
+    queue.push(Promise.all([
+      query.all(),
+      tableOptions.queryName,
+      tableOptions.mapping,
+      tableOptions.tableLinks
+    ]))
   })
 
   // queue has array of promises and when resolved becomes nested arrays
@@ -50,7 +55,9 @@ exports.sourceNodes = async ({ boundActionCreators },
   const allRows = await Promise.all(queue).then(all => {
     return all.reduce((accumulator, currentValue ) => {
       return accumulator.concat(currentValue[0].map(row => {
-          row.queryName = currentValue[1] // this will be queryName from tableOptions above
+          row.queryName = currentValue[1] // queryName from tableOptions above
+          row.mapping = currentValue[2] // mapping from tableOptions above
+          row.tableLinks = currentValue[3] // tableLinks from tableOptions above
           return row
         })
       )
@@ -71,9 +78,10 @@ exports.sourceNodes = async ({ boundActionCreators },
   })
 
   allRows.forEach(row => {
-    let processedData = processData(row._table.name, row.fields, tables)
+    let childNodes = []
+    let processedData = processData(row, childNodes)
 
-    const gatsbyNode = {
+    const node = {
       id: `Airtable_${row.id}`,
       parent: null,
       table: row._table.name,
@@ -89,19 +97,23 @@ exports.sourceNodes = async ({ boundActionCreators },
       data: processedData
     };
 
-    createNode(gatsbyNode);
+    createNode(node);
+    childNodes.forEach(node => createNode(node))
   });
 
   return
 }
 
-let processData = (tableName, data, tableOptions) => {
-  let tableLinks
-  tableOptions.forEach(table => {
-    if (table.tableName === tableName) {
-      tableLinks = table.tableLinks
-    }
-  })
+/* #################
+  helper functions
+################## */
+
+
+let processData = (row, childNodes) => {
+  let tableName = row._table.name
+  let data = row.fields
+  let mapping = row.mapping
+  let tableLinks = row.tableLinks
 
   let fieldKeys = Object.keys(data)
   let processedData = {}
@@ -112,13 +124,45 @@ let processData = (tableName, data, tableOptions) => {
       useKey = `${cleanKey(key)}___NODE`
       processedData[useKey] = data[key].map(id => `Airtable_${id}`)
     } else {
-      processedData[cleanKey(key)] = data[key]
+      let checkedChildNode = checkChildNode(key, row, childNodes)
+      processedData[checkedChildNode.key] = checkedChildNode.value
     }
   })
 
   return processedData
 }
 
-let cleanKey = (key) => {
+
+let checkChildNode = (key, row, childNodes) => {
+  let data = row.fields
+  let mapping = row.mapping
+  let cleanedKey = cleanKey(key)
+
+  if (mapping && mapping[key]) {
+    const node = {
+      id: `AirtableField_${row.id}_${cleanedKey}`,
+      parent: `Airtable_${row.id}`,
+      children: [],
+      raw: data[key],
+      internal: {
+        type: `AirtableField`,
+        mediaType: mapping[key],
+        content: data[key],
+        contentDigest: crypto
+          .createHash("md5")
+          .update(JSON.stringify(row))
+          .digest("hex")
+      }
+    };
+
+    childNodes.push(node)
+    return {key: `${cleanedKey}___NODE`, value: `AirtableField_${row.id}_${cleanedKey}`}
+  } else {
+    return {key: cleanedKey, value: data[key]}
+  }
+}
+
+
+let cleanKey = (key, data) => {
   return key.replace(/ /g,'_')
 }
