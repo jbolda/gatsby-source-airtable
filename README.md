@@ -27,8 +27,8 @@ plugins: [
           tableName: `YOUR_AIRTABLE_NAME`,
           tableView: `YOUR_AIRTABLE_VIEW_NAME`,
           queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
-          mapping: {'COLUMN NAME AS SEEN IN AIRTABLE': `VALUE_FORMAT`} // optional
-          tableLinks: [`ARRAY_OF_STRINGS_REPRESENTING_COLUMN_NAMES`] //optional
+          mapping: {'COLUMN NAME AS SEEN IN AIRTABLE': `VALUE_FORMAT`}, // optional
+          tableLinks: [`ARRAY_OF_STRINGS_REPRESENTING_COLUMN_NAMES`] // optional
         },
         {
           baseId: `YOUR_AIRTABLE_BASE_ID`,
