@@ -84,41 +84,39 @@ exports.sourceNodes = async (
     }
   });
 
-  return new Promise((resolve, reject) => {
-    resolve(
-      allRows.forEach(async row => {
-        let childNodes = [];
-        let processedData = processData(row, childNodes, {
-          createNodeId,
-          createNode,
-          store,
-          cache
-        });
+  await allRows.forEach(async row => {
+    let childNodes = [];
+    let processedData = processData(row, childNodes, {
+      createNodeId,
+      createNode,
+      store,
+      cache
+    });
 
-        const node = {
-          id: createNodeId(`Airtable_${row.id}`),
-          parent: null,
-          table: row._table.name,
-          queryName: row.queryName,
-          children: [],
-          internal: {
-            type: `AirtableLinked`,
-            contentDigest: crypto
-              .createHash("md5")
-              .update(JSON.stringify(row))
-              .digest("hex")
-          },
-          data: processedData
-        };
+    const node = {
+      id: createNodeId(`Airtable_${row.id}`),
+      parent: null,
+      table: row._table.name,
+      queryName: row.queryName,
+      children: [],
+      internal: {
+        type: `AirtableLinked`,
+        contentDigest: crypto
+          .createHash("md5")
+          .update(JSON.stringify(row))
+          .digest("hex")
+      },
+      data: processedData
+    };
 
-        await createNode(node);
-        await childNodes.forEach(node => createNode(node));
-      })
-    );
+    await createNode(node);
+    childNodes.forEach(node => createNode(node));
   });
+
+  return;
 };
 
-const processData = async (
+const processData = (
   row,
   childNodes,
   { createNodeId, createNode, store, cache }
@@ -129,7 +127,7 @@ const processData = async (
   let fieldKeys = Object.keys(data);
   let processedData = {};
 
-  await fieldKeys.forEach(async key => {
+  fieldKeys.forEach(key => {
     let useKey;
     // deals with airtable linked fields,
     // these will be airtable IDs
@@ -155,7 +153,7 @@ const processData = async (
   return processedData;
 };
 
-const checkChildNode = async (
+const checkChildNode = (
   key,
   row,
   childNodes,
