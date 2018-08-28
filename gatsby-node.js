@@ -25,7 +25,7 @@ exports.sourceNodes = async (
   // exit if tables is not defined
   if (tables === undefined || tables.length === 0) {
     console.warn(
-      "\ntables is not defined for gatsby-source-airtable-linked in gatsby-config.js"
+      "\ntables is not defined for gatsby-source-airtable in gatsby-config.js"
     );
     return;
   }
@@ -100,7 +100,7 @@ exports.sourceNodes = async (
       queryName: row.queryName,
       children: [],
       internal: {
-        type: `AirtableLinked`,
+        type: `Airtable`,
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))

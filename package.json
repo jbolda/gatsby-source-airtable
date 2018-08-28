@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-source-airtable-linked",
+  "name": "gatsby-source-airtable",
   "version": "2.0.0-beta.0",
-  "description": "Gatsby Airtable Source with Linked Nodes and Multiple Tables.",
+  "description": "Gatsby Airtable Source with Linked Nodes, Multiple Tables and File Nodes.",
   "main": "index.js",
-  "repository": "git@github.com:jbolda/gatsby-source-airtable-linked.git",
+  "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "license": "MIT",
   "keywords": [

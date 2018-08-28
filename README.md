@@ -1,19 +1,20 @@
-# gatsby-source-airtable-linked
+# gatsby-source-airtable
+## We are in process of combining namespaces. This codebase will be used for Gatsby v2 and forward.
 
-[![npm](https://img.shields.io/npm/v/gatsby-source-airtable-linked/latest.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable-linked)
-[![npm](https://img.shields.io/npm/v/gatsby-source-airtable-linked/next.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable-linked)
+[![npm](https://img.shields.io/npm/v/gatsby-source-airtable/latest.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable)
+[![npm](https://img.shields.io/npm/v/gatsby-source-airtable/next.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable)
 
-Gatsby source plugin for pulling rows from an Airtable. This plugin will allow multiple tables and bases. Additionally, it will link the columns that you manually specify. This was inspired by [gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable), but due to the many breaking changes introduced, I started a new package (pretty much a complete rewrite).
+Gatsby source plugin for pulling rows from an Airtable. This plugin will allow multiple tables and bases. Additionally, it will link the columns that you manually specify. This was inspired by [kevzettler/gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable), but due to the many breaking changes introduced, I started a new package (pretty much a complete rewrite). With the introduction of Gatsby v2, we felt it was a great time to combine the namespaces and this repository will be used moving forward. If you are looking for the documentation on `gatsby-source-airtable-linked`, see the additional branch. We do recommend moving your dependency over to `gatsby-source-airtable`.
 
 ## Install
 
 via npm
 
-`npm install --save gatsby-source-airtable-linked`
+`npm install --save gatsby-source-airtable`
 
 or via yarn
 
-`yarn add gatsby-source-airtable-linked`
+`yarn add gatsby-source-airtable`
 
 ## How to use
 
@@ -27,7 +28,7 @@ Additionally, if you are using the `Attachment` type field in Airtable, you may 
 // In gatsby-config.js
 plugins: [
   {
-    resolve: `gatsby-source-airtable-linked`,
+    resolve: `gatsby-source-airtable`,
     options: {
       apiKey: `YOUR_AIRTABLE_KEY`, // may instead specify via env, see below
       tables: [
@@ -63,7 +64,7 @@ If you are looking for an array of rows, your query may look like below. You can
 
 ```
 {
-  allAirtableLinked(filter: {table: {eq: "Table 1"}}) {
+  allAirtable(filter: {table: {eq: "Table 1"}}) {
     edges {
       node {
         id
@@ -84,7 +85,7 @@ If you are looking for a single record, your query may look like below. It will 
 
 ```
 {
-  airtableLinked(table: {eq: "Table 1"}, data: {Column_Names_Matching_Tables: {eq: "test2"}}) {
+  airtable(table: {eq: "Table 1"}, data: {Column_Names_Matching_Tables: {eq: "test2"}}) {
 		data {
 		  Column_Names_Matching_Tables
 		}
