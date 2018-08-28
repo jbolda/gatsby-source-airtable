@@ -1,0 +1,20 @@
+os:
+  - linux
+
+dist: trusty
+sudo: required
+
+jobs:
+    include:
+        - stage: build and test
+          language: node_js
+          node_js:
+            - '6'
+            - '8'
+            - '10'
+          cache:
+            yarn: true
+          install:
+          - yarn
+          script:
+          - yarn test
