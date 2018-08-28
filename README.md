@@ -18,9 +18,9 @@ or via yarn
 
 ## How to use
 
-Below is an example showing two tables. `tables` is always specified as an array. The tables may or may not be part of the same base. If you are using a field type of `Link to a Record`, you may specify the field name in `tableLinks` (matching the name shown in Airtable, not the escaped version) and this plugin will create the graphql links for you.
+Below is an example showing two tables. `tables` is always specified as an array. The tables may or may not be part of the same base. If you are using a field type of `Link to a Record`, you must specify the field name in `tableLinks` (matching the name shown in Airtable, not the escaped version) for this plugin to create the graphql links for you. Otherwise, you will just receive the Airtable IDs as `strings`. Functionally, Airtable stores the `Link to a Record` fields with IDs pointing to the other tables. When you specify the column name in `tableLinks`, you are signifying to this plugin that that column/field has IDs and you want these IDs linked to the real data that is also in graphql. The name of the column/field does not have to match the related base, but you do need to make sure that the related base is included in your `gatsby-config.js` as well. (We can't link to something that doesn't exist!)
 
-Additionally you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format. This is particularly useful if you would like to have gatsby pick up the fields for transforming, e.g. `text/markdown`. 
+Additionally you may optionally provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format. This is particularly useful if you would like to have gatsby pick up the fields for transforming, e.g. `text/markdown`. If you do not provide a mapping, Gatsby will just "infer" what type of value it is, which is most typically a `string`.
 
 Additionally, if you are using the `Attachment` type field in Airtable, you may specify a column name with `fileNode` and the plugin will bring in these files. Using this method, it will create "nodes" for each of the files and expose this to all of the transformer plugins. A good use case for this would be attaching images in Airtable, and being able to make these available for use with the `sharp` plugins and `gatsby-image`. Specifying a `fileNode` does require a peer dependency of `gatsby-source-filesystem` otherwise it will fall back as a non-mapped field. The locally available files and any ecosystem connections will be available on the node as `localFiles`.
 
@@ -51,6 +51,10 @@ plugins: [
   },
 ]
 ```
+
+Within Airtable, there exists your base which has table(s) and each table can have a view(s). A view can either be a different way to see your data, but it can also have embedded filters on your data. Specifying a view allows you to target a specific view (and possibly pre-filter if need be). If you do not specify a view, that airtable just returns the raw data in no particular order.
+
+Additionally, you may have a situation where you are including two separate bases each with a table that has the exact same name. With the data structure of this repo, both bases would fall into allAirtable and you wouldn't be able to tell which from which table each record came. If you need to filter your records down to a specfic table in this situation, you can specify a `queryName` with which to accomplish this. This is only to help separate these records within your gatsby repository. See the How To Query section for an example of filtering.
 
 ## API Key
 
