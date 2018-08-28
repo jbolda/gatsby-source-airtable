@@ -1,18 +1,27 @@
 # gatsby-source-airtable-linked
 
-[![npm](https://img.shields.io/npm/v/gatsby-source-airtable-linked.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable-linked)
+[![npm](https://img.shields.io/npm/v/gatsby-source-airtable-linked/latest.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable-linked)
+[![npm](https://img.shields.io/npm/v/gatsby-source-airtable-linked/next.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable-linked)
 
 Gatsby source plugin for pulling rows from an Airtable. This plugin will allow multiple tables and bases. Additionally, it will link the columns that you manually specify. This was inspired by [gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable), but due to the many breaking changes introduced, I started a new package (pretty much a complete rewrite).
 
 ## Install
 
+via npm
+
 `npm install --save gatsby-source-airtable-linked`
+
+or via yarn
+
+`yarn add gatsby-source-airtable-linked`
 
 ## How to use
 
 Below is an example showing two tables. `tables` is always specified as an array. The tables may or may not be part of the same base. If you are using a field type of `Link to a Record`, you may specify the field name in `tableLinks` (matching the name shown in Airtable, not the escaped version) and this plugin will create the graphql links for you.
 
-Additionally you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format. This is particularly useful if you would like to have gatsby pick up the fields for transforming, e.g. `text/markdown`.
+Additionally you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format. This is particularly useful if you would like to have gatsby pick up the fields for transforming, e.g. `text/markdown`. 
+
+Additionally, if you are using the `Attachment` type field in Airtable, you may specify a column name with `fileNode` and the plugin will bring in these files. Using this method, it will create "nodes" for each of the files and expose this to all of the transformer plugins. A good use case for this would be attaching images in Airtable, and being able to make these available for use with the `sharp` plugins and `gatsby-image`. Specifying a `fileNode` does require a peer dependency of `gatsby-source-filesystem` otherwise it will fall back as a non-mapped field. The locally available files and any ecosystem connections will be available on the node as `localFiles`.
 
 ```javascript
 // In gatsby-config.js
