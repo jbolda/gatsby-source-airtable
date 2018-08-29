@@ -6,6 +6,9 @@
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+  },
   "keywords": [
     "gatsby",
     "gatsby-plugin",
