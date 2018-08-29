@@ -7,7 +7,7 @@
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test": "echo \"Error: no test specified\""
   },
   "keywords": [
     "gatsby",
