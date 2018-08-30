@@ -162,6 +162,9 @@ export const pageQuery = graphql`
         }
       }
     }
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
+      publicURL
+    }
   }
 `;
 
