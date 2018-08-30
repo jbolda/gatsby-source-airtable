@@ -9,6 +9,25 @@ exports.sourceNodes = async (
   // tables contain baseId, tableName, tableView, queryName, mapping, tableLinks
   const { createNode, setPluginStatus } = actions;
 
+  console.warn(
+    "\n######################################################################################"
+  );
+  console.warn(
+    "\ngatsby-source-airtable-linked is deprecated in favor of gatsby-source-airtable."
+  );
+  console.warn(
+    "\nThe namespaces have been combined for Gatsby v2 and forward."
+  );
+  console.warn(
+    "\nWe recommend migrating over to the other package (relatively minor process)."
+  );
+  console.warn(
+    "\nHowever, this package should work fine for Gatsby v2, but it won't receive any attention or updates after v2.0.0."
+  );
+  console.warn(
+    "\n######################################################################################"
+  );
+
   try {
     // hoist api so we can use in scope outside of this block
     var api = await new Airtable({
@@ -84,9 +103,8 @@ exports.sourceNodes = async (
     }
   });
 
-  await allRows.forEach(async row => {
-    let childNodes = [];
-    let processedData = processData(row, childNodes, {
+  let childNodes = await allRows.map(async row => {
+    let processedData = await processData(row, {
       createNodeId,
       createNode,
       store,
@@ -106,28 +124,32 @@ exports.sourceNodes = async (
           .update(JSON.stringify(row))
           .digest("hex")
       },
-      data: processedData
+      data: processedData.data
     };
 
     await createNode(node);
-    childNodes.forEach(node => createNode(node));
+    return processedData.childNodes;
   });
 
-  return;
+  let flattenedChildNodes = await Promise.all(childNodes).reduce(
+    (accumulator, currentValue) => accumulator.concat(currentValue),
+    []
+  );
+
+  return Promise.all(flattenedChildNodes).then(nodes => {
+    nodes.forEach(node => createNode(node));
+  });
 };
 
-const processData = (
-  row,
-  childNodes,
-  { createNodeId, createNode, store, cache }
-) => {
+const processData = async (row, { createNodeId, createNode, store, cache }) => {
   let data = row.fields;
   let tableLinks = row.tableLinks;
 
   let fieldKeys = Object.keys(data);
   let processedData = {};
+  let childNodes = [];
 
-  fieldKeys.forEach(key => {
+  await fieldKeys.forEach(key => {
     let useKey;
     // deals with airtable linked fields,
     // these will be airtable IDs
@@ -141,77 +163,125 @@ const processData = (
       // for transforming. This will let other plugins pick
       // up on that node to add nodes.
     } else {
-      checkChildNode(key, row, childNodes, processedData, {
-        createNodeId,
-        createNode,
-        store,
-        cache
-      });
+      if (row.mapping && row.mapping[key]) {
+        let checkedChildNode = checkChildNode(key, row, processedData, {
+          createNodeId,
+          createNode,
+          store,
+          cache
+        });
+        childNodes.push(checkedChildNode);
+      } else {
+        processedData[cleanKey(key)] = data[key];
+      }
     }
   });
 
-  return processedData;
+  // where childNodes returns an array of objects
+  return { data: processedData, childNodes: childNodes };
 };
 
-const checkChildNode = (
+const checkChildNode = async (
   key,
   row,
-  childNodes,
   processedData,
   { createNodeId, createNode, store, cache }
 ) => {
   let data = row.fields;
   let mapping = row.mapping;
   let cleanedKey = cleanKey(key);
+  let localFiles = await localFileCheck(key, row, {
+    createNodeId,
+    createNode,
+    store,
+    cache
+  });
 
-  if (mapping && mapping[key]) {
-    let node = {
+  processedData[`${cleanedKey}___NODE`] = createNodeId(
+    `AirtableField_${row.id}_${cleanedKey}`
+  );
+
+  return asyncNode(
+    localFiles,
+    row,
+    cleanedKey,
+    data[key],
+    mapping[key],
+    createNodeId
+  );
+};
+
+const localFileCheck = async (
+  key,
+  row,
+  { createNodeId, createNode, store, cache }
+) => {
+  let data = row.fields;
+  let mapping = row.mapping;
+  if (mapping[key] === `fileNode`) {
+    try {
+      let fileNodes = [];
+      // where data[key] is the array of attachments
+      data[key].forEach(attachment => {
+        let attachmentNode = createRemoteFileNode({
+          url: attachment.url,
+          store,
+          cache,
+          createNode,
+          createNodeId
+        });
+        fileNodes.push(attachmentNode);
+      });
+      // Adds a field `localFile` to the node
+      // ___NODE tells Gatsby that this field will link to another nodes
+      let localFiles = await Promise.all(fileNodes).map(
+        attachmentNode => attachmentNode.id
+      );
+      return localFiles;
+    } catch (e) {
+      console.log(
+        "You specified a fileNode, but we caught an error. First check that you have gatsby-source-filesystem installed?\n",
+        e
+      );
+    }
+  }
+  return;
+};
+
+const asyncNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
+  if (localFiles) {
+    return {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
       parent: createNodeId(`Airtable_${row.id}`),
       children: [],
-      raw: data[key],
+      raw: raw,
+      localFiles___NODE: localFiles,
       internal: {
         type: `AirtableField`,
-        mediaType: mapping[key],
-        content: JSON.stringify(data[key]),
+        mediaType: mapping,
+        content: JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
           .digest("hex")
       }
     };
-
-    if (mapping[key] === `fileNode`) {
-      try {
-        let fileNodes = [];
-        // where data[key] is the array of attachments
-        data[key].forEach(async attachment => {
-          const node = await createRemoteFileNode({
-            url: attachment.url,
-            store,
-            cache,
-            createNode,
-            createNodeId
-          });
-          childNodes.push(node);
-          fileNodes.push(node.id);
-        });
-        // Adds a field `localFile` to the node
-        // ___NODE tells Gatsby that this field will link to another nodes
-        node.localFiles___NODE = fileNodes;
-      } catch (e) {
-        // Ignore
-      }
-    }
-
-    childNodes.push(node);
-    processedData[`${cleanedKey}___NODE`] = createNodeId(
-      `AirtableField_${row.id}_${cleanedKey}`
-    );
-    return;
   } else {
-    processedData[cleanedKey] = data[key];
-    return;
+    return {
+      id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
+      parent: createNodeId(`Airtable_${row.id}`),
+      children: [],
+      raw: raw,
+      internal: {
+        type: `AirtableField`,
+        mediaType: mapping,
+        content: JSON.stringify(raw),
+        contentDigest: crypto
+          .createHash("md5")
+          .update(JSON.stringify(row))
+          .digest("hex")
+      }
+    };
   }
 };
 
