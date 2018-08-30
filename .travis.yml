@@ -15,6 +15,21 @@ jobs:
           cache:
             yarn: true
           install:
-          - yarn
+            - yarn
           script:
-          - yarn test
+            - yarn test
+
+        - stage: example remote image attachments
+          language: node_js
+          node_js:
+            - '8'
+            - '9'
+            - '10'
+          cache:
+            yarn: true
+          before_install:
+            - cd examples/recipes-with-photos
+          install:
+            - yarn
+          script:
+            - yarn build
