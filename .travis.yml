@@ -12,13 +12,16 @@ jobs:
   include:
     - &test
       stage: test
+      name: Test on Node 8
       install:
         - yarn
       script:
         - yarn test
     - <<: *test
-      node_js: 'node'
+      name: Test on Node 10
+      node_js: '10'
     - &examplephoto
+      name: Example on Node 8
       stage: "[example] remote image attachments"
       before_install:
         - cd examples/recipes-with-photos
@@ -27,4 +30,5 @@ jobs:
       script:
         - yarn build
     - <<: *examplephoto
-      node_js: 'node'
+      name: Example on Node 10
+      node_js: '10'
