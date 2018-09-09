@@ -21,7 +21,7 @@ jobs:
       script:
         - yarn test
 
-    - stage: [example] remote image attachments
+    - stage: "[example] remote image attachments"
       before_install:
         - cd examples/recipes-with-photos
       install:
