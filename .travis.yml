@@ -13,6 +13,7 @@ jobs:
     - &test
       stage: test
       name: Test on Node 8
+      node_js: '8'
       install:
         - yarn
       script:
@@ -23,6 +24,7 @@ jobs:
     - &examplephoto
       name: Example on Node 8
       stage: "[example] remote image attachments"
+      node_js: '8'
       before_install:
         - cd examples/recipes-with-photos
       install:
