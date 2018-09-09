@@ -13,7 +13,7 @@ exports.sourceNodes = async (
     "\n######################################################################################"
   );
   console.warn(
-    "\ngatsby-source-airtable-linked is deprecated in favor of gatsby-source-airtable."
+    "\ngatsby-source-airtable-linked is deprecated in favor of gatsby-source-airtable at https://www.npmjs.com/package/gatsby-source-airtable."
   );
   console.warn(
     "\nThe namespaces have been combined for Gatsby v2 and forward."
