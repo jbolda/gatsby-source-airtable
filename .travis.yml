@@ -8,24 +8,23 @@ language: node_js
 cache:
   yarn: true
 
-matrix:
-  include:
-    - name: 'Node Current'
-      node_js: 'node'
-    - name: 'Node LTS'
-      node_js: 'lts/*'
-
 jobs:
   include:
-    - stage: test
+    - &test
+      stage: test
       install:
         - yarn
       script:
         - yarn test
-    - stage: "[example] remote image attachments"
+    - <<: *test
+      node_js: 'node'
+    - &examplephoto
+      stage: "[example] remote image attachments"
       before_install:
         - cd examples/recipes-with-photos
       install:
         - yarn
       script:
         - yarn build
+    - <<: *examplephoto
+      node_js: 'node'
