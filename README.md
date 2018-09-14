@@ -3,6 +3,7 @@
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-airtable/latest.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable)
 [![npm](https://img.shields.io/npm/v/gatsby-source-airtable/next.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable)
+[![Build Status](https://travis-ci.com/jbolda/gatsby-source-airtable.svg?branch=master)](https://travis-ci.com/jbolda/gatsby-source-airtable)
 
 Gatsby source plugin for pulling rows from an Airtable. This plugin will allow multiple tables and bases. Additionally, it will link the columns that you manually specify. This was inspired by [kevzettler/gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable), but due to the many breaking changes introduced, I started a new package (pretty much a complete rewrite). With the introduction of Gatsby v2, we felt it was a great time to combine the namespaces and this repository will be used moving forward. If you are looking for the documentation on `gatsby-source-airtable-linked`, see the additional branch. We do recommend moving your dependency over to `gatsby-source-airtable` for Gatsby v2. (If you are still on Gatsby v1, see `gatsby-source-airtable-linked` for compatibile code.)
 
