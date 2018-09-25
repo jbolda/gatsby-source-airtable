@@ -113,8 +113,8 @@ exports.sourceNodes = async (
   });
 
   let flattenedChildNodes = await Promise.all(childNodes).then(nodes => nodes.reduce(
-      (accumulator, currentValue) => accumulator.concat(currentValue),
-      []
+    (accumulator, currentValue) => accumulator.concat(currentValue),
+    []
   ));
 
   return Promise.all(flattenedChildNodes).then(nodes => {
