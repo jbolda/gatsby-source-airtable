@@ -29,6 +29,8 @@ jobs:
         - cd examples/recipes-with-photos
       install:
         - yarn
+      before_script:
+        - cp -F ../../gatsby-node.js ./node_modules/gastby-source-airtable
       script:
         - yarn build
     - <<: *examplephoto
