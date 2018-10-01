@@ -84,7 +84,7 @@ exports.sourceNodes = async (
     }
   });
 
-  let childNodes = await allRows.map(async row => {
+  let childNodes = allRows.map(async row => {
     let processedData = await processData(row, {
       createNodeId,
       createNode,
@@ -108,14 +108,16 @@ exports.sourceNodes = async (
       data: processedData.data
     };
 
-    await createNode(node);
+    createNode(node);
     return processedData.childNodes;
   });
 
-  let flattenedChildNodes = await Promise.all(childNodes).then(nodes => nodes.reduce(
-    (accumulator, currentValue) => accumulator.concat(currentValue),
-    []
-  ));
+  let flattenedChildNodes = Promise.all(childNodes).then(nodes =>
+    nodes.reduce(
+      (accumulator, currentValue) => accumulator.concat(currentValue),
+      []
+    )
+  );
 
   return Promise.all(flattenedChildNodes).then(nodes => {
     nodes.forEach(node => createNode(node));
@@ -182,7 +184,7 @@ const checkChildNode = async (
     `AirtableField_${row.id}_${cleanedKey}`
   );
 
-  return asyncNode(
+  return buildNode(
     localFiles,
     row,
     cleanedKey,
@@ -229,7 +231,7 @@ const localFileCheck = async (
   return;
 };
 
-const asyncNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
+const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
   if (localFiles) {
     return {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
