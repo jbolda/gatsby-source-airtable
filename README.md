@@ -1,5 +1,3 @@
-This is how we test# gatsby-source-airtable
-
 ## We are in process of combining namespaces. This codebase will be used for Gatsby v2 and forward.
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-airtable/latest.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable)
