@@ -85,7 +85,7 @@ Get all records from `YOUR_TABLE_NAME` where `Field_1 === YOUR_VALUE`
 
 ## How it works
 
-When running `gatsby develop` or `gatsby build`, this plugin will fetch all data for all rows in each of the tables you specify, making them available for query throughout your gatsby.js app, and to other gatsby plugins as well.
+When running `gatsby develop` or `gatsby build`, this plugin will fetch all data for all rows in each of the tables you specify, making them available for query throughout your gatsby.js app, and to other Gatsby plugins as well.
 
 As seen in the example above, `tables` is always specified as an array of table objects. These tables may be sourced from different bases.
 
@@ -101,7 +101,7 @@ This will create nested nodes accessible in your graphQL queries, as shown in th
 
 ### Using markdown and attachments
 
-Optionally, you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format of your choosing. This is particularly useful if you would like to have gatsby pick up the fields for transforming, e.g. `text/markdown`. If you do not provide a mapping, Gatsby will just "infer" what type of value it is, which is most typically a `string`.
+Optionally, you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format of your choosing. This is particularly useful if you would like to have Gatsby pick up the fields for transforming, e.g. `text/markdown`. If you do not provide a mapping, Gatsby will just "infer" what type of value it is, which is most typically a `string`.
 
 For an example of a markdown-and-airtable driven site using `gatsby-transformer-remark`, see the examples folder in this repo.
 
