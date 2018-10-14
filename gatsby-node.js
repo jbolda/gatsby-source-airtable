@@ -242,7 +242,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       internal: {
         type: `AirtableField`,
         mediaType: mapping,
-        content: JSON.stringify(raw),
+        content: typeof raw === 'string' ? raw : JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
@@ -258,7 +258,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       internal: {
         type: `AirtableField`,
         mediaType: mapping,
-        content: JSON.stringify(raw),
+        content: typeof raw === 'string' ? raw : JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
