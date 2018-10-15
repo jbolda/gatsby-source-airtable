@@ -36,3 +36,18 @@ jobs:
     - <<: *examplephoto
       name: Example on Node 10
       node_js: '10'
+    - &examplemarkdown
+      name: Example on Node 8
+      stage: "[example] markdown integration"
+      node_js: '8'
+      before_install:
+        - cd examples/markdown-docs
+      install:
+        - yarn
+      before_script:
+        - cp -f ../../gatsby-node.js ./node_modules/gastby-source-airtable
+      script:
+        - yarn build
+    - <<: *examplemarkdown
+      name: Example on Node 10
+      node_js: '10'
