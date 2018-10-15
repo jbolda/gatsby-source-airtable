@@ -22,20 +22,20 @@ module.exports = {
       options: {
         tables: [
           {
-            baseId: `appcL6Jdj7ZrhTg4q`,
+            baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Recipes`,
             tableView: `List`,
             mapping: { Attachments: `fileNode` },
             tableLinks: [`Cooking Method`, `Style`]
           },
           {
-            baseId: `appcL6Jdj7ZrhTg4q`,
+            baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Cooking Method`,
             tableView: `Main View`,
             tableLinks: [`Recipes`]
           },
           {
-            baseId: `appcL6Jdj7ZrhTg4q`,
+            baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Style`,
             tableView: `Main View`,
             tableLinks: [`Recipes`]
@@ -44,6 +44,6 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-react-helmet"
+    `gatsby-plugin-react-helmet`
   ]
 };
