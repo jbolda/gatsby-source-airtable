@@ -1,8 +1,5 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "markdown-docs-example",
   "dependencies": {
     "gatsby": "^2.0.19",
     "gatsby-source-airtable": "^2.0.1",
@@ -15,7 +12,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -25,8 +21,4 @@
   "devDependencies": {
     "prettier": "^1.14.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
 }
