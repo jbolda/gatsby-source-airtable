@@ -103,7 +103,7 @@ This will create nested nodes accessible in your graphQL queries, as shown in th
 
 Optionally, you may provide a "mapping". This will alert the plugin that column names you specify are of a specific, non-string format of your choosing. This is particularly useful if you would like to have Gatsby pick up the fields for transforming, e.g. `text/markdown`. If you do not provide a mapping, Gatsby will just "infer" what type of value it is, which is most typically a `string`.
 
-For an example of a markdown-and-airtable driven site using `gatsby-transformer-remark`, see the examples folder in this repo.
+For an example of a markdown-and-airtable-driven site using `gatsby-transformer-remark`, see the examples folder in this repo.
 
 If you are using the `Attachment` type field in Airtable, you may specify a column name with `fileNode` and the plugin will bring in these files. Using this method, it will create "nodes" for each of the files and expose this to all of the transformer plugins. A good use case for this would be attaching images in Airtable, and being able to make these available for use with the `sharp` plugins and `gatsby-image`. Specifying a `fileNode` does require a peer dependency of `gatsby-source-filesystem` otherwise it will fall back as a non-mapped field. The locally available files and any ecosystem connections will be available on the node as `localFiles`.
 
@@ -125,4 +125,4 @@ The API key can be specified in `gatsby-config.js` as noted in the previous sect
 
 Alternatively, you may specify your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). This plugin looks for an environment variable called `GATSBY_AIRTABLE_API_KEY` and will use it prior to resorting to the `apiKey` defined in `gatsby-config.js`. You may also specify it in your command line such as `GATSBY_AIRTABLE_API_KEY=XXXXXX gatsby develop`.
 
-If you add or your change your API key in an environment variable at the system level, you may need to reload your code editor / IDE for that variable to reload.
+If you add or change your API key in an environment variable at the system level, you may need to reload your code editor / IDE for that variable to reload.
