@@ -7,17 +7,17 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        // apiKey: `YOUR_API_KEY`,
+        // apiKey: `YOUR_API_KEY`, (set via environment variable for this example)
         tables: [
           {
-            // baseId: `YOUR_BASE_ID`,
+            baseId: `tblXeAbfG2hYTomd3`,
             tableName: `Sections`,
             tableView: `All`,
             mapping: { Body: 'text/markdown' },
             tableLinks: [`Pages`],
           },
           {
-            // baseId: `YOUR_BASE_ID`,
+            baseId: `tblXeAbfG2hYTomd3`,
             tableName: `Pages`,
             tableView: `All`,
             mapping: { Body: 'text/markdown' },
