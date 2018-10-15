@@ -22,20 +22,20 @@ module.exports = {
       options: {
         tables: [
           {
-            baseId: `tbl1zhB7g2q3NXALg`,
+            baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Recipes`,
             tableView: `List`,
             mapping: { Attachments: `fileNode` },
             tableLinks: [`Cooking Method`, `Style`]
           },
           {
-            baseId: `tbl1zhB7g2q3NXALg`,
+            baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Cooking Method`,
             tableView: `Main View`,
             tableLinks: [`Recipes`]
           },
           {
-            baseId: `tbl1zhB7g2q3NXALg`,
+            baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Style`,
             tableView: `Main View`,
             tableLinks: [`Recipes`]
