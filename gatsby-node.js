@@ -4,7 +4,7 @@ const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 
 exports.sourceNodes = async (
   { actions, createNodeId, store, cache },
-  { apiKey, tables }
+  { apiKey, tables, rawValues }
 ) => {
   // tables contain baseId, tableName, tableView, queryName, mapping, tableLinks
   const { createNode, setPluginStatus } = actions;
@@ -50,7 +50,10 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.mapping,
-        tableOptions.tableLinks
+        tableOptions.tableLinks,
+        tableOptions.tableName,
+        cleanTypeName(tableOptions.typeName || 'Airtable'),
+        tableOptions.rawValues,
       ])
     );
   });
@@ -66,6 +69,11 @@ exports.sourceNodes = async (
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.mapping = currentValue[2]; // mapping from tableOptions above
             row.tableLinks = currentValue[3]; // tableLinks from tableOptions above
+            row.tableName = currentValue[4]; // tableName from tableOptions above
+            row.typeName = currentValue[5]; // typeName from tableOptions above
+            // store raw values by default, but allow them to be switched off globally or on a table-by-table basis
+            // they often cause warnings about GraphQL type conflicts with Gatsby's auto-type-inference 
+            row.rawValues = rawValues !== false && currentValue[5] !== false; 
             return row;
           })
         );
@@ -85,21 +93,22 @@ exports.sourceNodes = async (
   });
 
   let childNodes = allRows.map(async row => {
+
     let processedData = await processData(row, {
       createNodeId,
       createNode,
       store,
-      cache
+      cache,
     });
-
+    
     const node = {
       id: createNodeId(`Airtable_${row.id}`),
       parent: null,
-      table: row._table.name,
+      table: row.tableName,
       queryName: row.queryName,
       children: [],
       internal: {
-        type: `Airtable`,
+        type: `${row.typeName}`,
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
@@ -151,7 +160,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
           createNodeId,
           createNode,
           store,
-          cache
+          cache,
         });
         childNodes.push(checkedChildNode);
       } else {
@@ -190,7 +199,7 @@ const checkChildNode = async (
     cleanedKey,
     data[key],
     mapping[key],
-    createNodeId
+    createNodeId,
   );
 };
 
@@ -237,10 +246,10 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
       parent: createNodeId(`Airtable_${row.id}`),
       children: [],
-      raw: raw,
+      raw: row.rawValues ? raw : null,
       localFiles___NODE: localFiles,
       internal: {
-        type: `AirtableField`,
+        type: `${row.typeName}Field`,
         mediaType: mapping,
         content: typeof raw === 'string' ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -254,9 +263,9 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
       parent: createNodeId(`Airtable_${row.id}`),
       children: [],
-      raw: raw,
+      raw: row.rawValues ? raw : null,
       internal: {
-        type: `AirtableField`,
+        type: `${row.typeName}Field`,
         mediaType: mapping,
         content: typeof raw === 'string' ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -270,4 +279,13 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
 
 const cleanKey = (key, data) => {
   return key.replace(/ /g, "_");
+};
+
+const upperFirst = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+// ensure our type name is valid - remove non a-z chars and make the first letter uppercase 
+const cleanTypeName = (typeName) => {
+  return upperFirst(typeName.replace(/[^a-z]/ig, ''));
 };
