@@ -147,9 +147,21 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
     // these will be airtable IDs
     if (tableLinks && tableLinks.includes(key)) {
       useKey = `${cleanKey(key)}___NODE`;
-      processedData[useKey] = data[key].map(id =>
-        createNodeId(`Airtable_${id}`)
-      );
+
+      try {
+        processedData[useKey] = data[key].map(id =>
+          createNodeId(`Airtable_${id}`)
+        );
+      }
+      catch (err) {
+        console.warn(`
+          WARNING: A failed lookup occurred for for a field named '${key}' in the table '${row.tableName}'.
+          You may have tried to configure a table link for a field which is NOT a linked record field type in Airtable.
+          Please check the '${key}' column in Airtable and change its field type to 'Link to another record',
+          otherwise this may cause unexpected problems with your build or site.
+        `);
+      }
+      
       // A child node comes from the mapping, where we want to
       // define a separate node in gatsby that is available
       // for transforming. This will let other plugins pick
