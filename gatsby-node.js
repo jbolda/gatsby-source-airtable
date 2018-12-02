@@ -157,7 +157,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
         console.warn(`
           WARNING: A failed lookup occurred for for a field named '${key}' in the table '${row.tableName}'.
           You may have tried to configure a table link for a field which is NOT a linked record field type in Airtable.
-          Please check the '${key}' column in Airtable and change its field type to 'Link to another record',
+          Please check the '${key}' column of '${row.tableName}' in Airtable and change its field type to 'Link to another record',
           otherwise this may cause unexpected problems with your build or site.
         `);
       }
