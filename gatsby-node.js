@@ -38,8 +38,10 @@ exports.sourceNodes = async (
 
     let table = base(tableOptions.tableName);
 
+    let view = tableOptions.tableView || "";
+
     let query = table.select({
-      view: tableOptions.tableView
+      view: view
     });
 
     // query.all() returns a promise, pass an array for each table with
