@@ -110,7 +110,7 @@ If you are using the `Attachment` type field in Airtable, you may specify a colu
 
 Within Airtable, every table can have one or more named Views. These Views are a convenient way to pre-filter and sort your data before querying it in Gatsby. If you do not specify a view in your table object, raw data will be returned in no particular order.
 
-For example, if you are creating a blog or documentation site, specify a `published` field in Airtable, create a filter showing only published posts, and specify this as `tableView` in `gatsby-config.js`
+For example, if you are creating a blog or documentation site, specify a `published` field in Airtable, create a filter showing only published posts, and specify this as the (optional) `tableView` option in `gatsby-config.js`
 
 ### Naming conflicts
 
