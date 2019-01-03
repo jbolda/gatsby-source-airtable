@@ -86,12 +86,14 @@ exports.sourceNodes = async (
     }
   });
 
+  const defaultValues = tableOptions.defaultValues || {};
   let childNodes = allRows.map(async row => {
     let processedData = await processData(row, {
       createNodeId,
       createNode,
       store,
-      cache
+      cache,
+      defaultValues
     });
 
     const node = {
@@ -126,7 +128,7 @@ exports.sourceNodes = async (
   });
 };
 
-const processData = async (row, { createNodeId, createNode, store, cache }) => {
+const processData = async (row, { createNodeId, createNode, store, cache, defaultValues }) => {
   let data = row.fields;
   let tableLinks = row.tableLinks;
 
@@ -161,6 +163,13 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
       }
     }
   });
+
+  Object.keys(defaultValues).forEach(key => {
+    const cleanedKey = cleanKey(key);
+    if (processData[cleanedKey] === undefined) {
+      processData[cleanedKey] = defaultValues[key];
+    }
+  })
 
   // where childNodes returns an array of objects
   return { data: processedData, childNodes: childNodes };
