@@ -128,8 +128,14 @@ exports.sourceNodes = async (
   });
 };
 
-const processData = async (row, { createNodeId, createNode, store, cache, defaultValues }) => {
-  let data = row.fields;
+const processData = async (
+  row,
+  { createNodeId, createNode, store, cache, defaultValues }
+) => {
+  let data = {
+    ...defaultValues,
+    ...row.fields
+  };
   let tableLinks = row.tableLinks;
 
   let fieldKeys = Object.keys(data);
@@ -163,13 +169,6 @@ const processData = async (row, { createNodeId, createNode, store, cache, defaul
       }
     }
   });
-
-  Object.keys(defaultValues).forEach(key => {
-    const cleanedKey = cleanKey(key);
-    if (processData[cleanedKey] === undefined) {
-      processData[cleanedKey] = defaultValues[key];
-    }
-  })
 
   // where childNodes returns an array of objects
   return { data: processedData, childNodes: childNodes };
@@ -253,7 +252,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       internal: {
         type: `AirtableField`,
         mediaType: mapping,
-        content: typeof raw === 'string' ? raw : JSON.stringify(raw),
+        content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
@@ -269,7 +268,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       internal: {
         type: `AirtableField`,
         mediaType: mapping,
-        content: typeof raw === 'string' ? raw : JSON.stringify(raw),
+        content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
