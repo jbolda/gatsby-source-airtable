@@ -98,6 +98,7 @@ exports.sourceNodes = async (
       id: createNodeId(`Airtable_${row.id}`),
       parent: null,
       table: row._table.name,
+      recordId: row.id,
       queryName: row.queryName,
       children: [],
       internal: {
