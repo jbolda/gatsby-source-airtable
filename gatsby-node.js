@@ -166,11 +166,15 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
   let childNodes = [];
 
   await fieldKeys.forEach(key => {
+    // once in "Gatsby-land" we want to use the cleanKey
+    // consistently everywhere including in configs
+    const cleanedKey = cleanKey(key)
+
     let useKey;
     // deals with airtable linked fields,
     // these will be airtable IDs
     if (tableLinks && tableLinks.includes(key)) {
-      useKey = `${cleanKey(key)}___NODE`;
+      useKey = `${cleanedKey}___NODE`;
       processedData[useKey] = data[key].map(id =>
         createNodeId(`Airtable_${id}`)
       );
@@ -178,18 +182,16 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
       // define a separate node in gatsby that is available
       // for transforming. This will let other plugins pick
       // up on that node to add nodes.
+    } else if (row.mapping && row.mapping[key]) {
+      let checkedChildNode = checkChildNode(key, row, processedData, {
+        createNodeId,
+        createNode,
+        store,
+        cache
+      });
+      childNodes.push(checkedChildNode);
     } else {
-      if (row.mapping && row.mapping[key]) {
-        let checkedChildNode = checkChildNode(key, row, processedData, {
-          createNodeId,
-          createNode,
-          store,
-          cache
-        });
-        childNodes.push(checkedChildNode);
-      } else {
-        processedData[cleanKey(key)] = data[key];
-      }
+      processedData[cleanedKey] = data[key];
     }
   });
 
