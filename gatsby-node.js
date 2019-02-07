@@ -116,12 +116,14 @@ exports.sourceNodes = async (
     }
   });
 
+  const defaultValues = tableOptions.defaultValues || {};
   let childNodes = allRows.map(async row => {
     let processedData = await processData(row, {
       createNodeId,
       createNode,
       store,
-      cache
+      cache,
+      defaultValues
     });
 
     const node = {
@@ -157,8 +159,14 @@ exports.sourceNodes = async (
   });
 };
 
-const processData = async (row, { createNodeId, createNode, store, cache }) => {
-  let data = row.fields;
+const processData = async (
+  row,
+  { createNodeId, createNode, store, cache, defaultValues }
+) => {
+  let data = {
+    ...defaultValues,
+    ...row.fields
+  };
   let tableLinks = row.tableLinks;
 
   let fieldKeys = Object.keys(data);
@@ -290,7 +298,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       internal: {
         type: `AirtableField`,
         mediaType: mapping,
-        content: typeof raw === 'string' ? raw : JSON.stringify(raw),
+        content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
@@ -306,7 +314,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       internal: {
         type: `AirtableField`,
         mediaType: mapping,
-        content: typeof raw === 'string' ? raw : JSON.stringify(raw),
+        content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
