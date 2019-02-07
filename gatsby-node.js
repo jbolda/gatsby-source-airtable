@@ -81,8 +81,8 @@ exports.sourceNodes = async (
       Promise.all([
         query.all(),
         tableOptions.queryName,
-        tableOptions.mapping,
-        tableOptions.tableLinks
+        cleanMapping,
+        cleanLinks
       ])
     );
   });
