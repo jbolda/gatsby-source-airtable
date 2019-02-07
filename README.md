@@ -116,6 +116,10 @@ For example, if you are creating a blog or documentation site, specify a `publis
 
 You may have a situation where you are including two separate bases, each with a table that has the exact same name. With the data structure of this repo, both bases would fall into allAirtable and you wouldn't be able to tell them apart when building graphQL queries. This is what the optional `queryName` setting is for-- simply to provide an alternate name for a table.
 
+### Column Names
+
+Within graphql (the language you query information from and that this plugin puts nodes into), there are character limitations. Most specifically we cannot have spaces in field names. We don't want to force you to change your Airtable names, so we will "clean" the keys and replace the spaces with an underscore (e.g. The Column Name becomes The_Column_Name). We use the cleaned name everywhere including `gatsby-config.js` and within your queries. We don't warn you when this happens to cut down on the verbosity of the output.
+
 ### API Keys
 
 Keys can be found in Airtable by clicking `Help > API Documentation`.
