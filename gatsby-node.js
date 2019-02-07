@@ -168,21 +168,29 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
   await fieldKeys.forEach(key => {
     // once in "Gatsby-land" we want to use the cleanKey
     // consistently everywhere including in configs
+    // this key that we clean comes from Airtable
+    // at this point, all user option keys should be clean
     const cleanedKey = cleanKey(key)
 
     let useKey;
     // deals with airtable linked fields,
     // these will be airtable IDs
-    if (tableLinks && tableLinks.includes(key)) {
+    if (tableLinks && tableLinks.includes(cleanedKey)) {
       useKey = `${cleanedKey}___NODE`;
+
+      // `data` is direct from Airtable so we don't use
+      // the cleanKey here
       processedData[useKey] = data[key].map(id =>
         createNodeId(`Airtable_${id}`)
       );
+
+    } else if (row.mapping && row.mapping[cleanedKey]) {
       // A child node comes from the mapping, where we want to
       // define a separate node in gatsby that is available
       // for transforming. This will let other plugins pick
       // up on that node to add nodes.
-    } else if (row.mapping && row.mapping[key]) {
+      // row contains `data` which is direct from Airtable
+      // so we pass down the raw instead of the cleanKey here
       let checkedChildNode = checkChildNode(key, row, processedData, {
         createNodeId,
         createNode,
@@ -191,6 +199,8 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
       });
       childNodes.push(checkedChildNode);
     } else {
+      // `data` is direct from Airtable so we don't use
+      // the cleanKey here
       processedData[cleanedKey] = data[key];
     }
   });
@@ -236,10 +246,13 @@ const localFileCheck = async (
 ) => {
   let data = row.fields;
   let mapping = row.mapping;
-  if (mapping[key] === `fileNode`) {
+  let cleanedKey = cleanKey(key);
+  if (mapping[cleanedKey] === `fileNode`) {
     try {
       let fileNodes = [];
       // where data[key] is the array of attachments
+      // `data` is direct from Airtable so we don't use
+      // the cleanKey here
       data[key].forEach(attachment => {
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
