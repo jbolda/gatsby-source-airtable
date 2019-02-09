@@ -81,6 +81,7 @@ exports.sourceNodes = async (
       Promise.all([
         query.all(),
         tableOptions.queryName,
+        tableOptions.defaultValues || {},
         cleanMapping,
         cleanLinks
       ])
@@ -96,8 +97,9 @@ exports.sourceNodes = async (
         return accumulator.concat(
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
-            row.mapping = currentValue[2]; // mapping from tableOptions above
-            row.tableLinks = currentValue[3]; // tableLinks from tableOptions above
+            row.defaultValues = currentValue[2]; // mapping from tableOptions above
+            row.mapping = currentValue[3]; // mapping from tableOptions above
+            row.tableLinks = currentValue[4]; // tableLinks from tableOptions above
             return row;
           })
         );
@@ -116,14 +118,12 @@ exports.sourceNodes = async (
     }
   });
 
-  const defaultValues = tableOptions.defaultValues || {};
   let childNodes = allRows.map(async row => {
     let processedData = await processData(row, {
       createNodeId,
       createNode,
       store,
-      cache,
-      defaultValues
+      cache
     });
 
     const node = {
@@ -161,10 +161,10 @@ exports.sourceNodes = async (
 
 const processData = async (
   row,
-  { createNodeId, createNode, store, cache, defaultValues }
+  { createNodeId, createNode, store, cache }
 ) => {
   let data = {
-    ...defaultValues,
+    ...row.defaultValues,
     ...row.fields
   };
   let tableLinks = row.tableLinks;
