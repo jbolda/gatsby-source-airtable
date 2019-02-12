@@ -10,11 +10,12 @@ export default ({ data }) => (
         __html: data.airtable.data.Body.childMarkdownRemark.html,
       }}
     />
-    {data.airtable.data.Pages.map((page, i) => (
-      <Link to={page.data.Path} key={i}>
-        <h4>{page.data.Title}</h4>
-      </Link>
-    ))}
+    <p>{data.airtable.data.random_field_doesnt_exist}</p>
+    {data.airtable.data.Pages.map(page => 
+        <Link to={page.data.Path} key={page.data.Path}>
+          <h4>{page.data.Title}</h4>
+        </Link>
+    )}
   </Layout>
 )
 
@@ -28,6 +29,7 @@ export const query = graphql`
             html
           }
         }
+        random_field_doesnt_exist
         Pages {
           data {
             Title
