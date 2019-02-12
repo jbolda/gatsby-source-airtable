@@ -15,6 +15,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "dev:next": "cp -f ../../gatsby-node.js ./node_modules/gatsby-source-airtable && gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
