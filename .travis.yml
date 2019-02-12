@@ -51,3 +51,18 @@ jobs:
     - <<: *examplemarkdown
       name: Example on Node 10
       node_js: '10'
+    - &exampleoptions
+      name: Example on Node 8
+      stage: "[example] testing plugin options"
+      node_js: '8'
+      before_install:
+        - cd examples/testing-options
+      install:
+        - yarn
+      before_script:
+        - cp -f ../../gatsby-node.js ./node_modules/gastby-source-airtable
+      script:
+        - yarn build
+    - <<: *exampleoptions
+      name: Example on Node 10
+      node_js: '10'
