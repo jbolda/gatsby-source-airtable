@@ -120,6 +120,13 @@ exports.sourceNodes = async (
   });
 
   let childNodes = allRows.map(async row => {
+    // don't love mutating the row here, but
+    // not ready to refactor yet to clean this up
+    // (happy to take a PR!)
+    row.fields = {
+      ...row.defaultValues,
+      ...row.fields,
+    }
     let processedData = await processData(row, {
       createNodeId,
       createNode,
@@ -164,12 +171,8 @@ const processData = async (
   row,
   { createNodeId, createNode, store, cache }
 ) => {
-  let data = {
-    ...row.defaultValues,
-    ...row.fields
-  };
+  let data = row.fields;
   let tableLinks = row.tableLinks;
-
   let fieldKeys = Object.keys(data);
   let processedData = {};
   let childNodes = [];
