@@ -48,7 +48,7 @@ exports.sourceNodes = async (
     // if they are not, warn them and change it for them
     // we can settle the API on clean keys and not have a breaking
     // change until the next major version when we remove this
-    const cleanMapping = tableOptions.mapping.map(key => {
+    const cleanMapping = !tableOptions.mapping ? null : Object.keys(tableOptions.mapping).reduce((cleaned, key) => {
       let useKey = cleanKey(key)
       if (useKey !== key) console.warn(`
         Field names within graphql cannot have spaces. We do not want you to change your column names
@@ -58,10 +58,11 @@ exports.sourceNodes = async (
         to use ${useKey} to make this warning go away. See https://github.com/jbolda/gatsby-source-airtable#column-names
         for more information.
       `)
-      return useKey
-    })
+      cleaned[useKey] = tableOptions.mapping[key]
+      return cleaned
+    }, {})
 
-    const cleanLinks = tableOptions.tableLinks.map(key => {
+    const cleanLinks = !tableOptions.tableLinks ? null : tableOptions.tableLinks.map(key => {
       let useKey = cleanKey(key)
       if (useKey !== key) console.warn(`
         Field names within graphql cannot have spaces. We do not want you to change your column names
