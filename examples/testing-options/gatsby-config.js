@@ -10,7 +10,7 @@ module.exports = {
         // apiKey: `YOUR_API_KEY`, (set via environment variable for this example)
         tables: [
           {
-            baseId: `appN0O40W9X0mzbsl`,
+            baseId: `appv8dCu3p2PAaA2F`,
             tableName: `Sections`,
             tableView: `All`,
             queryName: `test_default_values`,
@@ -22,7 +22,7 @@ module.exports = {
             tableLinks: [`Pages`],
           },
           {
-            baseId: `appN0O40W9X0mzbsl`,
+            baseId: `appv8dCu3p2PAaA2F`,
             tableName: `Pages`,
             tableView: `All`,
             mapping: { Body: 'text/markdown' },
