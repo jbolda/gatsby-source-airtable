@@ -44,6 +44,37 @@ exports.sourceNodes = async (
       view: view
     });
 
+    // confirm that the user is using the clean keys
+    // if they are not, warn them and change it for them
+    // we can settle the API on clean keys and not have a breaking
+    // change until the next major version when we remove this
+    const cleanMapping = !tableOptions.mapping ? null : Object.keys(tableOptions.mapping).reduce((cleaned, key) => {
+      let useKey = cleanKey(key)
+      if (useKey !== key) console.warn(`
+        Field names within graphql cannot have spaces. We do not want you to change your column names
+        within Airtable, but in "Gatsby-land" you will need to always use the "cleaned" key.
+        On the ${tableOptions.tableName} base ${tableOptions.baseId} 'mapping', we modified the supplied key of
+        ${key} to instead be ${useKey}. Please use ${useKey} in all of your queries. Also, update your config
+        to use ${useKey} to make this warning go away. See https://github.com/jbolda/gatsby-source-airtable#column-names
+        for more information.
+      `)
+      cleaned[useKey] = tableOptions.mapping[key]
+      return cleaned
+    }, {})
+
+    const cleanLinks = !tableOptions.tableLinks ? null : tableOptions.tableLinks.map(key => {
+      let useKey = cleanKey(key)
+      if (useKey !== key) console.warn(`
+        Field names within graphql cannot have spaces. We do not want you to change your column names
+        within Airtable, but in "Gatsby-land" you will need to always use the "cleaned" key.
+        On the ${tableOptions.tableName} base ${tableOptions.baseId} 'tableLinks', we modified the supplied key of
+        ${key} to instead be ${useKey}. Please use ${useKey} in all of your queries. Also, update your config
+        to use ${useKey} to make this warning go away. See https://github.com/jbolda/gatsby-source-airtable#column-names
+        for more information.
+      `)
+      return useKey
+    })
+
     // query.all() returns a promise, pass an array for each table with
     // both our promise and the queryName and then map reduce at the
     // final promise resolution to get queryName onto each row
@@ -51,8 +82,9 @@ exports.sourceNodes = async (
       Promise.all([
         query.all(),
         tableOptions.queryName,
-        tableOptions.mapping,
-        tableOptions.tableLinks
+        tableOptions.defaultValues || {},
+        cleanMapping,
+        cleanLinks
       ])
     );
   });
@@ -66,8 +98,9 @@ exports.sourceNodes = async (
         return accumulator.concat(
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
-            row.mapping = currentValue[2]; // mapping from tableOptions above
-            row.tableLinks = currentValue[3]; // tableLinks from tableOptions above
+            row.defaultValues = currentValue[2]; // mapping from tableOptions above
+            row.mapping = currentValue[3]; // mapping from tableOptions above
+            row.tableLinks = currentValue[4]; // tableLinks from tableOptions above
             return row;
           })
         );
@@ -86,14 +119,19 @@ exports.sourceNodes = async (
     }
   });
 
-  const defaultValues = tableOptions.defaultValues || {};
   let childNodes = allRows.map(async row => {
+    // don't love mutating the row here, but
+    // not ready to refactor yet to clean this up
+    // (happy to take a PR!)
+    row.fields = {
+      ...row.defaultValues,
+      ...row.fields,
+    }
     let processedData = await processData(row, {
       createNodeId,
       createNode,
       store,
-      cache,
-      defaultValues
+      cache
     });
 
     const node = {
@@ -131,43 +169,51 @@ exports.sourceNodes = async (
 
 const processData = async (
   row,
-  { createNodeId, createNode, store, cache, defaultValues }
+  { createNodeId, createNode, store, cache }
 ) => {
-  let data = {
-    ...defaultValues,
-    ...row.fields
-  };
+  let data = row.fields;
   let tableLinks = row.tableLinks;
-
   let fieldKeys = Object.keys(data);
   let processedData = {};
   let childNodes = [];
 
   await fieldKeys.forEach(key => {
+    // once in "Gatsby-land" we want to use the cleanKey
+    // consistently everywhere including in configs
+    // this key that we clean comes from Airtable
+    // at this point, all user option keys should be clean
+    const cleanedKey = cleanKey(key)
+
     let useKey;
     // deals with airtable linked fields,
     // these will be airtable IDs
-    if (tableLinks && tableLinks.includes(key)) {
-      useKey = `${cleanKey(key)}___NODE`;
+    if (tableLinks && tableLinks.includes(cleanedKey)) {
+      useKey = `${cleanedKey}___NODE`;
+
+      // `data` is direct from Airtable so we don't use
+      // the cleanKey here
       processedData[useKey] = data[key].map(id =>
         createNodeId(`Airtable_${id}`)
       );
+
+    } else if (row.mapping && row.mapping[cleanedKey]) {
       // A child node comes from the mapping, where we want to
       // define a separate node in gatsby that is available
       // for transforming. This will let other plugins pick
       // up on that node to add nodes.
+      // row contains `data` which is direct from Airtable
+      // so we pass down the raw instead of the cleanKey here
+      let checkedChildNode = checkChildNode(key, row, processedData, {
+        createNodeId,
+        createNode,
+        store,
+        cache
+      });
+      childNodes.push(checkedChildNode);
     } else {
-      if (row.mapping && row.mapping[key]) {
-        let checkedChildNode = checkChildNode(key, row, processedData, {
-          createNodeId,
-          createNode,
-          store,
-          cache
-        });
-        childNodes.push(checkedChildNode);
-      } else {
-        processedData[cleanKey(key)] = data[key];
-      }
+      // `data` is direct from Airtable so we don't use
+      // the cleanKey here
+      processedData[cleanedKey] = data[key];
     }
   });
 
@@ -212,10 +258,13 @@ const localFileCheck = async (
 ) => {
   let data = row.fields;
   let mapping = row.mapping;
-  if (mapping[key] === `fileNode`) {
+  let cleanedKey = cleanKey(key);
+  if (mapping[cleanedKey] === `fileNode`) {
     try {
       let fileNodes = [];
       // where data[key] is the array of attachments
+      // `data` is direct from Airtable so we don't use
+      // the cleanKey here
       data[key].forEach(attachment => {
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
