@@ -155,14 +155,14 @@ exports.sourceNodes = async (
     return processedData.childNodes;
   });
 
-  let flattenedChildNodes = Promise.all(childNodes).then(nodes =>
+  let flattenedChildNodes = await Promise.all(childNodes).then(nodes =>
     nodes.reduce(
       (accumulator, currentValue) => accumulator.concat(currentValue),
       []
     )
   );
 
-  return flattenedChildNodes.then(nodes => {
+  return Promise.all(flattenedChildNodes).then(nodes => {
     nodes.forEach(node => createNode(node));
   });
 };
