@@ -162,7 +162,7 @@ exports.sourceNodes = async (
     )
   );
 
-  return Promise.all(flattenedChildNodes).then(nodes => {
+  return flattenedChildNodes.then(nodes => {
     nodes.forEach(node => createNode(node));
   });
 };
