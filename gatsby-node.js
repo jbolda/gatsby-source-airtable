@@ -277,7 +277,8 @@ const localFileCheck = async (
       });
       // Adds a field `localFile` to the node
       // ___NODE tells Gatsby that this field will link to another nodes
-      let localFiles = await Promise.all(fileNodes).map(
+      const resolvedFileNodes = await Promise.all(fileNodes);
+      const localFiles = resolvedFileNodes.map(
         attachmentNode => attachmentNode.id
       );
       return localFiles;
