@@ -155,7 +155,7 @@ exports.sourceNodes = async (
     return processedData.childNodes;
   });
 
-  let flattenedChildNodes = Promise.all(childNodes).then(nodes =>
+  let flattenedChildNodes = await Promise.all(childNodes).then(nodes =>
     nodes.reduce(
       (accumulator, currentValue) => accumulator.concat(currentValue),
       []
@@ -277,7 +277,8 @@ const localFileCheck = async (
       });
       // Adds a field `localFile` to the node
       // ___NODE tells Gatsby that this field will link to another nodes
-      let localFiles = await Promise.all(fileNodes).map(
+      const resolvedFileNodes = await Promise.all(fileNodes);
+      const localFiles = resolvedFileNodes.map(
         attachmentNode => attachmentNode.id
       );
       return localFiles;
