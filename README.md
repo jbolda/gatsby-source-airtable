@@ -128,7 +128,9 @@ Keys can be found in Airtable by clicking `Help > API Documentation`.
 
 The API key can be specified in `gatsby-config.js` as noted in the previous section-- **this exposes your key to anyone viewing your repository and is not recommended. You should inject your API key as recommended below to prevent it from being committed to source control**.
 
-We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). This plugin looks for a config variable, `apiKey` defined in `gatsby-config.js`:
+We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). This plugin looks for an environment variable called `GATSBY_AIRTABLE_API_KEY` and will use it prior to resorting to the `apiKey` defined in `gatsby-config.js`. You may also specify it in your command line such as `GATSBY_AIRTABLE_API_KEY=XXXXXX gatsby develop`. This method takes advantage of some syntactic sugar courtesy of Gatsby, which automatically makes environment variables prefaced with GATSBY_ available - but any references to environment variables like this that are rendered client-side will **automatically** expose your API key within the browser.
+
+To be safe, you can also setup your API key via a config variable, `apiKey` defined in `gatsby-config.js`. This is the recommended way to inject your API key.
 
 ```javascript
 // In gatsby-config.js
@@ -136,6 +138,7 @@ plugins: [
   {
     resolve: `gatsby-source-airtable`,
     options: {
+      //not prefaced with "GATSBY_", will not automatically be included client-side unless you explicitly expose it
       apiKey: process.env.AIRTABLE_API_KEY
       //...etc
     }

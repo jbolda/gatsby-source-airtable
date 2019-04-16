@@ -12,9 +12,9 @@ exports.sourceNodes = async (
   try {
     // hoist api so we can use in scope outside of this block
     if (!apiKey && process.env.GATSBY_AIRTABLE_API_KEY) {
-      console.warn("\nValue of GATSBY_AIRTABLE_API_KEY must now be explicitly set in gatsby-config.js, please see Readme!")
+      console.warn("\nImplicit setting of GATSBY_AIRTABLE_API_KEY as apiKey will be deprecated in future release, apiKey should be set in gatsby-config.js, please see Readme!")
     }
-    var api = await new Airtable({ apiKey: apiKey });
+    var api = await new Airtable({ apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey });
   } catch (e) {
     // airtable uses `assert` which doesn't exit the process,
     //  but rather just makes gatsby hang. Warn, don't create any
