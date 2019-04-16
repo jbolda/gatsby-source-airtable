@@ -126,8 +126,52 @@ Within graphql (the language you query information from and that this plugin put
 
 Keys can be found in Airtable by clicking `Help > API Documentation`.
 
-The API key can be specified in `gatsby-config.js` as noted in the previous section-- **this exposes your key to anyone viewing your repository and is not recommended**.
+The API key can be specified in `gatsby-config.js` as noted in the previous section-- **this exposes your key to anyone viewing your repository and is not recommended. You should inject your API key as recommended below to prevent it from being committed to source control**.
 
-Alternatively, you may specify your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). This plugin looks for an environment variable called `GATSBY_AIRTABLE_API_KEY` and will use it prior to resorting to the `apiKey` defined in `gatsby-config.js`. You may also specify it in your command line such as `GATSBY_AIRTABLE_API_KEY=XXXXXX gatsby develop`.
+We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). This plugin looks for a config variable, `apiKey` defined in `gatsby-config.js`:
+
+```javascript
+// In gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-source-airtable`,
+    options: {
+      apiKey: process.env.AIRTABLE_API_KEY
+      //...etc
+    }
+  }
+]
+```
+
+You can either use a node tool like "dotenv" to load secrets like your Airtable API key from a .env file, or you can specify it in your command line such as `AIRTABLE_API_KEY=XXXXXX gatsby develop`.
 
 If you add or change your API key in an environment variable at the system level, you may need to reload your code editor / IDE for that variable to reload.
+
+### Columns with null values
+
+If you want to perform conditional logic based on data that may or may not be present in Airtable, but you do not yet have tabular data for the "may" case, you can update the gatsby-source-airtable section of `gatsby-config.js` to include sensible defaults for those fields
+so that they will be returned via your graphql calls:
+
+```javascript
+// In gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-source-airtable`,
+    options: {
+      apiKey: process.env.AIRTABLE_API_KEY,
+      tables: [
+        {
+          baseId: process.env.AIRTABLE_BASE,
+          tableName: process.env.AIRTABLE_TABLE_NAME,
+          defaultValues: {
+            //currently does not accept null / undefined. use empty string instead
+            //and perform your conditional logic on name_of_field.length > 0 ? condition_1 : condition_2
+            NAME_OF_FIELD_THAT_WILL_OTHERWISE_NOT_BE_RETURNED_IF_ALL_VALUES_ARE_BLANK: ""
+            //... etc
+          }
+        }
+      ]
+    }
+  }
+];
+```
