@@ -119,7 +119,7 @@ exports.sourceNodes = async (
     }
   });
 
-  let childNodes = allRows.map(async row => {
+  return Promise.map(allRows, async row => {
     // don't love mutating the row here, but
     // not ready to refactor yet to clean this up
     // (happy to take a PR!)
@@ -152,19 +152,11 @@ exports.sourceNodes = async (
     };
 
     createNode(node);
-    return processedData.childNodes;
-  });
 
-  let flattenedChildNodes = await Promise.all(childNodes).then(nodes =>
-    nodes.reduce(
-      (accumulator, currentValue) => accumulator.concat(currentValue),
-      []
-    )
-  );
-
-  return Promise.all(flattenedChildNodes).then(nodes => {
-    nodes.forEach(node => createNode(node));
-  });
+    await Promise.all(processedData.childNodes).then(nodes => {
+      nodes.forEach(node => createNode(node));
+    });
+  }, { concurrency: 100 });
 };
 
 const processData = async (
