@@ -22,7 +22,7 @@ module.exports = {
       options: {
         tables: [
           {
-            apiKey: process.env.GATSBY_AIRTABLE_API_KEY, //(set via environment variable for this example)
+            apiKey: process.env.AIRTABLE_API_KEY, //(set via environment variable for this example)
             baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Recipes`,
             tableView: `List`,
