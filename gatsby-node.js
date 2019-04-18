@@ -1,10 +1,11 @@
 const Airtable = require("airtable");
 const crypto = require(`crypto`);
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
+const { map } = require('bluebird');
 
 exports.sourceNodes = async (
   { actions, createNodeId, store, cache },
-  { apiKey, tables }
+  { apiKey, tables, concurrency }
 ) => {
   // tables contain baseId, tableName, tableView, queryName, mapping, tableLinks
   const { createNode, setPluginStatus } = actions;
@@ -28,6 +29,15 @@ exports.sourceNodes = async (
       "\ntables is not defined for gatsby-source-airtable in gatsby-config.js"
     );
     return;
+  }
+
+  if (concurrency === undefined) {
+    // There is not documentation from Airtable regarding what the rate limit
+    // against their attachment servers. Their rate limit for the API server is 
+    // 5 requests/sec, so the default limit of 5 concurrent requests for remote files 
+    // has been selected in that spirit. A higher value can be set as a plugin
+    // option in gatsby-config.js
+    concurrency = 5;
   }
 
   console.time(`\nfetch all Airtable rows from ${tables.length} tables`);
@@ -119,7 +129,10 @@ exports.sourceNodes = async (
     }
   });
 
-  return Promise.map(allRows, async row => {
+  // Use the map function for arrays of promises imported from Bluebird.
+  // Using the concurrency option protects against being blocked from Airtable's
+  // file attachment servers for large numbers of requests.
+  return map(allRows, async row => {
     // don't love mutating the row here, but
     // not ready to refactor yet to clean this up
     // (happy to take a PR!)
@@ -156,7 +169,7 @@ exports.sourceNodes = async (
     await Promise.all(processedData.childNodes).then(nodes => {
       nodes.forEach(node => createNode(node));
     });
-  }, { concurrency: 100 });
+  }, { concurrency: concurrency });
 };
 
 const processData = async (
