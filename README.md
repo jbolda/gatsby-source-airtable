@@ -126,9 +126,9 @@ Within graphql (the language you query information from and that this plugin put
 
 Keys can be found in Airtable by clicking `Help > API Documentation`.
 
-The API key can be specified in `gatsby-config.js` as noted in the previous section-- **this exposes your key to anyone viewing your repository and is not recommended. You should inject your API key as recommended below to prevent it from being committed to source control**.
+The API key can be hard coded directly in `gatsby-config.js` as noted in the previous section-- **this exposes your key to anyone viewing your repository and is not recommended. You should inject your API key as recommended below to prevent it from being committed to source control**.
 
-We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). This plugin looks for an environment variable called `GATSBY_AIRTABLE_API_KEY` and will use it prior to resorting to the `apiKey` defined in `gatsby-config.js`. You may also specify it in your command line such as `GATSBY_AIRTABLE_API_KEY=XXXXXX gatsby develop`. This method takes advantage of some syntactic sugar courtesy of Gatsby, which automatically makes environment variables prefaced with GATSBY_ available - but any references to environment variables like this that are rendered client-side will **automatically** expose your API key within the browser.
+We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). You may also specify it in your command line such as `AIRTABLE_API_KEY=XXXXXX gatsby develop`. Note: If you use an environment variable prepended with `GATSBY_`, it takes advantage of some syntactic sugar courtesy of Gatsby, which automatically makes it available - but any references to environment variables like this that are rendered client-side will **automatically** expose your API key within the browser. To avoid accidentally exposing it, we recommend *not* prepending it with `GATSBY_`.
 
 To be safe, you can also setup your API key via a config variable, `apiKey` defined in `gatsby-config.js`. This is the recommended way to inject your API key.
 
@@ -150,7 +150,7 @@ You can either use a node tool like "dotenv" to load secrets like your Airtable 
 
 If you add or change your API key in an environment variable at the system level, you may need to reload your code editor / IDE for that variable to reload.
 
-### Columns with null values
+### Columns without any values (yet)
 
 If you want to perform conditional logic based on data that may or may not be present in Airtable, but you do not yet have tabular data for the "may" case, you can update the gatsby-source-airtable section of `gatsby-config.js` to include sensible defaults for those fields
 so that they will be returned via your graphql calls:
