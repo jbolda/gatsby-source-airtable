@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-airtable",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Gatsby Airtable Source with Linked Nodes, Multiple Tables and File Nodes.",
   "main": "index.js",
   "files": [
