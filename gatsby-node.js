@@ -33,10 +33,9 @@ exports.sourceNodes = async (
   }
 
   if (concurrency === undefined) {
-    // There is not documentation from Airtable regarding what the rate limit
-    // against their attachment servers. Their rate limit for the API server is 
-    // 5 requests/sec, so the default limit of 5 concurrent requests for remote files 
-    // has been selected in that spirit. A higher value can be set as a plugin
+    // Airtable hasn't documented what the rate limit against their attachment servers is. 
+    // They do document that API calls are limited to 5 requests/sec, so the default limit of 5 concurrent 
+    // requests for remote files has been selected in that spirit. A higher value can be set as a plugin 
     // option in gatsby-config.js
     concurrency = 5;
   }
