@@ -54,6 +54,8 @@ exports.sourceNodes = async (
       view: view
     });
 
+    let fieldPrefix = tableOptions.fieldPrefix || "";
+
     // confirm that the user is using the clean keys
     // if they are not, warn them and change it for them
     // we can settle the API on clean keys and not have a breaking
@@ -73,7 +75,9 @@ exports.sourceNodes = async (
     }, {})
 
     const cleanLinks = !tableOptions.tableLinks ? null : tableOptions.tableLinks.map(key => {
-      let useKey = cleanKey(key)
+      let useKey = (tableOptions.fieldPrefix) ?
+        cleanKey(tableOptions.fieldPrefix) + cleanKey(key) :
+        cleanKey(key);
       if (useKey !== key) console.warn(`
         Field names within graphql cannot have spaces. We do not want you to change your column names
         within Airtable, but in "Gatsby-land" you will need to always use the "cleaned" key.
@@ -94,7 +98,8 @@ exports.sourceNodes = async (
         tableOptions.queryName,
         tableOptions.defaultValues || {},
         cleanMapping,
-        cleanLinks
+        cleanLinks,
+        fieldPrefix
       ])
     );
   });
@@ -111,6 +116,7 @@ exports.sourceNodes = async (
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
             row.mapping = currentValue[3]; // mapping from tableOptions above
             row.tableLinks = currentValue[4]; // tableLinks from tableOptions above
+            row.fieldPrefix = currentValue[5]; // fieldPrefix from tableOptions above
             return row;
           })
         );
@@ -153,6 +159,7 @@ exports.sourceNodes = async (
       table: row._table.name,
       recordId: row.id,
       queryName: row.queryName,
+      fieldPrefix: row.fieldPrefix,
       children: [],
       internal: {
         type: `Airtable`,
@@ -181,13 +188,14 @@ const processData = async (
   let fieldKeys = Object.keys(data);
   let processedData = {};
   let childNodes = [];
+  const cleanedKeyPrefix = (row.fieldPrefix) ? cleanKey(row.fieldPrefix) : "";
 
   await fieldKeys.forEach(key => {
     // once in "Gatsby-land" we want to use the cleanKey
     // consistently everywhere including in configs
     // this key that we clean comes from Airtable
     // at this point, all user option keys should be clean
-    const cleanedKey = cleanKey(key)
+    const cleanedKey = cleanedKeyPrefix + cleanKey(key);
 
     let useKey;
     // deals with airtable linked fields,
