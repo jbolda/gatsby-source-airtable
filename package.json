@@ -20,7 +20,8 @@
   ],
   "dependencies": {
     "airtable": "^0.5.6",
-    "bluebird": "^3.5.4"
+    "bluebird": "^3.5.4",
+    "gatsby-plugin-json-output": "^1.1.0"
   },
   "peerDependencies": {
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
