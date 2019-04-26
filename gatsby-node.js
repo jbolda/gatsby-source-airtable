@@ -93,6 +93,7 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.defaultValues || {},
+        tableOptions.createSeparateNodeType || false,
         cleanMapping,
         cleanLinks
       ])
@@ -109,8 +110,9 @@ exports.sourceNodes = async (
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
-            row.mapping = currentValue[3]; // mapping from tableOptions above
-            row.tableLinks = currentValue[4]; // tableLinks from tableOptions above
+            row.separateNodeType = currentValue[3]; // create separate node type from tableOptions above
+            row.mapping = currentValue[4]; // mapping from tableOptions above
+            row.tableLinks = currentValue[5]; // tableLinks from tableOptions above
             return row;
           })
         );
@@ -146,6 +148,10 @@ exports.sourceNodes = async (
       store,
       cache
     });
+    
+    const nodeType = (row.separateNodeType) ?
+      `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}` : 
+      `Airtable`;
 
     const node = {
       id: createNodeId(`Airtable_${row.id}`),
@@ -155,7 +161,7 @@ exports.sourceNodes = async (
       queryName: row.queryName,
       children: [],
       internal: {
-        type: `Airtable`,
+        type: nodeType,
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
