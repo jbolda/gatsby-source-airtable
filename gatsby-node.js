@@ -93,7 +93,9 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.defaultValues || {},
-        tableOptions.createSeparateNodeType || false,
+        (typeof tableOptions.createSeparateNodeType !== 'undefined') ? 
+          tableOptions.createSeparateNodeType :
+          false,
         cleanMapping,
         cleanLinks
       ])
