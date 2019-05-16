@@ -33,8 +33,7 @@ plugins: [
           baseId: `YOUR_AIRTABLE_BASE_ID`,
           tableName: `YOUR_TABLE_NAME`,
           tableView: `YOUR_TABLE_VIEW_NAME`, // optional
-          queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
-          createSeparateNodeType: true, // optional - makes all records in this table a separate node type, based on your tableView, or if not present, tableName, e.g. a table called "Fruit" would become "allAirtableFruit"
+          queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optionall default is false - makes all records in this table a separate node type, based on your tableView, or if not present, tableName, e.g. a table called "Fruit" would become "allAirtableFruit". Useful when pulling many airtables with similar structures or fields that have different types. See https://github.com/jbolda/gatsby-source-airtable/pull/52.
           mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
           tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
         },
