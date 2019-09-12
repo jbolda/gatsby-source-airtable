@@ -1044,12 +1044,12 @@ after@0.8.2:
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
   integrity sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
 
-airtable@^0.5.6:
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.5.8.tgz#85fafddf8492b6d6071bc0097c57898e2e6466b8"
-  integrity sha512-ftIqOYH8Abg5+d/NleTBnIqSdc8tAS2czRF7Z1sre1rpGsQKTKC50MsiEPqKig/H7m7nKqxbEtrPzSsneAuZRQ==
+airtable@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.7.1.tgz#1ebad9c9ed332d9348fb3ec3ef9c2d8be452b4f4"
+  integrity sha512-VV/8LKyDOtWca2YFMDJWDbPNPkhQPij6+H8SwoLTDEAR/02mTcGI1fSiwC5eW3xfy5Uzn6gLlfTGne7YqxxUkQ==
   dependencies:
-    lodash "4.17.10"
+    lodash "4.17.14"
     request "2.88.0"
     xhr "2.3.3"
 
@@ -1606,6 +1606,11 @@ bluebird@^3.5.0, bluebird@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
   integrity sha512-/qKPUQlaW1OyR51WeCPBvRnAlnZFUJkCSG5HzGnuIqhgyJtF+T94lFnn33eiazjRm2LAHVy2guNnaq48X9SJuw==
+
+bluebird@^3.5.4:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
+  integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -4193,12 +4198,13 @@ gatsby-react-router-scroll@^2.0.4:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-airtable@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.0.4.tgz#625242bb43997cc6f7ca2e18df46b996a6f06c73"
-  integrity sha512-zi6VC7GWQx4ZrVBHCFJsyGn90FwX3tmwYCDoszhiQspu/abFQuFCS51HBhkGx/z33FBE52dAs6aXi1KdMCwbYg==
+gatsby-source-airtable@2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.0.9.tgz#244312165cb1aebc6c27e8e01181b33f98eeee28"
+  integrity sha512-IRfzCDwanxID5+zTFci+dtScDtqtO9H/jcUpD31kk9bSPQQtiUo1WHjLr1kLUCBzAs/H8coWz64qQSkVSPKwcg==
   dependencies:
-    airtable "^0.5.6"
+    airtable "^0.7.1"
+    bluebird "^3.5.4"
 
 gatsby-source-filesystem@2.0.20:
   version "2.0.20"
@@ -6067,10 +6073,10 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.10:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
-  integrity sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg==
+lodash@4.17.14:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
 
 lodash@^4.11.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.11"
