@@ -1,10 +1,10 @@
 {
   "name": "markdown-docs-example",
   "dependencies": {
-    "gatsby": "2.17.5",
+    "gatsby": "2.17.6",
     "gatsby-source-airtable": "2.0.9",
-    "gatsby-source-filesystem": "2.1.34",
-    "gatsby-transformer-remark": "2.6.31",
+    "gatsby-source-filesystem": "2.1.35",
+    "gatsby-transformer-remark": "2.6.32",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "remark-html": "10.0.0"
