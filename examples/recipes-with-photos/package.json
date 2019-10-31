@@ -10,7 +10,7 @@
     "gatsby-link": "2.2.22",
     "gatsby-plugin-react-helmet": "3.1.13",
     "gatsby-plugin-sharp": "2.2.36",
-    "gatsby-source-airtable": "2.0.9",
+    "gatsby-source-airtable": "2.0.10",
     "gatsby-source-filesystem": "2.1.35",
     "gatsby-transformer-sharp": "2.3.2",
     "react": "16.11.0",
