@@ -94,6 +94,7 @@ exports.sourceNodes = async (
         tableOptions.queryName,
         tableOptions.defaultValues || {},
         cleanMapping,
+        tableOptions.separateMapTypes,
         cleanLinks
       ])
     );
@@ -110,7 +111,8 @@ exports.sourceNodes = async (
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
             row.mapping = currentValue[3]; // mapping from tableOptions above
-            row.tableLinks = currentValue[4]; // tableLinks from tableOptions above
+            row.separateMapTypes = currentValue[4]; // separateMapTypes from tableOptions above
+            row.tableLinks = currentValue[5]; // tableLinks from tableOptions above
             return row;
           })
         );
@@ -306,7 +308,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       raw: raw,
       localFiles___NODE: localFiles,
       internal: {
-        type: `AirtableField`,
+        type: `AirtableField${!row.separateMapTypes ? "" : cleanType(mapping)}`,
         mediaType: mapping,
         content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -322,7 +324,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       children: [],
       raw: raw,
       internal: {
-        type: `AirtableField`,
+        type: `AirtableField${!row.separateMapTypes ? "" : cleanType(mapping)}`,
         mediaType: mapping,
         content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -336,4 +338,8 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
 
 const cleanKey = (key, data) => {
   return key.replace(/ /g, "_");
+};
+
+const cleanType = (key, data) => {
+  return key.replace(/[ /+]/g, "");
 };
