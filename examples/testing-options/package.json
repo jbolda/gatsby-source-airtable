@@ -1,7 +1,7 @@
 {
   "name": "testing-options",
   "dependencies": {
-    "gatsby": "2.17.12",
+    "gatsby": "2.17.13",
     "gatsby-source-airtable": "2.0.10",
     "gatsby-source-filesystem": "2.1.36",
     "gatsby-transformer-remark": "2.6.34",
