@@ -4937,10 +4937,10 @@ gatsby-react-router-scroll@^2.1.16:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-source-airtable@2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.0.10.tgz#243a0c43eebb7b4974f84f7fd2d4337411c646bf"
-  integrity sha512-tXn7ZoOSTeYwrRi9QGo6JAST2bZegBbRoO3NUPzluWW/QrdgrjfxV+QwFY5A7iGny5ybpRuTDOJTglHsle2OXg==
+gatsby-source-airtable@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.0.12.tgz#e08926d3015a90a04d6254a41614031e63263aa3"
+  integrity sha512-WQR5Jwk6sGSE6zebU3XPh+aX6kukq+f3surW2ceCq4HfSQJWrFDdooGuXPGm77Lq0qmINcuYT/1jBR2hC0rZmw==
   dependencies:
     airtable "^0.7.2"
     bluebird "^3.5.4"
