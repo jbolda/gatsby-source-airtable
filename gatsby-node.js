@@ -193,7 +193,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
   let processedData = {};
   let childNodes = [];
 
-  await fieldKeys.forEach(key => {
+  fieldKeys.forEach(key => {
     // once in "Gatsby-land" we want to use the cleanKey
     // consistently everywhere including in configs
     // this key that we clean comes from Airtable
@@ -232,6 +232,8 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
     }
   });
 
+  // wait for all of the children to finish
+  await Promise.all(childNodes);
   // where childNodes returns an array of objects
   return { data: processedData, childNodes: childNodes };
 };
