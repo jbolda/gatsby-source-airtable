@@ -5,11 +5,11 @@
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "dependencies": {
-    "gatsby": "2.17.17",
+    "gatsby": "2.18.3",
     "gatsby-image": "2.2.33",
     "gatsby-link": "2.2.24",
     "gatsby-plugin-react-helmet": "3.1.15",
-    "gatsby-plugin-sharp": "2.3.2",
+    "gatsby-plugin-sharp": "2.3.3",
     "gatsby-source-airtable": "2.0.10",
     "gatsby-source-filesystem": "2.1.38",
     "gatsby-transformer-sharp": "2.3.5",
