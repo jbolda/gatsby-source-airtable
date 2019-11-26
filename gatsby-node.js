@@ -103,8 +103,13 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.defaultValues || {},
+        (typeof tableOptions.createSeparateNodeType !== 'undefined') ? 
+          tableOptions.createSeparateNodeType :
+          false,
+        (typeof tableOptions.separateMapTypes !== 'undefined') ? 
+          tableOptions.separateMapTypes :
+          false,
         cleanMapping,
-        tableOptions.separateMapTypes,
         cleanLinks
       ])
     );
@@ -120,9 +125,10 @@ exports.sourceNodes = async (
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
-            row.mapping = currentValue[3]; // mapping from tableOptions above
-            row.separateMapTypes = currentValue[4]; // separateMapTypes from tableOptions above
-            row.tableLinks = currentValue[5]; // tableLinks from tableOptions above
+            row.separateMapTypes = currentValue[3]; // separateMapTypes from tableOptions above
+            row.separateMapTypes = currentValue[4]; // create separate node type from tableOptions above
+            row.mapping = currentValue[5]; // mapping from tableOptions above
+            row.tableLinks = currentValue[6]; // tableLinks from tableOptions above
             return row;
           })
         );
@@ -312,6 +318,9 @@ const localFileCheck = async (
 };
 
 const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
+  const nodeType = (row.separateNodeType) ?
+      `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}` : 
+      `Airtable`;
   if (localFiles) {
     return {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
