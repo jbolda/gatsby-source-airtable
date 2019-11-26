@@ -20,9 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
+        apiKey: process.env.AIRTABLE_API_KEY, //(set via environment variable for this example)
         tables: [
           {
-            apiKey: process.env.AIRTABLE_API_KEY, //(set via environment variable for this example)
             baseId: `appM8D8wmSJX9WJDE`,
             tableName: `Recipes`,
             tableView: `List`,

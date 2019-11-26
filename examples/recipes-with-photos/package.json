@@ -5,17 +5,17 @@
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "dependencies": {
-    "gatsby": "latest",
-    "gatsby-image": "latest",
-    "gatsby-link": "latest",
-    "gatsby-plugin-react-helmet": "latest",
-    "gatsby-plugin-sharp": "latest",
-    "gatsby-source-airtable": "latest",
-    "gatsby-source-filesystem": "latest",
-    "gatsby-transformer-sharp": "latest",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0"
+    "gatsby": "2.18.3",
+    "gatsby-image": "2.2.33",
+    "gatsby-link": "2.2.24",
+    "gatsby-plugin-react-helmet": "3.1.15",
+    "gatsby-plugin-sharp": "2.3.3",
+    "gatsby-source-airtable": "2.0.12",
+    "gatsby-source-filesystem": "2.1.38",
+    "gatsby-transformer-sharp": "2.3.5",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-helmet": "5.2.1"
   },
   "keywords": [
     "gatsby"
@@ -30,6 +30,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "prettier": "1.19.1"
   }
 }
