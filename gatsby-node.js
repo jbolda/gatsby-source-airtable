@@ -106,6 +106,9 @@ exports.sourceNodes = async (
         (typeof tableOptions.createSeparateNodeType !== 'undefined') ? 
           tableOptions.createSeparateNodeType :
           false,
+        (typeof tableOptions.separateMapTypes !== 'undefined') ? 
+          tableOptions.separateMapTypes :
+          false,
         cleanMapping,
         cleanLinks
       ])
@@ -122,9 +125,10 @@ exports.sourceNodes = async (
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
-            row.separateNodeType = currentValue[3]; // create separate node type from tableOptions above
-            row.mapping = currentValue[4]; // mapping from tableOptions above
-            row.tableLinks = currentValue[5]; // tableLinks from tableOptions above
+            row.separateMapTypes = currentValue[3]; // separateMapTypes from tableOptions above
+            row.separateMapTypes = currentValue[4]; // create separate node type from tableOptions above
+            row.mapping = currentValue[5]; // mapping from tableOptions above
+            row.tableLinks = currentValue[6]; // tableLinks from tableOptions above
             return row;
           })
         );
@@ -325,7 +329,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       raw: raw,
       localFiles___NODE: localFiles,
       internal: {
-        type: nodeType,
+        type: `AirtableField${!row.separateMapTypes ? "" : cleanType(mapping)}`,
         mediaType: mapping,
         content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -341,7 +345,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       children: [],
       raw: raw,
       internal: {
-        type: nodeType,
+        type: `AirtableField${!row.separateMapTypes ? "" : cleanType(mapping)}`,
         mediaType: mapping,
         content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -355,4 +359,8 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
 
 const cleanKey = (key, data) => {
   return key.replace(/ /g, "_");
+};
+
+const cleanType = (key, data) => {
+  return key.replace(/[ /+]/g, "");
 };
