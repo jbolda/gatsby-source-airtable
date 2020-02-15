@@ -37,7 +37,7 @@ plugins: [
           mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
           tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
           createSeparateNodeType: false, // boolean, default is false, see the documentation on naming conflicts for more information
-          separateMapTypes: false, // boolean, default is false, see the documentation on using markdown and attachments for more information
+          separateMapType: false, // boolean, default is false, see the documentation on using markdown and attachments for more information
         },
         {
           baseId: `YOUR_AIRTABLE_BASE_ID`,
@@ -110,7 +110,7 @@ For an example of a markdown-and-airtable-driven site using `gatsby-transformer-
 
 If you are using the `Attachment` type field in Airtable, you may specify a column name with `fileNode` and the plugin will bring in these files. Using this method, it will create "nodes" for each of the files and expose this to all of the transformer plugins. A good use case for this would be attaching images in Airtable, and being able to make these available for use with the `sharp` plugins and `gatsby-image`. Specifying a `fileNode` does require a peer dependency of `gatsby-source-filesystem` otherwise it will fall back as a non-mapped field. The locally available files and any ecosystem connections will be available on the node as `localFiles`.
 
-If you are specifying more than one type of `mapping`, you may potentially run into issues with data types clashing and throwing errors. An additional option that you may specify is `separateMapTypes` which will create a gatsby node type for each type of data. This should prevent issues with your data types clashing.
+If you are specifying more than one type of `mapping`, you may potentially run into issues with data types clashing and throwing errors. An additional option that you may specify is `separateMapType` which will create a gatsby node type for each type of data. This should prevent issues with your data types clashing.
 
 When using the Attachment type field, this plugin governs requests to download the associated files from Airtable to 5 concurrent requests to prevent excessive requests on Airtable's servers - which can result in refused / hanging connections. You can adjust this limit with the concurrency option in your gatsby-config.js file. Set the option with an integer value for your desired limit on attempted concurrent requests. A value of 0 will allow requests to be made without any limit.
 
