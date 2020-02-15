@@ -125,7 +125,7 @@ exports.sourceNodes = async (
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
-            row.separateMapTypes = currentValue[3]; // separateMapTypes from tableOptions above
+            row.separateNodeType = currentValue[3]; // separateMapTypes from tableOptions above
             row.separateMapTypes = currentValue[4]; // create separate node type from tableOptions above
             row.mapping = currentValue[5]; // mapping from tableOptions above
             row.tableLinks = currentValue[6]; // tableLinks from tableOptions above
@@ -175,7 +175,9 @@ exports.sourceNodes = async (
         queryName: row.queryName,
         children: [],
         internal: {
-          type: `Airtable`,
+          type: `Airtable${
+            !row.separateNodeType ? "" : cleanType(row.queryName)
+          }`,
           contentDigest: crypto
             .createHash("md5")
             .update(JSON.stringify(row))

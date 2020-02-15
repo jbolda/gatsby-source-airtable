@@ -36,6 +36,8 @@ plugins: [
           queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optionall default is false - makes all records in this table a separate node type, based on your tableView, or if not present, tableName, e.g. a table called "Fruit" would become "allAirtableFruit". Useful when pulling many airtables with similar structures or fields that have different types. See https://github.com/jbolda/gatsby-source-airtable/pull/52.
           mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
           tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
+          createSeparateNodeType: false, // boolean, default is false, see the documentation on naming conflicts for more information
+          separateMapTypes: false, // boolean, default is false, see the documentation on using markdown and attachments for more information
         },
         {
           baseId: `YOUR_AIRTABLE_BASE_ID`,
@@ -108,6 +110,8 @@ For an example of a markdown-and-airtable-driven site using `gatsby-transformer-
 
 If you are using the `Attachment` type field in Airtable, you may specify a column name with `fileNode` and the plugin will bring in these files. Using this method, it will create "nodes" for each of the files and expose this to all of the transformer plugins. A good use case for this would be attaching images in Airtable, and being able to make these available for use with the `sharp` plugins and `gatsby-image`. Specifying a `fileNode` does require a peer dependency of `gatsby-source-filesystem` otherwise it will fall back as a non-mapped field. The locally available files and any ecosystem connections will be available on the node as `localFiles`.
 
+If you are specifying more than one type of `mapping`, you may potentially run into issues with data types clashing and throwing errors. An additional option that you may specify is `separateMapTypes` which will create a gatsby node type for each type of data. This should prevent issues with your data types clashing.
+
 When using the Attachment type field, this plugin governs requests to download the associated files from Airtable to 5 concurrent requests to prevent excessive requests on Airtable's servers - which can result in refused / hanging connections. You can adjust this limit with the concurrency option in your gatsby-config.js file. Set the option with an integer value for your desired limit on attempted concurrent requests. A value of 0 will allow requests to be made without any limit.
 
 ### The power of views
@@ -119,6 +123,8 @@ For example, if you are creating a blog or documentation site, specify a `publis
 ### Naming conflicts
 
 You may have a situation where you are including two separate bases, each with a table that has the exact same name. With the data structure of this repo, both bases would fall into allAirtable and you wouldn't be able to tell them apart when building graphQL queries. This is what the optional `queryName` setting is for-- simply to provide an alternate name for a table.
+
+If you would like to have the query names for tables be different from the default `allAirtable` or `airtable`, you may specify `createSeparateNodeType` as `true`.
 
 ### Column Names
 
