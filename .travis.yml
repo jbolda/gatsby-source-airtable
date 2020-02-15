@@ -12,8 +12,8 @@ jobs:
   include:
     - &test
       stage: test
-      name: Test on Node 8
-      node_js: '8'
+      name: Test on Node 12
+      node_js: '12'
       install:
         - yarn
       script:
@@ -22,9 +22,9 @@ jobs:
       name: Test on Node 10
       node_js: '10'
     - &examplephoto
-      name: Example on Node 8
+      name: Example on Node 12
       stage: "[example] remote image attachments"
-      node_js: '8'
+      node_js: '12'
       before_install:
         - cd examples/recipes-with-photos
       install:
@@ -37,9 +37,9 @@ jobs:
       name: Example on Node 10
       node_js: '10'
     - &examplemarkdown
-      name: Example on Node 8
+      name: Example on Node 12
       stage: "[example] markdown integration"
-      node_js: '8'
+      node_js: '12'
       before_install:
         - cd examples/markdown-docs
       install:
@@ -52,9 +52,9 @@ jobs:
       name: Example on Node 10
       node_js: '10'
     - &exampleoptions
-      name: Example on Node 8
+      name: Example on Node 12
       stage: "[example] testing plugin options"
-      node_js: '8'
+      node_js: '12'
       before_install:
         - cd examples/testing-options
       install:
