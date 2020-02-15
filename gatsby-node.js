@@ -103,12 +103,12 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.defaultValues || {},
-        (typeof tableOptions.createSeparateNodeType !== 'undefined') ? 
-          tableOptions.createSeparateNodeType :
-          false,
-        (typeof tableOptions.separateMapTypes !== 'undefined') ? 
-          tableOptions.separateMapTypes :
-          false,
+        typeof tableOptions.createSeparateNodeType !== "undefined"
+          ? tableOptions.createSeparateNodeType
+          : false,
+        typeof tableOptions.separateMapTypes !== "undefined"
+          ? tableOptions.separateMapTypes
+          : false,
         cleanMapping,
         cleanLinks
       ])
@@ -318,9 +318,9 @@ const localFileCheck = async (
 };
 
 const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
-  const nodeType = (row.separateNodeType) ?
-      `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}` : 
-      `Airtable`;
+  const nodeType = row.separateNodeType
+    ? `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}`
+    : `Airtable`;
   if (localFiles) {
     return {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
