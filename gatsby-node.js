@@ -103,12 +103,12 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.defaultValues || {},
-        (typeof tableOptions.createSeparateNodeType !== 'undefined') ? 
-          tableOptions.createSeparateNodeType :
-          false,
-        (typeof tableOptions.separateMapTypes !== 'undefined') ? 
-          tableOptions.separateMapTypes :
-          false,
+        typeof tableOptions.separateNodeType !== "undefined"
+          ? tableOptions.separateNodeType
+          : false,
+        typeof tableOptions.separateMapType !== "undefined"
+          ? tableOptions.separateMapType
+          : false,
         cleanMapping,
         cleanLinks
       ])
@@ -125,8 +125,8 @@ exports.sourceNodes = async (
           currentValue[0].map(row => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
-            row.separateMapTypes = currentValue[3]; // separateMapTypes from tableOptions above
-            row.separateMapTypes = currentValue[4]; // create separate node type from tableOptions above
+            row.separateNodeType = currentValue[3]; // separateMapType from tableOptions above
+            row.separateMapType = currentValue[4]; // create separate node type from tableOptions above
             row.mapping = currentValue[5]; // mapping from tableOptions above
             row.tableLinks = currentValue[6]; // tableLinks from tableOptions above
             return row;
@@ -167,6 +167,13 @@ exports.sourceNodes = async (
         cache
       });
 
+      if (row.separateNodeType && (!row.queryName || row.queryName === "")) {
+        console.warn(
+          `You have opted into separate node types, but not specified a queryName.
+          We use the queryName to suffix to node type. Without a queryName, it will act like separateNodeType is false.`
+        );
+      }
+
       const node = {
         id: createNodeId(`Airtable_${row.id}`),
         parent: null,
@@ -175,7 +182,9 @@ exports.sourceNodes = async (
         queryName: row.queryName,
         children: [],
         internal: {
-          type: `Airtable`,
+          type: `Airtable${
+            row.separateNodeType ? cleanType(row.queryName) : ""
+          }`,
           contentDigest: crypto
             .createHash("md5")
             .update(JSON.stringify(row))
@@ -318,9 +327,9 @@ const localFileCheck = async (
 };
 
 const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
-  const nodeType = (row.separateNodeType) ?
-      `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}` : 
-      `Airtable`;
+  const nodeType = row.separateNodeType
+    ? `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}`
+    : `Airtable`;
   if (localFiles) {
     return {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
@@ -329,7 +338,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       raw: raw,
       localFiles___NODE: localFiles,
       internal: {
-        type: `AirtableField${!row.separateMapTypes ? "" : cleanType(mapping)}`,
+        type: `AirtableField${row.separateMapType ? cleanType(mapping) : ""}`,
         mediaType: mapping,
         content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -345,7 +354,7 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
       children: [],
       raw: raw,
       internal: {
-        type: `AirtableField${!row.separateMapTypes ? "" : cleanType(mapping)}`,
+        type: `AirtableField${row.separateMapType ? cleanType(mapping) : ""}`,
         mediaType: mapping,
         content: typeof raw === "string" ? raw : JSON.stringify(raw),
         contentDigest: crypto
@@ -361,6 +370,6 @@ const cleanKey = (key, data) => {
   return key.replace(/ /g, "_");
 };
 
-const cleanType = (key, data) => {
-  return key.replace(/[ /+]/g, "");
+const cleanType = key => {
+  return !key ? "" : key.replace(/[ /+]/g, "");
 };
