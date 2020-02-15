@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
+  "author": "Jacob Bolda <me@jacobbolda.com>",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.5",
+    "@mdx-js/react": "^1.5.5",
+    "gatsby": "2.19.17",
+    "gatsby-image": "2.2.41",
+    "gatsby-link": "2.2.29",
+    "gatsby-plugin-mdx": "^1.0.73",
+    "gatsby-plugin-react-helmet": "3.1.22",
+    "gatsby-plugin-sharp": "2.4.5",
+    "gatsby-source-airtable": "2.0.12",
+    "gatsby-source-filesystem": "2.1.48",
+    "gatsby-transformer-sharp": "2.3.14",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-helmet": "5.2.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "dev:hard": "yarn gatsby clean && yarn develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lazy": "cp ../../gatsby-node.js ./node_modules/gatsby-source-airtable && yarn dev:hard"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
+  }
+}
