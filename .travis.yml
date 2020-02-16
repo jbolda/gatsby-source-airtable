@@ -36,6 +36,21 @@ jobs:
     - <<: *examplephoto
       name: Example on Node 10
       node_js: '10'
+    - &examplemultitype
+      name: Example on Node 12
+      stage: "[example] multi-type node with md and images"
+      node_js: '12'
+      before_install:
+        - cd examples/recipes-with-multi-type
+      install:
+        - yarn
+      before_script:
+        - cp -f ../../gatsby-node.js ./node_modules/gatsby-source-airtable
+      script:
+        - yarn build
+    - <<: *examplemultitype
+      name: Example on Node 10
+      node_js: '10'
     - &examplemarkdown
       name: Example on Node 12
       stage: "[example] markdown integration"
