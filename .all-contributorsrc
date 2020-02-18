@@ -107,6 +107,17 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "ethagnawl",
+      "name": "Pete Doherty",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/289949?v=4",
+      "profile": "https://peterdohertys.website/",
+      "contributions": [
+        "doc",
+        "code",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7
