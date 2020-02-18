@@ -1,0 +1,125 @@
+{
+  "projectName": "gatsby-source-airtable",
+  "projectOwner": "jbolda",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "jbolda",
+      "name": "Jacob Bolda",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2019387?v=4",
+      "profile": "http://www.jacobbolda.com",
+      "contributions": [
+        "code",
+        "doc",
+        "review",
+        "question",
+        "ideas",
+        "example",
+        "bug"
+      ]
+    },
+    {
+      "login": "brendanmc6",
+      "name": "Brendan McGill",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9867865?v=4",
+      "profile": "https://github.com/brendanmc6",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "bug"
+      ]
+    },
+    {
+      "login": "jamessimone",
+      "name": "James Simone",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16430727?v=4",
+      "profile": "https://www.jamessimone.net",
+      "contributions": [
+        "code",
+        "doc",
+        "bug",
+        "question",
+        "review"
+      ]
+    },
+    {
+      "login": "jonesbp",
+      "name": "Brian Jones",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/507511?v=4",
+      "profile": "http://brianjon.es",
+      "contributions": [
+        "code",
+        "bug",
+        "ideas"
+      ]
+    },
+    {
+      "login": "christopherfrance",
+      "name": "Christopher Blow France",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7366?v=4",
+      "profile": "https://github.com/christopherfrance",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "eunjae-lee",
+      "name": "Eunjae Lee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/499898?v=4",
+      "profile": "https://twitter.com/eunjae_lee",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "EvanHahn",
+      "name": "Evan Hahn",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/777712?v=4",
+      "profile": "https://evanhahn.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pieh",
+      "name": "Michal Piechowiak",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/419821?v=4",
+      "profile": "https://github.com/pieh",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "youmustfight",
+      "name": "Mark Hansen",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4956240?v=4",
+      "profile": "https://markthemark.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "ethagnawl",
+      "name": "Pete Doherty",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/289949?v=4",
+      "profile": "https://peterdohertys.website/",
+      "contributions": [
+        "doc",
+        "code",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

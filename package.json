@@ -10,7 +10,8 @@
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "c": "all-contributors"
   },
   "keywords": [
     "gatsby",
@@ -24,5 +25,8 @@
   },
   "peerDependencies": {
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^6.13.0"
   }
 }
