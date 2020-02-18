@@ -189,3 +189,22 @@ plugins: [
 A Gatsby source plugin for pulling rows from multiple tables and bases in Airtable. This was originally inspired by [kevzettler/gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable) and eventually superseeded the original plugin with the introduction of Gatsby v2.
 
 If you are looking for the documentation on `gatsby-source-airtable-linked`, see the additional branch. We do recommend moving your dependency over to this plugin, `gatsby-source-airtable`, for Gatsby v2. (If you are still on Gatsby v1, see `gatsby-source-airtable-linked` for compatible code.)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://www.jacobbolda.com"><img src="https://avatars2.githubusercontent.com/u/2019387?v=4" width="100px;" alt=""/><br /><sub><b>Jacob Bolda</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=jbolda" title="Code">💻</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=jbolda" title="Documentation">📖</a> <a href="https://github.com/jbolda/gatsby-source-airtable/pulls?q=is%3Apr+reviewed-by%3Ajbolda" title="Reviewed Pull Requests">👀</a> <a href="#question-jbolda" title="Answering Questions">💬</a> <a href="#ideas-jbolda" title="Ideas, Planning, & Feedback">🤔</a> <a href="#example-jbolda" title="Examples">💡</a> <a href="https://github.com/jbolda/gatsby-source-airtable/issues?q=author%3Ajbolda" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

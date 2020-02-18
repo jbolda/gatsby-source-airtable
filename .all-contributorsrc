@@ -1,0 +1,30 @@
+{
+  "projectName": "gatsby-source-airtable",
+  "projectOwner": "jbolda",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "jbolda",
+      "name": "Jacob Bolda",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2019387?v=4",
+      "profile": "http://www.jacobbolda.com",
+      "contributions": [
+        "code",
+        "doc",
+        "review",
+        "question",
+        "ideas",
+        "example",
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
