@@ -69,6 +69,16 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "eunjae-lee",
+      "name": "Eunjae Lee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/499898?v=4",
+      "profile": "https://twitter.com/eunjae_lee",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
