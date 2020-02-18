@@ -1,11 +1,7 @@
-## gatsby-source-airtable
+# gatsby-source-airtable
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-airtable/latest.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-airtable)
 [![Build Status](https://travis-ci.com/jbolda/gatsby-source-airtable.svg?branch=master)](https://travis-ci.com/jbolda/gatsby-source-airtable)
-
-A Gatsby source plugin for pulling rows from multiple tables and bases in Airtable. This was originally inspired by [kevzettler/gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable) and eventually superseeded the original plugin with the introduction of Gatsby v2.
-
-If you are looking for the documentation on `gatsby-source-airtable-linked`, see the additional branch. We do recommend moving your dependency over to this plugin, `gatsby-source-airtable`, for Gatsby v2. (If you are still on Gatsby v1, see `gatsby-source-airtable-linked` for compatible code.)
 
 ## Install
 
@@ -28,6 +24,7 @@ plugins: [
     resolve: `gatsby-source-airtable`,
     options: {
       apiKey: `YOUR_AIRTABLE_KEY`, // may instead specify via env, see below
+      concurrency: 5, // default, see using markdown and attachments for more information
       tables: [
         {
           baseId: `YOUR_AIRTABLE_BASE_ID`,
@@ -186,3 +183,9 @@ plugins: [
   }
 ];
 ```
+
+## History
+
+A Gatsby source plugin for pulling rows from multiple tables and bases in Airtable. This was originally inspired by [kevzettler/gatsby-source-airtable](https://github.com/kevzettler/gatsby-source-airtable) and eventually superseeded the original plugin with the introduction of Gatsby v2.
+
+If you are looking for the documentation on `gatsby-source-airtable-linked`, see the additional branch. We do recommend moving your dependency over to this plugin, `gatsby-source-airtable`, for Gatsby v2. (If you are still on Gatsby v1, see `gatsby-source-airtable-linked` for compatible code.)
