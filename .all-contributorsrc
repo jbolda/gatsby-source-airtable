@@ -79,6 +79,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "EvanHahn",
+      "name": "Evan Hahn",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/777712?v=4",
+      "profile": "https://evanhahn.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
