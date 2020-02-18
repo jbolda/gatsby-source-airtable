@@ -88,6 +88,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "pieh",
+      "name": "Michal Piechowiak",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/419821?v=4",
+      "profile": "https://github.com/pieh",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

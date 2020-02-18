@@ -207,6 +207,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/eunjae_lee"><img src="https://avatars3.githubusercontent.com/u/499898?v=4" width="100px;" alt=""/><br /><sub><b>Eunjae Lee</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=eunjae-lee" title="Code">💻</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=eunjae-lee" title="Documentation">📖</a></td>
     <td align="center"><a href="https://evanhahn.com/"><img src="https://avatars1.githubusercontent.com/u/777712?v=4" width="100px;" alt=""/><br /><sub><b>Evan Hahn</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=EvanHahn" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/pieh"><img src="https://avatars1.githubusercontent.com/u/419821?v=4" width="100px;" alt=""/><br /><sub><b>Michal Piechowiak</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=pieh" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
