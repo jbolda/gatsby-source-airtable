@@ -209,6 +209,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/pieh"><img src="https://avatars1.githubusercontent.com/u/419821?v=4" width="100px;" alt=""/><br /><sub><b>Michal Piechowiak</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=pieh" title="Code">💻</a></td>
+    <td align="center"><a href="https://markthemark.com"><img src="https://avatars0.githubusercontent.com/u/4956240?v=4" width="100px;" alt=""/><br /><sub><b>Mark Hansen</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/issues?q=author%3Ayoumustfight" title="Bug reports">🐛</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=youmustfight" title="Code">💻</a></td>
   </tr>
 </table>
 
