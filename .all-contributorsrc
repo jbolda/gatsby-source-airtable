@@ -36,6 +36,19 @@
         "example",
         "bug"
       ]
+    },
+    {
+      "login": "jamessimone",
+      "name": "James Simone",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16430727?v=4",
+      "profile": "https://www.jamessimone.net",
+      "contributions": [
+        "code",
+        "doc",
+        "bug",
+        "question",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7
