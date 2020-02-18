@@ -24,6 +24,18 @@
         "example",
         "bug"
       ]
+    },
+    {
+      "login": "brendanmc6",
+      "name": "Brendan McGill",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9867865?v=4",
+      "profile": "https://github.com/brendanmc6",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7

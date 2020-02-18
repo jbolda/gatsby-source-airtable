@@ -200,6 +200,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.jacobbolda.com"><img src="https://avatars2.githubusercontent.com/u/2019387?v=4" width="100px;" alt=""/><br /><sub><b>Jacob Bolda</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=jbolda" title="Code">💻</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=jbolda" title="Documentation">📖</a> <a href="https://github.com/jbolda/gatsby-source-airtable/pulls?q=is%3Apr+reviewed-by%3Ajbolda" title="Reviewed Pull Requests">👀</a> <a href="#question-jbolda" title="Answering Questions">💬</a> <a href="#ideas-jbolda" title="Ideas, Planning, & Feedback">🤔</a> <a href="#example-jbolda" title="Examples">💡</a> <a href="https://github.com/jbolda/gatsby-source-airtable/issues?q=author%3Ajbolda" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/brendanmc6"><img src="https://avatars3.githubusercontent.com/u/9867865?v=4" width="100px;" alt=""/><br /><sub><b>Brendan McGill</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=brendanmc6" title="Code">💻</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=brendanmc6" title="Documentation">📖</a> <a href="#example-brendanmc6" title="Examples">💡</a> <a href="https://github.com/jbolda/gatsby-source-airtable/issues?q=author%3Abrendanmc6" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
