@@ -24,6 +24,7 @@ plugins: [
     resolve: `gatsby-source-airtable`,
     options: {
       apiKey: `YOUR_AIRTABLE_KEY`, // may instead specify via env, see below
+      concurrency: 5, // default, see using markdown and attachments for more information
       tables: [
         {
           baseId: `YOUR_AIRTABLE_BASE_ID`,
