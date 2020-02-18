@@ -27,6 +27,6 @@
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "^6.13.0"
+    "all-contributors-cli": "6.13.0"
   }
 }
