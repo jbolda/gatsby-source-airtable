@@ -1866,11 +1866,12 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^3.2.0"
 
-airtable@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.7.2.tgz#106e87b7139f6a2c9f1bd856583e83626e2f3c04"
-  integrity sha512-BwHIJyXmtUJ78EpnNzs+aYmPK9r0xNeFyKkmSn9I6WvG6QYcXlbDe6rhoEwqEdrjPVL6ZCoNwimJN4l6y5TUJg==
+airtable@^0.8.0:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.8.1.tgz#8d10f04f41673b86ed75fa054f54470357e36ae0"
+  integrity sha512-Cxw55ta1olDwDERz++HFJOBX6LONtg+d7+wOcYguqI4PR4P5RHmgjTbY8tPKgLHb8U3FVOyAbpb7NpLRSnLGgg==
   dependencies:
+    es6-promise "4.2.8"
     lodash "4.17.15"
     request "2.88.0"
     xhr "2.3.3"
@@ -4733,6 +4734,11 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es6-promise@4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
 es6-promisify@^6.0.0:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-6.0.2.tgz#525c23725b8510f5f1f2feb5a1fbad93a93e29b4"
@@ -5841,12 +5847,12 @@ gatsby-react-router-scroll@^2.1.21:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-source-airtable@2.0.12:
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.0.12.tgz#e08926d3015a90a04d6254a41614031e63263aa3"
-  integrity sha512-WQR5Jwk6sGSE6zebU3XPh+aX6kukq+f3surW2ceCq4HfSQJWrFDdooGuXPGm77Lq0qmINcuYT/1jBR2hC0rZmw==
+gatsby-source-airtable@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.1.0.tgz#9dfaa6b9e08c47bdf60270458ba89b0954d961fe"
+  integrity sha512-51axoKud0qoERX+vlyyuMwWS6exV8UeJgCY4v9rM8d8owGsNBnzg89v50JPJ3DpoBM7xpmuGiAVmkzWg2Y0gGg==
   dependencies:
-    airtable "^0.7.2"
+    airtable "^0.8.0"
     bluebird "^3.5.4"
 
 gatsby-source-filesystem@2.1.48:
