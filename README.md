@@ -33,7 +33,7 @@ plugins: [
           queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optionally default is false - makes all records in this table a separate node type, based on your tableView, or if not present, tableName, e.g. a table called "Fruit" would become "allAirtableFruit". Useful when pulling many airtables with similar structures or fields that have different types. See https://github.com/jbolda/gatsby-source-airtable/pull/52.
           mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
           tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
-          createSeparateNodeType: false, // boolean, default is false, see the documentation on naming conflicts for more information
+          separateNodeType: false, // boolean, default is false, see the documentation on naming conflicts for more information
           separateMapType: false, // boolean, default is false, see the documentation on using markdown and attachments for more information
         },
         {
@@ -121,7 +121,7 @@ For example, if you are creating a blog or documentation site, specify a `publis
 
 You may have a situation where you are including two separate bases, each with a table that has the exact same name. With the data structure of this repo, both bases would fall into allAirtable and you wouldn't be able to tell them apart when building graphQL queries. This is what the optional `queryName` setting is for-- simply to provide an alternate name for a table.
 
-If you would like to have the query names for tables be different from the default `allAirtable` or `airtable`, you may specify `createSeparateNodeType` as `true`.
+If you would like to have the query names for tables be different from the default `allAirtable` or `airtable`, you may specify `separateNodeType` as `true`.
 
 ### Column Names
 
