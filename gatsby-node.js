@@ -300,8 +300,8 @@ const localFileCheck = async (
       // where data[key] is the array of attachments
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
-      const ext = mime.getExtension(attachment.type) // unknown type returns null
       data[key].forEach(attachment => {
+        const ext = mime.getExtension(attachment.type) // unknown type returns null
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
           store,
