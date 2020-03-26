@@ -7,7 +7,7 @@
     "gatsby-transformer-remark": "2.6.59",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "remark-html": "10.0.0"
+    "remark-html": "11.0.1"
   },
   "keywords": [
     "gatsby"
