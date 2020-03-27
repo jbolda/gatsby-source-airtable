@@ -337,4 +337,4 @@ specification. Contributions of any kind welcome!
 
 ## License
 
-[MIT License, Copyright (c) 2018 Jacob Bolda](./LICENSE)
+[MIT License, Copyright (c) 2020 Jacob Bolda](./LICENSE)
