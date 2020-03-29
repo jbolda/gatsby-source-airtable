@@ -308,7 +308,7 @@ const localFileCheck = async (
           cache,
           createNode,
           createNodeId,
-          ext: ext ? `.${ext}` : undefined
+          ext: !!ext ? `.${ext}` : undefined
         });
         fileNodes.push(attachmentNode);
       });
