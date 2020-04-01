@@ -133,7 +133,7 @@ Keys can be found in Airtable by clicking `Help > API Documentation`.
 
 The API key can be hard coded directly in `gatsby-config.js` as noted in the previous section-- **this exposes your key to anyone viewing your repository and is not recommended. You should inject your API key as recommended below to prevent it from being committed to source control**.
 
-We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). You may also specify it in your command line such as `AIRTABLE_API_KEY=XXXXXX gatsby develop`. Note: If you use an environment variable prepended with `GATSBY_`, it takes advantage of some syntactic sugar courtesy of Gatsby, which automatically makes it available - but any references to environment variables like this that are rendered client-side will **automatically** expose your API key within the browser. To avoid accidentally exposing it, we recommend *not* prepending it with `GATSBY_`.
+We recommended specifying your API key using an [Environment Variable](https://www.gatsbyjs.org/docs/environment-variables/). You may also specify it in your command line such as `AIRTABLE_API_KEY=XXXXXX gatsby develop`. Note: If you use an environment variable prepended with `GATSBY_`, it takes advantage of some syntactic sugar courtesy of Gatsby, which automatically makes it available - but any references to environment variables like this that are rendered client-side will **automatically** expose your API key within the browser. To avoid accidentally exposing it, we recommend _not_ prepending it with `GATSBY_`.
 
 To be safe, you can also setup your API key via a config variable, `apiKey` defined in `gatsby-config.js`. This is the recommended way to inject your API key.
 
@@ -144,11 +144,11 @@ plugins: [
     resolve: `gatsby-source-airtable`,
     options: {
       //not prefaced with "GATSBY_", will not automatically be included client-side unless you explicitly expose it
-      apiKey: process.env.AIRTABLE_API_KEY
+      apiKey: process.env.AIRTABLE_API_KEY,
       //...etc
-    }
-  }
-]
+    },
+  },
+];
 ```
 
 You can either use a node tool like "dotenv" to load secrets like your Airtable API key from a .env file, or you can specify it in your command line such as `AIRTABLE_API_KEY=XXXXXX gatsby develop`.
@@ -174,13 +174,14 @@ plugins: [
           defaultValues: {
             //currently does not accept null / undefined. use empty string instead
             //and perform your conditional logic on name_of_field.length > 0 ? condition_1 : condition_2
-            NAME_OF_FIELD_THAT_WILL_OTHERWISE_NOT_BE_RETURNED_IF_ALL_VALUES_ARE_BLANK: ""
+            NAME_OF_FIELD_THAT_WILL_OTHERWISE_NOT_BE_RETURNED_IF_ALL_VALUES_ARE_BLANK:
+              "",
             //... etc
-          }
-        }
-      ]
-    }
-  }
+          },
+        },
+      ],
+    },
+  },
 ];
 ```
 
@@ -217,6 +218,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
