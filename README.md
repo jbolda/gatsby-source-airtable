@@ -213,12 +213,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://markthemark.com"><img src="https://avatars0.githubusercontent.com/u/4956240?v=4" width="100px;" alt=""/><br /><sub><b>Mark Hansen</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/issues?q=author%3Ayoumustfight" title="Bug reports">🐛</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=youmustfight" title="Code">💻</a></td>
     <td align="center"><a href="https://peterdohertys.website/"><img src="https://avatars1.githubusercontent.com/u/289949?v=4" width="100px;" alt=""/><br /><sub><b>Pete Doherty</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=ethagnawl" title="Documentation">📖</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=ethagnawl" title="Code">💻</a> <a href="#ideas-ethagnawl" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://angeloashmore.github.io"><img src="https://avatars2.githubusercontent.com/u/8601064?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Ashmore</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=angeloashmore" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/dgrcode"><img src="https://avatars3.githubusercontent.com/u/17493200?v=4" width="100px;" alt=""/><br /><sub><b>Daniel González Reina</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=dgrcode" title="Code">💻</a> <a href="https://github.com/jbolda/gatsby-source-airtable/issues?q=author%3Adgrcode" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
