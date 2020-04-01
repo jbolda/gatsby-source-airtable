@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "all-contributors-cli": "6.14.0",
-    "prettier": "^2.0.2"
+    "prettier": "2.0.2"
   }
 }
