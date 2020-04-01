@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "airtable": "^0.8.0",
-    "bluebird": "^3.5.4"
+    "bluebird": "^3.5.4",
+    "mime": "^2.4.4"
   },
   "devDependencies": {
     "all-contributors-cli": "^6.14.0",
