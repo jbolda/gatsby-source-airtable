@@ -1,34 +1,46 @@
 {
   "name": "gatsby-source-airtable",
-  "version": "2.1.0",
   "description": "Gatsby Airtable Source with Linked Nodes, Multiple Tables and File Nodes.",
+  "version": "2.1.0",
+  "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
+  "author": "Jacob Bolda <me@jacobbolda.com>",
   "main": "index.js",
   "files": [
     "/gatsby-node.js"
   ],
-  "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
-  "author": "Jacob Bolda <me@jacobbolda.com>",
-  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
     "c": "all-contributors",
-    "pretty": "prettier --write \"{gatsby-node.js,README.md,package.json}\""
+    "format": "prettier --write \"{gatsby-node.js,README.md,package.json}\"",
+    "test": "echo \"Error: no test specified\""
   },
-  "keywords": [
-    "gatsby",
-    "gatsby-plugin",
-    "gatsby-source",
-    "airtable"
-  ],
   "dependencies": {
     "airtable": "^0.8.0",
-    "bluebird": "^3.5.4"
+    "bluebird": "^3.5.4",
+    "mime": "^2.4.4"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "6.14.0",
+    "husky": "4.2.3",
+    "prettier": "2.0.2"
   },
   "peerDependencies": {
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
   },
-  "devDependencies": {
-    "all-contributors-cli": "6.14.0",
-    "prettier": "2.0.2"
-  }
+  "keywords": [
+    "airtable",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source",
+    "gatsby-source-airtable"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "trailingComma": "all"
+  },
+  "license": "MIT"
 }
