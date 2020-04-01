@@ -18,7 +18,7 @@ exports.sourceNodes = async (
       );
     }
     var api = await new Airtable({
-      apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey
+      apiKey: process.env.GATSBY_AIRTABLE_API_KEY || apiKey,
     });
   } catch (e) {
     // airtable uses `assert` which doesn't exit the process,
@@ -47,7 +47,7 @@ exports.sourceNodes = async (
   console.time(`\nfetch all Airtable rows from ${tables.length} tables`);
 
   let queue = [];
-  tables.forEach(tableOptions => {
+  tables.forEach((tableOptions) => {
     let base = api.base(tableOptions.baseId);
 
     let table = base(tableOptions.tableName);
@@ -55,7 +55,7 @@ exports.sourceNodes = async (
     let view = tableOptions.tableView || "";
 
     let query = table.select({
-      view: view
+      view: view,
     });
 
     // confirm that the user is using the clean keys
@@ -81,7 +81,7 @@ exports.sourceNodes = async (
 
     const cleanLinks = !tableOptions.tableLinks
       ? null
-      : tableOptions.tableLinks.map(key => {
+      : tableOptions.tableLinks.map((key) => {
           let useKey = cleanKey(key);
           if (useKey !== key)
             console.warn(`
@@ -110,7 +110,7 @@ exports.sourceNodes = async (
           ? tableOptions.separateMapType
           : false,
         cleanMapping,
-        cleanLinks
+        cleanLinks,
       ])
     );
   });
@@ -119,10 +119,10 @@ exports.sourceNodes = async (
   // we flatten the array to return all rows from all tables after mapping
   // the queryName to each row
   const allRows = await Promise.all(queue)
-    .then(all => {
+    .then((all) => {
       return all.reduce((accumulator, currentValue) => {
         return accumulator.concat(
-          currentValue[0].map(row => {
+          currentValue[0].map((row) => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
             row.separateNodeType = currentValue[3]; // separateMapType from tableOptions above
@@ -134,7 +134,7 @@ exports.sourceNodes = async (
         );
       }, []);
     })
-    .catch(e => {
+    .catch((e) => {
       throw e;
       return;
     });
@@ -143,8 +143,8 @@ exports.sourceNodes = async (
 
   setPluginStatus({
     status: {
-      lastFetched: new Date().toJSON()
-    }
+      lastFetched: new Date().toJSON(),
+    },
   });
 
   // Use the map function for arrays of promises imported from Bluebird.
@@ -152,19 +152,19 @@ exports.sourceNodes = async (
   // file attachment servers for large numbers of requests.
   return map(
     allRows,
-    async row => {
+    async (row) => {
       // don't love mutating the row here, but
       // not ready to refactor yet to clean this up
       // (happy to take a PR!)
       row.fields = {
         ...row.defaultValues,
-        ...row.fields
+        ...row.fields,
       };
       let processedData = await processData(row, {
         createNodeId,
         createNode,
         store,
-        cache
+        cache,
       });
 
       if (row.separateNodeType && (!row.queryName || row.queryName === "")) {
@@ -188,15 +188,15 @@ exports.sourceNodes = async (
           contentDigest: crypto
             .createHash("md5")
             .update(JSON.stringify(row))
-            .digest("hex")
+            .digest("hex"),
         },
-        data: processedData.data
+        data: processedData.data,
       };
 
       createNode(node);
 
-      await Promise.all(processedData.childNodes).then(nodes => {
-        nodes.forEach(node => createNode(node));
+      await Promise.all(processedData.childNodes).then((nodes) => {
+        nodes.forEach((node) => createNode(node));
       });
     },
     { concurrency: concurrency }
@@ -210,7 +210,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
   let processedData = {};
   let childNodes = [];
 
-  fieldKeys.forEach(key => {
+  fieldKeys.forEach((key) => {
     // once in "Gatsby-land" we want to use the cleanKey
     // consistently everywhere including in configs
     // this key that we clean comes from Airtable
@@ -225,7 +225,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
 
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
-      processedData[useKey] = data[key].map(id =>
+      processedData[useKey] = data[key].map((id) =>
         createNodeId(`Airtable_${id}`)
       );
     } else if (row.mapping && row.mapping[cleanedKey]) {
@@ -239,7 +239,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
         createNodeId,
         createNode,
         store,
-        cache
+        cache,
       });
       childNodes.push(checkedChildNode);
     } else {
@@ -268,7 +268,7 @@ const checkChildNode = async (
     createNodeId,
     createNode,
     store,
-    cache
+    cache,
   });
 
   processedData[`${cleanedKey}___NODE`] = createNodeId(
@@ -299,13 +299,13 @@ const localFileCheck = async (
       // where data[key] is the array of attachments
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
-      data[key].forEach(attachment => {
+      data[key].forEach((attachment) => {
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
           store,
           cache,
           createNode,
-          createNodeId
+          createNodeId,
         });
         fileNodes.push(attachmentNode);
       });
@@ -313,7 +313,7 @@ const localFileCheck = async (
       // ___NODE tells Gatsby that this field will link to another nodes
       const resolvedFileNodes = await Promise.all(fileNodes);
       const localFiles = resolvedFileNodes.map(
-        attachmentNode => attachmentNode.id
+        (attachmentNode) => attachmentNode.id
       );
       return localFiles;
     } catch (e) {
@@ -344,8 +344,8 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
-          .digest("hex")
-      }
+          .digest("hex"),
+      },
     };
   } else {
     return {
@@ -360,8 +360,8 @@ const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
-          .digest("hex")
-      }
+          .digest("hex"),
+      },
     };
   }
 };
@@ -370,6 +370,6 @@ const cleanKey = (key, data) => {
   return key.replace(/ /g, "_");
 };
 
-const cleanType = key => {
+const cleanType = (key) => {
   return !key ? "" : key.replace(/[ /+]/g, "");
 };

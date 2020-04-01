@@ -11,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "c": "all-contributors"
+    "c": "all-contributors",
+    "pretty": "prettier --write \"{gatsby-node.js,README.md,package.json}\""
   },
   "keywords": [
     "gatsby",
@@ -27,6 +28,7 @@
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "6.14.0"
+    "all-contributors-cli": "6.14.0",
+    "prettier": "^2.0.2"
   }
 }
