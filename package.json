@@ -19,8 +19,8 @@
     "mime": "^2.4.4"
   },
   "devDependencies": {
-    "all-contributors-cli": "^6.14.0",
-    "husky": "^4.2.3",
+    "all-contributors-cli": "6.14.0",
+    "husky": "4.2.3",
     "prettier": "2.0.2"
   },
   "peerDependencies": {
