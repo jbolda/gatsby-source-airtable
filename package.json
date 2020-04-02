@@ -1,7 +1,7 @@
 {
   "name": "gatsby-source-airtable",
   "description": "Gatsby Airtable Source with Linked Nodes, Multiple Tables and File Nodes.",
-  "version": "2.1.0",
+  "version": "2.1.1-beta.0",
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "main": "index.js",
