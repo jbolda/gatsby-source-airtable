@@ -1,12 +1,12 @@
 const Airtable = require("airtable");
-const crypto = require(`crypto`);
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
+const crypto = require("crypto");
+const { createRemoteFileNode } = require("gatsby-source-filesystem");
 const { map } = require("bluebird");
-const mime = require('mime/lite');
+const mime = require("mime/lite");
 
 exports.sourceNodes = async (
   { actions, createNodeId, store, cache },
-  { apiKey, tables, concurrency }
+  { apiKey, tables, concurrency },
 ) => {
   // tables contain baseId, tableName, tableView, queryName, mapping, tableLinks
   const { createNode, setPluginStatus } = actions;
@@ -15,7 +15,7 @@ exports.sourceNodes = async (
     // hoist api so we can use in scope outside of this block
     if (!apiKey && process.env.GATSBY_AIRTABLE_API_KEY) {
       console.warn(
-        "\nImplicit setting of GATSBY_AIRTABLE_API_KEY as apiKey will be deprecated in future release, apiKey should be set in gatsby-config.js, please see Readme!"
+        "\nImplicit setting of GATSBY_AIRTABLE_API_KEY as apiKey will be deprecated in future release, apiKey should be set in gatsby-config.js, please see Readme!",
       );
     }
     var api = await new Airtable({
@@ -32,7 +32,7 @@ exports.sourceNodes = async (
   // exit if tables is not defined
   if (tables === undefined || tables.length === 0) {
     console.warn(
-      "\ntables is not defined for gatsby-source-airtable in gatsby-config.js"
+      "\ntables is not defined for gatsby-source-airtable in gatsby-config.js",
     );
     return;
   }
@@ -112,7 +112,7 @@ exports.sourceNodes = async (
           : false,
         cleanMapping,
         cleanLinks,
-      ])
+      ]),
     );
   });
 
@@ -131,7 +131,7 @@ exports.sourceNodes = async (
             row.mapping = currentValue[5]; // mapping from tableOptions above
             row.tableLinks = currentValue[6]; // tableLinks from tableOptions above
             return row;
-          })
+          }),
         );
       }, []);
     })
@@ -171,7 +171,7 @@ exports.sourceNodes = async (
       if (row.separateNodeType && (!row.queryName || row.queryName === "")) {
         console.warn(
           `You have opted into separate node types, but not specified a queryName.
-          We use the queryName to suffix to node type. Without a queryName, it will act like separateNodeType is false.`
+          We use the queryName to suffix to node type. Without a queryName, it will act like separateNodeType is false.`,
         );
       }
 
@@ -200,7 +200,7 @@ exports.sourceNodes = async (
         nodes.forEach((node) => createNode(node));
       });
     },
-    { concurrency: concurrency }
+    { concurrency: concurrency },
   );
 };
 
@@ -227,7 +227,7 @@ const processData = async (row, { createNodeId, createNode, store, cache }) => {
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
       processedData[useKey] = data[key].map((id) =>
-        createNodeId(`Airtable_${id}`)
+        createNodeId(`Airtable_${id}`),
       );
     } else if (row.mapping && row.mapping[cleanedKey]) {
       // A child node comes from the mapping, where we want to
@@ -260,7 +260,7 @@ const checkChildNode = async (
   key,
   row,
   processedData,
-  { createNodeId, createNode, store, cache }
+  { createNodeId, createNode, store, cache },
 ) => {
   let data = row.fields;
   let mapping = row.mapping;
@@ -273,7 +273,7 @@ const checkChildNode = async (
   });
 
   processedData[`${cleanedKey}___NODE`] = createNodeId(
-    `AirtableField_${row.id}_${cleanedKey}`
+    `AirtableField_${row.id}_${cleanedKey}`,
   );
 
   return buildNode(
@@ -282,33 +282,33 @@ const checkChildNode = async (
     cleanedKey,
     data[key],
     mapping[key],
-    createNodeId
+    createNodeId,
   );
 };
 
 const localFileCheck = async (
   key,
   row,
-  { createNodeId, createNode, store, cache }
+  { createNodeId, createNode, store, cache },
 ) => {
   let data = row.fields;
   let mapping = row.mapping;
   let cleanedKey = cleanKey(key);
-  if (mapping[cleanedKey] === `fileNode`) {
+  if (mapping[cleanedKey] === "fileNode") {
     try {
       let fileNodes = [];
       // where data[key] is the array of attachments
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
       data[key].forEach((attachment) => {
-        const ext = mime.getExtension(attachment.type) // unknown type returns null
+        const ext = mime.getExtension(attachment.type); // unknown type returns null
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
           store,
           cache,
           createNode,
           createNodeId,
-          ext: !!ext ? `.${ext}` : undefined
+          ext: !!ext ? `.${ext}` : undefined,
         });
         fileNodes.push(attachmentNode);
       });
@@ -316,13 +316,13 @@ const localFileCheck = async (
       // ___NODE tells Gatsby that this field will link to another nodes
       const resolvedFileNodes = await Promise.all(fileNodes);
       const localFiles = resolvedFileNodes.map(
-        (attachmentNode) => attachmentNode.id
+        (attachmentNode) => attachmentNode.id,
       );
       return localFiles;
     } catch (e) {
       console.log(
         "You specified a fileNode, but we caught an error. First check that you have gatsby-source-filesystem installed?\n",
-        e
+        e,
       );
     }
   }
@@ -332,7 +332,7 @@ const localFileCheck = async (
 const buildNode = (localFiles, row, cleanedKey, raw, mapping, createNodeId) => {
   const nodeType = row.separateNodeType
     ? `Airtable${cleanKey(row.queryName ? row.queryName : row._table.name)}`
-    : `Airtable`;
+    : "Airtable";
   if (localFiles) {
     return {
       id: createNodeId(`AirtableField_${row.id}_${cleanedKey}`),
