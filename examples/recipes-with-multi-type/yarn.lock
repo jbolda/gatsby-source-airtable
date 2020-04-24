@@ -6200,13 +6200,14 @@ gatsby-recipes@^0.0.14:
     ws "^7.2.3"
     xstate "^4.8.0"
 
-gatsby-source-airtable@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.1.0.tgz#9dfaa6b9e08c47bdf60270458ba89b0954d961fe"
-  integrity sha512-51axoKud0qoERX+vlyyuMwWS6exV8UeJgCY4v9rM8d8owGsNBnzg89v50JPJ3DpoBM7xpmuGiAVmkzWg2Y0gGg==
+gatsby-source-airtable@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.1.1.tgz#a864be9900f252267a73aed38072e7ee89af8d6c"
+  integrity sha512-VLTB9iny0Vqf9ee/Piwl1LLRC++wtGyO9ZBMEISgXxsamwpQ0/08J8jL2zB+EDe5v4KRPRLSlEqb4aO1kYCBIA==
   dependencies:
     airtable "^0.8.0"
     bluebird "^3.5.4"
+    mime "^2.4.4"
 
 gatsby-source-filesystem@2.2.5:
   version "2.2.5"
