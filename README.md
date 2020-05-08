@@ -217,7 +217,7 @@ you when this happens to cut down on the verbosity of the output.
 
 #### Known exception
 
-Some column names might end up with more thatn two underscores in a sequence, for example:
+Some column names might end up with more than two underscores in a sequence, for example,
 
 ```Phone no. (Cell)```
 
