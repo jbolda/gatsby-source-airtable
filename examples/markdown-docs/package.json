@@ -1,7 +1,7 @@
 {
   "name": "markdown-docs-example",
   "dependencies": {
-    "gatsby": "2.24.43",
+    "gatsby": "2.24.47",
     "gatsby-source-airtable": "2.1.1",
     "gatsby-source-filesystem": "2.3.24",
     "gatsby-transformer-remark": "2.8.28",
