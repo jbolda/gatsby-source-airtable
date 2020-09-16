@@ -33,6 +33,6 @@
     "lazy": "cp ../../gatsby-node.js ./node_modules/gatsby-source-airtable && yarn dev:hard"
   },
   "devDependencies": {
-    "prettier": "2.1.1"
+    "prettier": "2.1.2"
   }
 }
