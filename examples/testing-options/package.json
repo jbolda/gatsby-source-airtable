@@ -1,10 +1,10 @@
 {
   "name": "testing-options",
   "dependencies": {
-    "gatsby": "2.24.67",
+    "gatsby": "2.24.69",
     "gatsby-source-airtable": "2.1.1",
-    "gatsby-source-filesystem": "2.3.32",
-    "gatsby-transformer-remark": "2.8.37",
+    "gatsby-source-filesystem": "2.3.33",
+    "gatsby-transformer-remark": "2.8.38",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark-html": "12.0.0"
