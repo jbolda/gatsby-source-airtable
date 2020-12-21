@@ -104,6 +104,7 @@ exports.sourceNodes = async (
         query.all(),
         tableOptions.queryName,
         tableOptions.defaultValues || {},
+        tableOptions.overrideValues || {},
         typeof tableOptions.separateNodeType !== "undefined"
           ? tableOptions.separateNodeType
           : false,
@@ -126,10 +127,11 @@ exports.sourceNodes = async (
           currentValue[0].map((row) => {
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
-            row.separateNodeType = currentValue[3]; // separateMapType from tableOptions above
-            row.separateMapType = currentValue[4]; // create separate node type from tableOptions above
-            row.mapping = currentValue[5]; // mapping from tableOptions above
-            row.tableLinks = currentValue[6]; // tableLinks from tableOptions above
+            row.overrideValues = currentValue[3]; // mapping from tableOptions above
+            row.separateNodeType = currentValue[4]; // separateMapType from tableOptions above
+            row.separateMapType = currentValue[5]; // create separate node type from tableOptions above
+            row.mapping = currentValue[6]; // mapping from tableOptions above
+            row.tableLinks = currentValue[7]; // tableLinks from tableOptions above
             return row;
           }),
         );
@@ -160,6 +162,7 @@ exports.sourceNodes = async (
       row.fields = {
         ...row.defaultValues,
         ...row.fields,
+        ...row.overrideValues,
       };
       let processedData = await processData(row, {
         createNodeId,
