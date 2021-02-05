@@ -123,7 +123,8 @@ exports.sourceNodes = async (
     .then((all) => {
       return all.reduce((accumulator, currentValue) => {
         return accumulator.concat(
-          currentValue[0].map((row) => {
+          currentValue[0].map((row, rowIndex) => {
+            row.rowIndex = rowIndex;
             row.queryName = currentValue[1]; // queryName from tableOptions above
             row.defaultValues = currentValue[2]; // mapping from tableOptions above
             row.separateNodeType = currentValue[3]; // separateMapType from tableOptions above
@@ -181,6 +182,7 @@ exports.sourceNodes = async (
         table: row._table.name,
         recordId: row.id,
         queryName: row.queryName,
+        rowIndex: row.rowIndex,
         children: [],
         internal: {
           type: `Airtable${
