@@ -34,3 +34,10 @@ jobs:
         working-directory: ${{ matrix.example }}
       - run: npm run build
         working-directory: ${{ matrix.example }}
+
+  report:
+    name: examples-passed
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "passed!"
