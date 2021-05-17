@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "recAHAs0xBTJuW4Sj",
+      "fields": {
+        "Body": "This section contains reasons why we _love_ using airtable.",
+        "Title": "Reasons why Airtable is great",
+        "Slug": "great-airtable",
+        "Pages": [
+          "recDsgAjjqB96rWYu",
+          "recgs85twoodF07jY",
+          "recmOBEBXpYnsUw7X"
+        ],
+        "Path": "great-airtable"
+      },
+      "createdTime": "2018-10-10T19:20:48.000Z"
+    },
+    {
+      "id": "rec73d0bQ3ixgqPCC",
+      "fields": {
+        "Body": "This section contains reasons why we _love_ using markdown.",
+        "Title": "Reasons why Markdown is great",
+        "Slug": "great-markdown",
+        "Pages": [
+          "recCtvNR1KLl3NpiT",
+          "recyGwuD1HRbDHRgC",
+          "recYTzQrv6z0VrhbR"
+        ],
+        "Path": "great-markdown"
+      },
+      "createdTime": "2018-10-10T19:20:48.000Z"
+    },
+    {
+      "id": "recS6cgCiroAH6OrG",
+      "fields": {
+        "Body": "This section contains reasons why we _love_ using gatsby.",
+        "Title": "Reasons why we love Gatsby!",
+        "Slug": "great-gatsby",
+        "Pages": [
+          "recnpdlJFBOBWAK5g",
+          "rec17gldTIAaTcz47",
+          "recUeeZxQgqX58WJv"
+        ],
+        "Path": "great-gatsby"
+      },
+      "createdTime": "2018-10-13T17:15:02.000Z"
+    }
+  ]
+}

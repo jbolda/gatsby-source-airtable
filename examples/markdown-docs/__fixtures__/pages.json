@@ -1,0 +1,103 @@
+{
+  "records": [
+    {
+      "id": "recDsgAjjqB96rWYu",
+      "fields": {
+        "Body": "Airtable is __intuitive__ and __easy to use__. _I'm writing these docs right in my browser!_",
+        "Slug": "easy",
+        "Section": ["recAHAs0xBTJuW4Sj"],
+        "Title": "It's easy to use.",
+        "Path": "great-airtable/easy"
+      },
+      "createdTime": "2018-10-13T17:17:22.000Z"
+    },
+    {
+      "id": "recgs85twoodF07jY",
+      "fields": {
+        "Body": "The API makes it a _fantastic_ choice for hosting data you need to read or write elsewhere.",
+        "Slug": "api",
+        "Section": ["recAHAs0xBTJuW4Sj"],
+        "Title": "The API is amazing.",
+        "Path": "great-airtable/api"
+      },
+      "createdTime": "2018-10-13T17:17:29.000Z"
+    },
+    {
+      "id": "recmOBEBXpYnsUw7X",
+      "fields": {
+        "Body": "Airtable works for all kinds of use-cases-- __like gatsby documentation__!",
+        "Slug": "flexible",
+        "Section": ["recAHAs0xBTJuW4Sj"],
+        "Title": "It's flexible.",
+        "Path": "great-airtable/flexible"
+      },
+      "createdTime": "2018-10-13T17:17:40.000Z"
+    },
+    {
+      "id": "recCtvNR1KLl3NpiT",
+      "fields": {
+        "Body": "Markdown is [simple](https://gist.github.com/jonschlinkert/5854601) to write and just works!",
+        "Slug": "simple",
+        "Section": ["rec73d0bQ3ixgqPCC"],
+        "Title": "It's very simple.",
+        "Path": "great-markdown/simple"
+      },
+      "createdTime": "2018-10-13T17:17:56.000Z"
+    },
+    {
+      "id": "recyGwuD1HRbDHRgC",
+      "fields": {
+        "Body": "Markdown is way more maintainable than other doc and text formats., because it's just text!",
+        "Slug": "maintainable",
+        "Section": ["rec73d0bQ3ixgqPCC"],
+        "Title": "It's maintainable.",
+        "Path": "great-markdown/maintainable"
+      },
+      "createdTime": "2018-10-13T17:18:48.000Z"
+    },
+    {
+      "id": "recYTzQrv6z0VrhbR",
+      "fields": {
+        "Body": "### Don't write sketchy html!\n\nJust write markdown!",
+        "Slug": "safe",
+        "Section": ["rec73d0bQ3ixgqPCC"],
+        "Title": "It's safe.",
+        "Path": "great-markdown/safe"
+      },
+      "createdTime": "2018-10-13T17:19:09.000Z"
+    },
+    {
+      "id": "recnpdlJFBOBWAK5g",
+      "fields": {
+        "Body": "Gatsby is awesome because we can write react components and do all the fancy things that react can do, easy.\n\n![react logo](https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/square_256/react.png)",
+        "Slug": "react",
+        "Section": ["recS6cgCiroAH6OrG"],
+        "Title": "It uses React!",
+        "Path": "great-gatsby/react"
+      },
+      "createdTime": "2018-10-13T17:19:43.000Z"
+    },
+    {
+      "id": "rec17gldTIAaTcz47",
+      "fields": {
+        "Body": "Gatsby compiles to static pages, so they are __wicked fast__.",
+        "Slug": "fast",
+        "Section": ["recS6cgCiroAH6OrG"],
+        "Title": "It's crazy fast.",
+        "Path": "great-gatsby/fast"
+      },
+      "createdTime": "2018-10-13T17:19:55.000Z"
+    },
+    {
+      "id": "recUeeZxQgqX58WJv",
+      "fields": {
+        "Body": "__So many great plugins__ make sourcing and transforming a breeze.\n\nCan't wait to see what's possible in the future!",
+        "Slug": "pluggable",
+        "Section": ["recS6cgCiroAH6OrG"],
+        "Title": "It has amazing plugins!",
+        "Path": "great-gatsby/pluggable"
+      },
+      "createdTime": "2018-10-13T17:19:55.000Z"
+    }
+  ]
+}

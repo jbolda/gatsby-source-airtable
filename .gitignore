@@ -5,3 +5,6 @@ public
 .vscode
 *.code-workspace
 *.log
+
+# nock output file
+record.txt
