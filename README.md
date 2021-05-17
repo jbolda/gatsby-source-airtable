@@ -217,17 +217,19 @@ you when this happens to cut down on the verbosity of the output.
 
 #### Known exception
 
-Some column names might end up with more than two underscores in a sequence, for example,
+Some column names might end up with more than two underscores in a sequence, for
+example,
 
-```Phone no. (Cell)```
+`Phone no. (Cell)`
 
 would become
 
-```Phone_no___Cell_```
+`Phone_no___Cell_`
 
-as the period, the space and the parenthesis all become underscores. Although your graphql
-queries will work, you will see only nulls in this column. So please ensure the names of
-your fields in Airtable do not result in 3 sequential underscores.
+as the period, the space and the parenthesis all become underscores. Although
+your graphql queries will work, you will see only nulls in this column. So
+please ensure the names of your fields in Airtable do not result in 3 sequential
+underscores.
 
 ### API Keys
 
@@ -351,6 +353,7 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the

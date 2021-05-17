@@ -1,0 +1,1240 @@
+{
+  "records": [
+    {
+      "id": "recfeQZT1bAUaFiG8",
+      "fields": {
+        "Name": "Balsamic Chicken and Vegetables",
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["rec9snLVeEx7oiCVf"],
+        "URL": "http://www.bhg.com/recipe/chicken/balsamic-chicken-and-vegetables/#page=0",
+        "Ingredients": "1/4 cup bottled Italian salad dressing,\n2 tablespoons balsamic vinegar,\n1 tablespoon honey,\n1/8 teaspoon crushed red pepper,\n2 tablespoons olive oil,\n1 pound chicken breast tenderloins,\n10 ounces fresh asparagus, trimmed and cut into 2-inch pieces, or one 10-ounce package frozen cut asparagus, thawed and well drained,\n1 cup purchased shredded carrot,\n1 small tomato; seeded and chopped",
+        "Directions": "In a small bowl, stir together salad dressing, balsamic vinegar, honey, and crushed red pepper. Set aside.\n\nIn a large skillet, heat oil over medium-high heat. Add chicken; cook for 5 to 6 minutes or until chicken is tender and no longer pink, turning once. Add half of the dressing mixture to skillet; turn chicken to coat. Transfer chicken to a serving platter; cover and keep warm.\n\nAdd asparagus and carrot to skillet. Cook and stir for 3 to 4 minutes or until asparagus is crisp-tender; transfer to serving platter.\n\nStir remaining dressing mixture; add to skillet. Cook and stir for 1 minute, scraping up browned bits from bottom of skillet. Drizzle the dressing mixture over chicken and vegetables. Sprinkle with tomato. \n\nMakes 4 servings.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:45:32.000Z"
+    },
+    {
+      "id": "recXFnf5mWIMx6lO3",
+      "fields": {
+        "Name": "Cajun Chicken and Rice",
+        "Attachments": [
+          {
+            "id": "attKhr7Tv2KD3VsMb",
+            "url": "https://dl.airtable.com/WUm7mHBtRYKiqEGVgmS0_cajun-chicken-and-rice-jambalaya-recipe-15.jpg",
+            "filename": "cajun-chicken-and-rice-jambalaya-recipe-15.jpg",
+            "size": 108650,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/2pY7XXrTl6qefDuP90MO_small_cajun-chicken-and-rice-jambalaya-recipe-15.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/uaX1BrSjKVyge9vJytZg_large_cajun-chicken-and-rice-jambalaya-recipe-15.jpg",
+                "width": 480,
+                "height": 512
+              },
+              "full": {
+                "url": "https://dl.airtable.com/lNaUFjlCSJWUTeMI09s4_full_cajun-chicken-and-rice-jambalaya-recipe-15.jpg",
+                "width": 480,
+                "height": 720
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["rec2Tl0ohj9ignvhe"],
+        "URL": "http://www.kevinandamanda.com/cajun-chicken-rice/",
+        "Last Made": "2017-03-22",
+        "Ingredients": "1 cup uncooked rice,\n2 cups water or chicken broth,\n1 teaspoon salt,\n1 lb boneless skinless chicken breasts,\nCajun or Creole Seasoning,\n2 tablespoons olive oil,\n4 cups diced onions and bell peppers,\n1 (10-oz) can Ro-Tel Diced Tomatoes and Green Chiles,\n1 cup shredded cheddar cheese",
+        "Directions": "1. Combine rice, water (or broth) and salt in a saucepan. Bring to a boil, then cover, reduce heat to low, and simmer for 14 minutes. Remove from heat and set aside when done. Keep covered.\n2. Cut the chicken into bite-sized pieces, about 1-inch cubes. Season generously with cajun seasoning. Add one tablespoon of the olive oil to a large pot or dutch oven over medium-high heat. When the oil is very hot, add the chicken in a single layer. Brown on one side, about 2-3 minutes, then flip and brown on the other side. Remove chicken to a plate and set aside.\n3. Add the remaining olive oil to the pan, increase heat to high, and when the oil is hot, carefully add the onions and bell peppers. Add more seasoning and cook, stirring occasionally, until the vegetables are softened and browned.\n4. Add the tomatoes to the onions and bell peppers, then add the chicken back in, along with any juices that may have collected on the plate. Add the cooked rice and stir until well combined. Add the cheese if desired and stir well to combine.",
+        "Rating": 5
+      },
+      "createdTime": "2017-03-22T21:32:07.000Z"
+    },
+    {
+      "id": "recP5F2d08EuXuGiG",
+      "fields": {
+        "Name": "Chicken Chow Mein",
+        "Attachments": [
+          {
+            "id": "attvIq79yeNrnPOKo",
+            "url": "https://dl.airtable.com/em8VA9nTwi2Cc4BKRR1A_chicken-chow-mein-3.jpg",
+            "filename": "chicken-chow-mein-3.jpg",
+            "size": 118071,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/FU2uMCceQoCTnpV7Ujbq_small_chicken-chow-mein-3.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/JbaYXwTrOj7QMhbZwIg4_large_chicken-chow-mein-3.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/JJOII0YdQ1C1G5CmnjDb_full_chicken-chow-mein-3.jpg",
+                "width": 680,
+                "height": 1020
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recWvIGq6hVYrygs4"],
+        "URL": "https://www.dinneratthezoo.com/chicken-chow-mein/",
+        "Last Made": "2017-10-18",
+        "Ingredients": "1 tablespoon vegetable oil,\n3/4 pound boneless skinless chicken breasts cut into 1 inch pieces,\n6 ounces dry chow mein noodles,\n1/2 cup thinly sliced yellow onion,\n1/2 cup shredded or julienned carrots,\n1/4 cup thinly sliced celery,\n1 teaspoon minced garlic,\n1 cup shredded cabbage,\n1/4 cup soy sauce,\n2 teaspoons honey,\n1 tablespoon sesame oil,\n1/4 cup sliced green onion tops (only the dark green part),\nsalt and pepper to taste",
+        "Directions": "Bring a pot of water to a boil; add the chow mein noodles and cook according to package instructions.\nPreheat the oil in a large pan over medium high heat. \nAdd the chicken and season with salt and pepper to taste. Cook for 3-4 minutes per side or until golden brown. \nAdd the onions, carrots and celery to the pan and cook for 3-4 minutes or until just softened. \nAdd the garlic and cook for 30 seconds.\nAdd the noodles to the pan, along with the cabbage. Toss to combine.\nIn a small bowl, whisk together the soy sauce, honey and sesame oil. Pour the soy sauce mixture into the pan.\nStir until sauce evenly coats the noodles. Add the green onion tops and cook for 1-2 more minutes, until green onions and cabbage are wilted. Serve immediately.",
+        "Rating": 8,
+        "Cooking Time": 15,
+        "Preparation Time": 10,
+        "Total Time": 25
+      },
+      "createdTime": "2017-11-12T16:55:47.000Z"
+    },
+    {
+      "id": "receZOWN1vGuM3KGj",
+      "fields": {
+        "Name": "Chicken Mozzarella Pasta",
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recBjrNbe28tTF2ps"],
+        "Ingredients": "1 pound penne or rigatoni,\n2 tablespoons olive oil; plus more for drizzling,\n2 boneless; skinless chicken breasts; cut into bite-size pieces,\nSalt and freshly ground black pepper,\n2 cloves garlic; minced,\n1 large onion; finely diced,\nOne 25-ounce jar good-quality marinara sauce,\n1/2 teaspoon crushed red pepper flakes; or more to taste,\n2 tablespoons minced fresh parsley,\n8 ounces fresh mozzarella; cut into medium cubes,\n1/4 cup Parmesan shavings; plus grated Parmesan; for serving,\n12 basil leaves; cut into chiffonade",
+        "Directions": "Cook the pasta according to the package directions.\n\nHeat the olive oil in a skillet over medium-high heat. Add the chicken pieces in a single layer and sprinkle with salt and pepper. Allow it to cook, without stirring, until golden, about 2 minutes. Stir the chicken around to brown it on all sides. Remove to a plate.\n\nIn the same skillet over medium-high heat, add the garlic and onions and stir immediately to start cooking. Cook until the onions are deep golden, stirring occasionally, 2 to 3 minutes.\n\nReduce the heat to low and pour in the marinara sauce, red pepper flakes, and 1/2 cup water. Stir until the onions and garlic are mixed in, then add the chicken back to the skillet. Add the parsley and stir to combine. Bring to a simmer and cook, stirring occasionally, for 7 to 8 minutes.\n\nMake sure the sauce is bubbly and very hot, then gently stir in the mozzarella. Let sit, undisturbed, until you can see that the mozzarella is very soft, 2 to 3 minutes.\n\nDrain the pasta and pour it onto a platter. Drizzle with a little olive oil. Immediately sprinkle on the Parmesan shavings. Pour on the sauce, sprinkle with grated Parmesan and the chiffonade of basil and serve immediately!",
+        "Rating": 5,
+        "Cooking Time": 12,
+        "Preparation Time": 4,
+        "Total Time": 16
+      },
+      "createdTime": "2017-06-24T21:35:45.000Z"
+    },
+    {
+      "id": "recLhtX41Z6p6u987",
+      "fields": {
+        "Name": "Chicken Stuffed Peppers",
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recniMtrdNRfRP8VF"],
+        "Ingredients": "4 bell peppers,\n2 tsp. olive oil,\n1 medium onion,\n2 cloves garlic,\n1 1/2 lbs chicken; boneless; skinless; chopped 3/4in,\n1 1/2 tsp ground chili peppers,\n1 1/2 tsp ground cumin,\n1 tsp sea salt,\n1/4 tsp ground black pepper,\n1 cup [8 oz] (all natural) tomato sauce; no salt or sugar,\n2 [~0.67 cups; 5.3 oz uncooked] cups cooked quinoa,\n1 cup [8 oz] canned black beans; drained; rinsed,\n1 cup [8 oz] frozen corn kernels,\n5 Tbsp chopped fresh cilantro,\n2 Tbsp [1 oz] fresh lime juice,\n1 cup [8 oz] shredded Monterey jack cheese",
+        "Directions": "See Fixate book.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:46:52.000Z"
+    },
+    {
+      "id": "rec0yq9AU25NzsQh6",
+      "fields": {
+        "Name": "Chicken with Honeydew Salsa",
+        "Attachments": [
+          {
+            "id": "attc0c2K3b3nd8lHh",
+            "url": "https://dl.airtable.com/9TVMo1DASfqu69sJxgVi_20150910_191841.jpg.jpeg",
+            "filename": "20150910_191841.jpg.jpeg",
+            "size": 2175437,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/XOZGPKpHT6mTcaOnscB3_small_20150910_191841.jpg.jpeg",
+                "width": 64,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/ehFZUMSjQhqeCMhjnK0f_large_20150910_191841.jpg.jpeg",
+                "width": 910,
+                "height": 512
+              },
+              "full": {
+                "url": "https://dl.airtable.com/wOuHLwbySFSgJy3O0Dgi_full_20150910_191841.jpg.jpeg",
+                "width": 3000,
+                "height": 1688
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY", "reclskYBNAMij4hVi"],
+        "Style": ["recvonGdIKUkK1AmX"],
+        "Ingredients": "1 1/3 cups finely diced peeled seeded honeydew or other melon,\n1/4 cup finely chopped fresh cilantro plus 1/4 cup cilantro leaves,\n1/4 cup finely diced red onion,\n2 tablespoons fresh lime juice,\n2 tablespoons olive oil,\n2 teaspoons finely grated lime peel,\n1 teaspoon finely chopped seeded serrano chile,\nNonstick vegetable oil spray,\n4 boneless chicken breast halves with skin",
+        "Directions": "Combine diced melon, 1/4 cup chopped cilantro, finely diced red onion, lime juice, olive oil, grated lime peel, and chopped serrano chile in medium bowl. Toss to blend flavors. Season melon salsa to taste with salt and pepper.\n\nSpray grill with nonstick vegetable oil spray; prepare barbecue (medium heat). Sprinkle chicken breasts with salt and pepper. Grill chicken breasts until skin is crisp and brown and chicken is cooked through, about 5 minutes per side.\n\nSlice chicken breasts and arrange on plates. Top with melon salsa and cilantro leaves and serve.",
+        "Rating": 5
+      },
+      "createdTime": "2017-04-23T15:25:38.000Z"
+    },
+    {
+      "id": "reclr2EVgdzrAJRIf",
+      "fields": {
+        "Name": "Crack Chicken Spaghetti",
+        "Cooking Method": ["recIZsc1O8MPFFDPL", "recwE7GSDT3BBhDHY"],
+        "Style": ["rec2Tl0ohj9ignvhe"],
+        "URL": "http://www.plainchicken.com/2017/07/crack-chicken-spaghetti.html?m=1",
+        "Last Made": "2018-03-20",
+        "Ingredients": "8 ounces spaghetti,\n1 can (10.75-oz) cream of chicken soup,\n1 (8-oz) package Velveeta cheese; cubed,\n1/2 cup chicken broth,\n2 Tbsp dry Ranch dressing mix,\n2-1/2 cups cooked chopped chicken,\n1 (3-oz) package precooked bacon bits (Oscar Mayer),\n1-1/2 cups shredded cheddar cheese",
+        "Directions": "Preheat oven to 350 degrees. Lightly spray a 9x9-inch pan with cooking spray. Set aside.\n\n\nCook pasta according to package directions. Drain. Set aside.\n\nIn a saucepan, combine cream of soup, Velveeta and chicken broth. Cook on low, until the cheese melts, stirring constantly. Stir in dry Ranch mix.\n\nStir in cooked spaghetti, cooked chicken and bacon bits. Pour mixture into prepared dish. Top with cheddar cheese.\n\nBake uncovered for 30 minutes or until heated through.",
+        "Rating": 5,
+        "Cooking Time": 30,
+        "Preparation Time": 15,
+        "Total Time": 45
+      },
+      "createdTime": "2018-03-22T14:03:54.000Z"
+    },
+    {
+      "id": "recpafyMtqQJ5BmuR",
+      "fields": {
+        "Name": "Crack Pork Chops",
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recRT9XtMBKOE6w2U"],
+        "URL": "http://www.delish.com/cooking/recipe-ideas/recipes/a51925/crack-pork-chops-recipe/",
+        "Last Made": "2017-04-04",
+        "Ingredients": "1 tbsp. olive oil,\n1 lb. boneless pork chops (about 1/2\" thick),\nkosher salt,\nFreshly ground black pepper,\n1 c. barbecue sauce,\n1/2 c. brown sugar,\nJuice of 2 limes,\n1 tsp. garlic powder",
+        "Directions": "1. In a large skillet over medium heat, heat olive oil. Season both sides of pork chops with salt and pepper. Add pork chops to the skillet in a single layer and cook until golden on both sides, 2 to 3 minutes per side.\n2. Meanwhile, make crack sauce: In a medium bowl, whisk together barbecue sauce, brown sugar, lime juice, and garlic powder.\n3. When the pork chops are golden, add the crack sauce to the pan and bring sauce to a boil. Reduce heat to medium, cover the skillet with a tight-fitting lid, and simmer until the pork is cooked through, 4 to 5 minutes more.\n4. Garnish with parsley and serve immediately.",
+        "Rating": 5
+      },
+      "createdTime": "2017-04-02T02:42:35.000Z"
+    },
+    {
+      "id": "reckEP6triC1KAjph",
+      "fields": {
+        "Name": "Creamy Chicken and Corn Chowder",
+        "Attachments": [
+          {
+            "id": "att2YFMJy7MKMBpoj",
+            "url": "https://dl.airtable.com/oQejTdLbSv2vgJbdOnx2_creamy-chicken-and-corn-chowder5%2Bsrgb.1.jpg",
+            "filename": "creamy-chicken-and-corn-chowder5+srgb.1.jpg",
+            "size": 168568,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/Gyav6SISjSB0vFS9fkPA_small_creamy-chicken-and-corn-chowder5%2Bsrgb.1.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/GsZjHU0hTr6bw3Wlmxy2_large_creamy-chicken-and-corn-chowder5%2Bsrgb.1.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/nbouYaAmQ1KDsPtESUPE_full_creamy-chicken-and-corn-chowder5%2Bsrgb.1.jpg",
+                "width": 525,
+                "height": 788
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recnSWbG6ch3i3jkX"],
+        "URL": "https://www.cookingclassy.com/creamy-chicken-corn-chowder/",
+        "Last Made": "2018-04-12",
+        "Ingredients": "1 lb boneless skinless chicken breast; cooked and shredded (3 cups),\n8 slices bacon; cooked and crumbled*,\n1/4 cup butter; diced into 1 Tbsp pieces,\n1 large red bell pepper; diced (1 1/2 cups),\n1 medium yellow onion; diced (1 1/4 cups),\n1 - 2 jalapenos; seeded for less heat if desired; finely chopped,\n4 cloves garlic; minced,\n1/3 cup all-purpose flour,\n6 cups low-sodium chicken broth,\n3 medium russet potatoes; peeled and diced slightly less than 1/2-inch thick (3 cups),\n2 bay leaves,\nSalt and freshly ground black pepper; to taste,\n2 1/2 cups fresh or frozen corn,\n1 1/2 cups half and half,\nGreen onions and seeded; finely chopped jalapenos (optional); for serving",
+        "Directions": "In a large pot, melt butter over medium heat. Add red bell pepper, onions, jalapenos and saute until tender, about 3 minutes. Add garlic and cook 30 seconds longer. Stir in flour, and cook 2 minutes stirring constantly. While stirring, slowly add in chicken broth and whisk until well blended.\n\n\nAdd potatoes, bay leaves and season with salt and pepper to taste. Bring mixture to a boil stirring frequently, then reduce heat to medium-low and cook, uncovered, 10 minutes or just until potatoes are tender, stirring occasionally.\n\nAdd in cooked chicken, corn and half and half and simmer, uncovered 10 - 15 minutes longer, stirring occasionally. Serve warm topped bacon, green onions, and optional jalapeno peppers.",
+        "Rating": 10,
+        "Cooking Time": 30,
+        "Preparation Time": 15,
+        "Total Time": 45
+      },
+      "createdTime": "2018-04-14T14:23:19.000Z"
+    },
+    {
+      "id": "recd3og4M2sLL0yH8",
+      "fields": {
+        "Name": "Creamy Chicken Enchilada Soup",
+        "Attachments": [
+          {
+            "id": "att1Zs3HF7EWAF4Q9",
+            "url": "https://dl.airtable.com/WKUEjHwRZSa5iGD6yOwk_creamy-chicken-enchilada-soup-5.jpg",
+            "filename": "creamy-chicken-enchilada-soup-5.jpg",
+            "size": 77932,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/IdlPXXfOQhWWVdZ1PYXg_small_creamy-chicken-enchilada-soup-5.jpg",
+                "width": 26,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/mf0UjBQZQMa7YGlNZX6r_large_creamy-chicken-enchilada-soup-5.jpg",
+                "width": 512,
+                "height": 704
+              },
+              "full": {
+                "url": "https://dl.airtable.com/v9lg4kqMSvO8xai6QSGP_full_creamy-chicken-enchilada-soup-5.jpg",
+                "width": 680,
+                "height": 935
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recnSWbG6ch3i3jkX", "recKoIeSobZsci1G1"],
+        "URL": "https://lmld.org/creamy-chicken-enchilada-soup/",
+        "Last Made": "2018-08-23",
+        "Ingredients": "For the Soup:\n2-3 large chicken breasts raw and thawed\n1 10 oz can red enchilada sauce\n1 14 oz can black beans rinsed and drained\n1 14 oz can corn drained\n1 4 oz can diced green chiles\n1 14 oz can diced tomatoes with juices\n2 cups chicken broth or stock or about 1 14oz can\n1 TBS minced garlic\n1 tsp salt\n1 TBS taco seasoning\n1 8 oz block cream cheese\n1/2 cup shredded mozzarella cheese\n\nToppings:\nshredded mozzarella or cheddar cheese\ncilantro\ntortilla strips or tortilla chips\navocado\ndiced green onion",
+        "Directions": "Pour all ingredients except the cream cheese and mozzarella into a large pot heated over medium high heat on the stove top.\n\n\nAllow to cook for about 30 minutes, or until chicken is cooked through.\n\nRemove chicken from pot and shred in a bowl using 2 forks. Return to pot.\n\nCut the cream cheese into small cubes and add them and the shredded mozzarella cheese to the pot.\n\nStir well until the cream cheese has melted completely into the soup.\n\nServe topped with sour cream, shredded cheese, tortilla strips, etc.",
+        "Rating": 10,
+        "Cooking Time": 45,
+        "Preparation Time": 10,
+        "Total Time": 50
+      },
+      "createdTime": "2018-08-24T11:37:30.000Z"
+    },
+    {
+      "id": "recs82J8JB1EHB2lH",
+      "fields": {
+        "Name": "Creamy Garlic Parmesan Zoodles",
+        "Attachments": [
+          {
+            "id": "attoynaN8H3pi2Zof",
+            "url": "https://dl.airtable.com/QsJclP6KTGOIDBTyquc7_Creamy-Zucchini-Noodles%5B1%5D.jpg",
+            "filename": "Creamy-Zucchini-Noodles[1].jpg",
+            "size": 157008,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/2ylL1l0iQhdiAIFsgnyU_small_Creamy-Zucchini-Noodles%5B1%5D.jpg",
+                "width": 21,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/9vGqRIZvQfCviT6wfp6r_large_Creamy-Zucchini-Noodles%5B1%5D.jpg",
+                "width": 512,
+                "height": 875
+              },
+              "full": {
+                "url": "https://dl.airtable.com/BZ51xAiWRLmCkep3jUcJ_full_Creamy-Zucchini-Noodles%5B1%5D.jpg",
+                "width": 700,
+                "height": 1196
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recvonGdIKUkK1AmX"],
+        "URL": "https://www.momendeavors.com/creamy-garlic-parmesan-zoodles/",
+        "Last Made": "2018-06-07",
+        "Ingredients": "1 TBSP butter\n2 cloves garlic, minced\n4 oz cream cheese\n2-3 TBSP milk\n¼ C Parmesan cheese\n4-5 medium zucchini, spiralized\nsalt & pepper to taste\n*optional - sliced cherry tomatoes for garnish",
+        "Directions": "In a large pan, melt butter over medium-low heat. Then add minced garlic.\n\nLet the garlic and butter cook together for a minute or so, then add cream cheese and milk.\n\nAllow the cream cheese to melt and start forming a simple sauce.\n\nAdd in all the zucchini noodles. Toss the zoodles to coat with the sauce.\n\nAdd Parmesan cheese and cook all together, just until the noodles are barely fork tender and all the cheese has melted.",
+        "Rating": 8,
+        "Cooking Time": 5,
+        "Preparation Time": 5,
+        "Total Time": 10
+      },
+      "createdTime": "2018-06-14T12:05:47.000Z"
+    },
+    {
+      "id": "recN26I4YiFfSYkwt",
+      "fields": {
+        "Name": "Creamy Parmesan Garlic Broccoli Chicken",
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recniMtrdNRfRP8VF"],
+        "URL": "https://therecipecritic.com/2016/06/creamy-parmesan-garlic-mushroom-chicken/",
+        "Last Made": "2017-07-11",
+        "Ingredients": "4 boneless skinless chicken breasts thinly sliced,\n2 Tablespoons Olive oil,\nSalt and Pepper,\n8 ounces sliced mushrooms,\n¼ cup butter,\n2 garlic cloves minced,\n1 tablespoon flour,\n½ cup chicken broth,\n1 cup heavy cream or half and half,\n½ cup grated parmesan cheese,\n½ teaspoon garlic powder,\n¼ teaspoon pepper,\n½ teaspoon salt,\n1 cup spinach chopped",
+        "Directions": "In a large skillet add olive oil and cook the chicken on medium high heat for 3-5 minutes on each side or until brown on each side and cooked until no longer pink in center. Remove chicken and set aside on a plate. Add the sliced mushrooms and cook for a few minutes until tender. Remove and set aside.\n\nTo make the sauce add the butter and melt. Add garlic and cook until tender. Whisk in the flour until it thickens. Whisk in chicken broth, heavy cream, parmesan cheese, garlic powder, pepper and salt. Add the spinach and let simmer until it starts to thicken and spinach wilts. Add the chicken and ,mushrooms back to the sauce and serve over pasta is desired.",
+        "Rating": 5,
+        "Cooking Time": 20,
+        "Preparation Time": 5,
+        "Total Time": 25
+      },
+      "createdTime": "2017-07-12T02:00:05.000Z"
+    },
+    {
+      "id": "recKBB3jdyBUtZuyO",
+      "fields": {
+        "Name": "Creamy Tuscan Garlic Chicken",
+        "Attachments": [
+          {
+            "id": "attwbVeo0C3IvlXtf",
+            "url": "https://dl.airtable.com/XHZCwBjTQqPnTVg6QkMm_tuscangarlicchicken4-650x975%5B1%5D.jpg",
+            "filename": "tuscangarlicchicken4-650x975[1].jpg",
+            "size": 132494,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/jZezavMYRAyg1rZCaEhE_small_tuscangarlicchicken4-650x975%5B1%5D.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/wjTx0AQSOmAw8PXgdLzQ_large_tuscangarlicchicken4-650x975%5B1%5D.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/umznvMzCTM67GeS2xviy_full_tuscangarlicchicken4-650x975%5B1%5D.jpg",
+                "width": 650,
+                "height": 975
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recBjrNbe28tTF2ps"],
+        "URL": "https://therecipecritic.com/creamy-tuscan-garlic-chicken/",
+        "Ingredients": "1.5 pounds boneless skinless chicken breasts, thinly sliced\n2 Tablespoons olive oil\n1 cup heavy cream\n1/2 cup chicken broth\n1 teaspoon garlic powder\n1 teaspoon italian seasoning\n1/2 cup parmesan cheese\n1 cup spinach, chopped\n1/2 cup sun dried tomatoes",
+        "Directions": "In a large skillet add olive oil and cook the chicken on medium high heat for 3-5 minutes on each side or until brown on each side and cooked until no longer pink in center. Remove chicken and set aside on a plate.\n\n\nAdd the heavy cream, chicken broth, garlic powder, italian seasoning, and parmesan cheese. Whisk over medium high heat until it starts to thicken. Add the spinach and sundried tomatoes and let it simmer until the spinach starts to wilt. Add the chicken back to the pan and serve over pasta if desired.",
+        "Rating": 7,
+        "Cooking Time": 15,
+        "Preparation Time": 10,
+        "Total Time": 25
+      },
+      "createdTime": "2018-06-14T11:59:40.000Z"
+    },
+    {
+      "id": "rec36eHJ4zkpvB0c9",
+      "fields": {
+        "Name": "Easiest Crock Pot Salsa Verde Chicken",
+        "Attachments": [
+          {
+            "id": "att9SbJ79PiSl4DgC",
+            "url": "https://dl.airtable.com/GduD6bCJR12TkEQyfiXl_easiest-crock-pot-salsa-verde-chicken-170x255.jpg",
+            "filename": "easiest-crock-pot-salsa-verde-chicken-170x255.jpg",
+            "size": 26445,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/Uw1h6zdoQryUcby5IV9C_small_easiest-crock-pot-salsa-verde-chicken-170x255.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/g3ZpkHPOQF2oIbUPSFl3_large_easiest-crock-pot-salsa-verde-chicken-170x255.jpg",
+                "width": 170,
+                "height": 255
+              },
+              "full": {
+                "url": "https://dl.airtable.com/pJ4e8M69QqO1hRLCJ57c_full_easiest-crock-pot-salsa-verde-chicken-170x255.jpg",
+                "width": 170,
+                "height": 255
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recWTJyY9wn5FXJ7p"],
+        "Style": ["recKoIeSobZsci1G1"],
+        "URL": "http://www.skinnytaste.com/easiest-crock-pot-salsa-verde-chicken",
+        "Last Made": "2017-04-05",
+        "Ingredients": "1 1/2 lbs raw skinless chicken tenders\n1/4 tsp garlic powder\n1/8 tsp oregano\n1/8 tsp ground cumin\nsalt, to taste\n16 oz roasted salsa verde",
+        "Directions": "Season chicken with garlic powder, oregano, cumin and salt and place in the bottom of the slow cooker. Cover with salsa verde, cover and cook HIGH 2 hours. Remove chicken, shred with 2 forks. Remove 2/3 cup of liquid from the slow cooker, and discard (unless you want it over rice). Place shredded chicken back into the crock pot with remaining salsa, adjust seasoning to taste if needed and keep warm.",
+        "Rating": 5
+      },
+      "createdTime": "2017-04-05T21:54:01.000Z"
+    },
+    {
+      "id": "reciwLVTztUkQ4lMg",
+      "fields": {
+        "Name": "Easy 20-Minutes Teriyaki Chicken and Broccoli",
+        "Attachments": [
+          {
+            "id": "att9DF1tjxaQApWsu",
+            "url": "https://dl.airtable.com/eobALs9RzKT2Xq6GpdeV_teriyaki-chicken-broccoli-tablefortwoblog-5.jpg",
+            "filename": "teriyaki-chicken-broccoli-tablefortwoblog-5.jpg",
+            "size": 111641,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/BFjo06SKRc6TIYvlg7VM_small_teriyaki-chicken-broccoli-tablefortwoblog-5.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/GGQAnrFFRCmtxUIa0Cfj_large_teriyaki-chicken-broccoli-tablefortwoblog-5.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/COjbYNoQFi3LNPecNQJb_full_teriyaki-chicken-broccoli-tablefortwoblog-5.jpg",
+                "width": 600,
+                "height": 900
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recWvIGq6hVYrygs4"],
+        "URL": "https://www.tablefortwoblog.com/easy-20-minute-teriyaki-chicken-and-broccoli/",
+        "Last Made": "2017-09-21",
+        "Ingredients": "4 cups fresh broccoli (see notes below if you're using frozen broccoli),\n1 large boneless skinless chicken breast diced into 1-inch cubes,\n1 tablespoon vegetable oil,\n\nFor the sauce,\n2 cloves garlic minced,\n1/2 cup low-sodium soy sauce,\n1/4 cup water,\n2 tablespoon rice vinegar,\n1/4 cup dark brown sugar,\n2 tablespoon cornstarch",
+        "Directions": "In a small bowl, whisk together all the ingredients for the sauce and set aside.\n\nBring a medium pot of water to a boil and add the broccoli. Blanch the broccoli for 5 minutes then immediately transfer the broccoli to an ice bath (a large bowl of water with ice in it) to stop the cooking process. Set aside.\n\nIn a skillet, brown chicken on both sides with vegetable oil over medium high heat. Add the broccoli (excess water drained well) then turn the heat down to medium. Gently pour in the sauce and let thicken, about 5 minutes. Gently toss the ingredients in the sauce until everything is coated well.\n\nServe over rice.",
+        "Rating": 10,
+        "Cooking Time": 15,
+        "Preparation Time": 5,
+        "Total Time": 20
+      },
+      "createdTime": "2017-09-30T22:55:22.000Z"
+    },
+    {
+      "id": "rec2webh8UIXDJiKh",
+      "fields": {
+        "Name": "Easy Chicken & Cheese Enchiladas",
+        "Attachments": [
+          {
+            "id": "atthITwuqx2W1tJrx",
+            "url": "https://dl.airtable.com/tNsQGD00RrKKmPvBe0e4_easy-chicken-cheese-enchiladas-large-50780.jpg",
+            "filename": "easy-chicken-cheese-enchiladas-large-50780.jpg",
+            "size": 46853,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/2fZ2ububRQyDqcjMKl7M_small_easy-chicken-cheese-enchiladas-large-50780.jpg",
+                "width": 52,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/rIECH3MeRRiCLrA6KWIX_large_easy-chicken-cheese-enchiladas-large-50780.jpg",
+                "width": 460,
+                "height": 316
+              },
+              "full": {
+                "url": "https://dl.airtable.com/2gkfryiR2GPsMH4v0dvc_full_easy-chicken-cheese-enchiladas-large-50780.jpg",
+                "width": 460,
+                "height": 316
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recKoIeSobZsci1G1"],
+        "Ingredients": "1 can (10 1/2 ounces) Campbell’s® Condensed Cream of Chicken Soup or (10 1/2 ounces) Campbell’s® Condensed 98% Fat Free Cream of Chicken Soup,\n1/2 cup sour cream,\n1 cup Pace® Picante Sauce,\n2 teaspoons chili powder,\n2 cups chopped cooked chicken,\n1/2 cup Monterey Jack cheese,\n6 each (6-inch) flour tortillas; warmed,\n1 small tomato; chopped (about 1/2 cup),\n1 green onion; sliced (about 2 tablespoons)",
+        "Directions": "Heat the oven to 350°F. Stir the soup, sour cream, picante sauce and chili powder in a medium bowl.\n\nStir 1 cup soup mixture, chicken and cheese in a large bowl.\n\nDivide the chicken mixture among the tortillas. Roll up the tortillas and place seam-side down in an 11 x 8 x 2-inch baking dish. Pour the remaining soup mixture over the filled tortillas. Cover the baking dish.\n\nBake for 40 minutes or until the enchiladas are hot and bubbling. Top with the tomato and onion.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:34:41.000Z"
+    },
+    {
+      "id": "recNCOhMzAtIjvh4N",
+      "fields": {
+        "Name": "Healthy Baked Chicken Parmesan",
+        "Attachments": [
+          {
+            "id": "atth8GdWdAYDe4ASf",
+            "url": "https://dl.airtable.com/1l4cM4uUSbSsh5yc0xX2_chickenparm8.jpg",
+            "filename": "chickenparm8.jpg",
+            "size": 236632,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/y1hjmuQ2Qk6Ry4ggc0Rx_small_chickenparm8.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/nYEmRr4uQ4aMg1ItIrhT_large_chickenparm8.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/oIz7xwRSmaMBTtLYrksw_full_chickenparm8.jpg",
+                "width": 700,
+                "height": 1050
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recBjrNbe28tTF2ps"],
+        "Last Made": "2018-01-23",
+        "Ingredients": "½ cup unseasoned wholegrain breadcrumbs,\n2 tablespoons grated parmesan (or romano) cheese,\n1 teaspoon Italian seasoning,\n½ teaspoon granulated garlic,\n½ teaspoon onion powder,\n½ teaspoon salt,\n½ teaspoon ground pepper,\n1 tablespoon olive oil,\n2lbs chicken cutlets,\n¾ cup sauce,\n¾ cup mozzarella cheese",
+        "Directions": "Preheat oven to 375 degrees.\n\nIn a medium bowl mix together the breadcrumbs, parmesan cheese, granulated garlic, onion powder, salt, and pepper.\n\nCoat a sheet pan with the olive oil.\n\nDredge each chicken cutlet in the breadcrumb mixture and place on the sheet pan. Discard the rest of the breadcrumb mixture.\nBake the chicken for 15 minutes. Turn over and bake for another 15 minutes.\n\nRemove the pan from the oven and spread 2 tablespoons of sauce and 2 tablespoons of shredded mozzarella cheese on each chicken cutlet.\nPlace back in the oven and cook for 10 - 15 minutes or until sauce is hot and cheese is melted.\n\nServe hot.",
+        "Rating": 5,
+        "Cooking Time": 45,
+        "Preparation Time": 10,
+        "Total Time": 55
+      },
+      "createdTime": "2017-09-30T23:07:16.000Z"
+    },
+    {
+      "id": "recIiArUGk4bh24c9",
+      "fields": {
+        "Name": "Instant Pot Beef Stew",
+        "Attachments": [
+          {
+            "id": "attwivz0Kt50jmaST",
+            "url": "https://dl.airtable.com/51rlgLYQ9CkMyli7ggFT_Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-4-e1507826969837.jpg",
+            "filename": "Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-4-e1507826969837.jpg",
+            "size": 123535,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/vutRjX4aTLLn9Pg2Eg9M_small_Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-4-e1507826969837.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/VLFFJD0tQUWeyDkPqBU1_large_Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-4-e1507826969837.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/XesonifQPDdkt0C6rehQ_full_Instant-Pot-Beef-Stew-Recipe-Photo-Recipe-1-of-1-4-e1507826969837.jpg",
+                "width": 633,
+                "height": 950
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["rec987Cl06FI5q0ea"],
+        "Style": ["recRT9XtMBKOE6w2U"],
+        "URL": "https://lifemadesweeter.com/instant-pot-pressure-cooker-homemade-beef-stew/",
+        "Last Made": "2017-11-08",
+        "Ingredients": "1 1/2 - 2 pounds beef stew meat, trimmed and cut into 1 - 2 inch chunks,,\n1 -2 teaspoons sea salt,\n1/2 teaspoon black pepper,\n1/2 teaspoon onion powder,\n1/2 teaspoon Italian seasoning,\n1/3 cup flour (use gluten free flour or arrowroot starch if needed),\ncooking oil,\n1 medium onion, cut into large chunks,\n3-4 cloves garlic, minced,\n6 tablespoons tomato paste,\n2 tablespoons balsamic vinegar or red wine,\n4 medium Russet potatoes, peeled and chopped into 1 inch chunks,\n1 large sweet potato, peeled and chopped into 1 inch chunks (leave out if desired),\n3 medium carrots, peeled and cut into slices,\n2 ribs celery, chopped,\n1-2 teaspoons Worcestershire sauce,\n2 teaspoons Italian seasoning (or 1 teaspoon dried rosemary 1/2 teaspoon dried parsley, 1/2 teaspoon dried thyme),\n1 bay leaf,\n4-5 cups beef broth, homemade or low sodium,\nwater as needed to cover the vegetables,\n1-2 tablespoons fresh chopped parsley, for garnish,\n1 star anise (optional but adds SO much depth and flavor),\nsalt and pepper to taste",
+        "Directions": "In a large zip-top bag, combine flour, salt, pepper, onion powder, and Italian seasoning . Add meat and shake until well coated..\n\n\nBrowning the meat: (feel free to skip to step 5 and add all the ingredients together instead). Set the Instant Pot to SAUTE, add cooking oil and brown the meat on all sides. Meat will not be cooked through. (Be sure not to crowd the pot - you may have to work in batches). Transfer browned meat onto a large plate.\n\nPlace the pot back in the pressure cooker and add onions and garlic and sauté for a minute or two then add the balsamic vinegar and tomato paste until just hot enough to deglaze the pot, about 1 minute.\n\nAdd the beef back into the pot along with potatoes, sweet potato, carrots, celery, seasoning, Worcestershire sauce, broth, bay leaf (star anise if using) and stir to combine. If there is not enough liquid to cover the vegetables, add water - only as much as needed.\n\nAdd the lid on the Instant Pot and set to 20 minutes with High Pressure on Manual mode. Allow the pressure cooker to release naturally for at least 15 minutes. Adjust seasonings with salt and pepper if necessary (discard star anise if used). Serve hot with fresh parsley.\n\n**Optional: To thicken stew: Make a slurry by whisking 2 tablespoons of cool water with tablespoons cornstarch or flour (all purpose, gluten free or arrowroot powder). Set the Instant Pot to SAUTE and allow the stew to come to a boil and thicken up.",
+        "Rating": 9,
+        "Cooking Time": 35,
+        "Preparation Time": 15,
+        "Total Time": 50
+      },
+      "createdTime": "2017-11-12T16:43:56.000Z"
+    },
+    {
+      "id": "recMX5c9H9OfKvOOg",
+      "fields": {
+        "Name": "Keto Chicken Enchilada Bowl",
+        "Attachments": [
+          {
+            "id": "attoiy3J9eW95bEoY",
+            "url": "https://dl.airtable.com/fWoY3BfRouyuTCwCttOw_Image%2016%20June%202018%2010%3A15%20PM.jpg",
+            "filename": "Image 16 June 2018 10:15 PM.jpg",
+            "size": 317846,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/OFp8DHHLTFmtXxIJyHa3_small_Image%2016%20June%202018%2010%3A15%20PM.jpg",
+                "width": 29,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/ztJrSrDFSQ2WptewumPM_large_Image%2016%20June%202018%2010%3A15%20PM.jpg",
+                "width": 512,
+                "height": 637
+              },
+              "full": {
+                "url": "https://dl.airtable.com/oueV3HDTVe4fJRbNjmo3_full_Image%2016%20June%202018%2010%3A15%20PM.jpg",
+                "width": 777,
+                "height": 967
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recKoIeSobZsci1G1", "recwLWwlrOE4uwTMM"],
+        "URL": "https://www.heyketomama.com/keto-chicken-enchilada-bowl/",
+        "Last Made": "2018-06-14",
+        "Ingredients": "2-3 chicken breasts (about one pound of chicken)\n3/4 cups red enchilada sauce\n1/4 cup water\n1/4 cup onion\n1 4 oz can green chiles\n1 12oz steam bag cauliflower rice (We use broccoli and cauliflower mix)\nPreferred toppings- I used avocado, jalapeno, cheese, and roma tomatoes\nSeasoning, to taste",
+        "Directions": "In skillet over medium heat cook chicken breasts until lightly brown\n\n(I cut each breast into 3 or 4 large pieces to cook faster)\n\nAdd enchilada sauce, chiles, onions, water and reduce heat to simmer, covered\n\nCover and cook until chicken is cooked through and shred chicken\n\nAdd chicken back into sauce and continue simmering for additional 10 minutes uncovered or until most of liquid has been soaked up\n\nPrepare cauliflower rice per bag instructions and dice preferred toppings\n\nTop rice with chicken, cheese, avocado or preferred toppings",
+        "Rating": 10,
+        "Cooking Time": 10,
+        "Preparation Time": 20,
+        "Total Time": 30
+      },
+      "createdTime": "2018-06-17T03:09:56.000Z"
+    },
+    {
+      "id": "recp0sYFoErl4I23G",
+      "fields": {
+        "Name": "Lemon and Pea Alfredo",
+        "Attachments": [
+          {
+            "id": "attF2MthDHm5NLQXj",
+            "url": "https://dl.airtable.com/4abI9h8KSkyvKMwbkYgw_Image%2029%20April%202018%2011%3A15%20AM.jpg",
+            "filename": "Image 29 April 2018 11:15 AM.jpg",
+            "size": 778102,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/8RvDxu6YSPmWzB3C2owJ_small_Image%2029%20April%202018%2011%3A15%20AM.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/fFb8bFI6SBiY74YFZ48J_large_Image%2029%20April%202018%2011%3A15%20AM.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/vHkpfSiuRLhWHoTcavg1_full_Image%2029%20April%202018%2011%3A15%20AM.jpg",
+                "width": 800,
+                "height": 1200
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recBjrNbe28tTF2ps"],
+        "URL": "https://www.giadzy.com/posts/recipes/438842/lemon-and-pea-alfredo",
+        "Last Made": "2018-10-04",
+        "Ingredients": "1 pound fusilli col buco; such as Rustichella d’Abruzzo or Setaro,\n3 tablespoons butter,\n1 clove garlic; minced,\n2 1/2 cups freshly grated parmesan cheese; plus more for garnish,\n1 cup mascarpone cheese; at room temperature,\n2 teaspoon lemon zest; from 2 lemons,\n3/4 teaspoon kosher salt,\n1 1/2 cups frozen peas; thawed,\n1 tablespoon lemon juice,\n1 teaspoon pink peppercorns; ground",
+        "Directions": "Bring a large pot of salted water to a boil over high heat. Add the pasta and cook until just under al dente, about 10 or 11 minutes.\n\nMeanwhile heat a large straight sided skillet over medium heat. Add the butter to the hot pan. When the butter is melted add the garlic and cook, stirring often until soft and fragrant. Add 1/2 cup of the pasta water and reduce the heat to low. When the pasta is ready remove it from the water and add it directly to the pan with the sauce. Bring the heat back to medium and sprinkle 1 1/2 cups of the parmesan directly on the plain pasta. Stir to combine. Add the mascarpone, zest and salt. Toss well to coat adding pasta water as needed to thin the sauce and to assist in finishing cooking the pasta. Add the peas, lemon juice and remaining cheese. Toss well to combine adding pasta water as needed to reach the desired consistency of the sauce. You will more than likely use close to 1 1/2 cups pasta water total. Sprinkle with the pink peppercorns and additional parmesan if desired.",
+        "Rating": 8,
+        "Cooking Time": 20,
+        "Preparation Time": 5,
+        "Total Time": 25
+      },
+      "createdTime": "2018-04-29T16:10:07.000Z"
+    },
+    {
+      "id": "recW39v72u7oRmfHa",
+      "fields": {
+        "Name": "Lemon Garlic Orzo with Veggies",
+        "Attachments": [
+          {
+            "id": "attDbCCTDOonMOvR4",
+            "url": "https://dl.airtable.com/7OZNERKRXuqGIcdreHi9_RoastedVeggieOrzo-7.jpg",
+            "filename": "RoastedVeggieOrzo-7.jpg",
+            "size": 246101,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/UYOpmBeSDGoTmgW8yUFu_small_RoastedVeggieOrzo-7.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/j0aqtIpSD6381dmZodgg_large_RoastedVeggieOrzo-7.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/ndeTquQQLCYiL424RvAw_full_RoastedVeggieOrzo-7.jpg",
+                "width": 680,
+                "height": 1020
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recBjrNbe28tTF2ps"],
+        "URL": "https://vanillaandbean.com/lemon-garlic-orzo-with-roasted-vegetables/",
+        "Last Made": "2018-08-22",
+        "Ingredients": "For the Orzo and Veggies:\n1 1/2 C Crimini Mushrooms destemmed and sliced, 116g\n1 C Mix of Red Yellow, or Orange Bell Peppers, deseeded and diced (I use baby bells), 126g\n1 lb Asparagus (sub zucchini or eggplant when in season!) cut into 1\" pieces with woody ends discarded, 426g\n12 oz Cherry Tomatoes cut in 1/2, 340g\n2 tsp Garlic minced, 6g\n1/2 C Shallot chopped, 116g\n3 Tbs Extra Virgin Olive Oil divided, 36g\n1/2 tsp Sea Salt\n1/2 tsp Black Pepper Ground\n1 C Orzo 198g\n1 1/2 C Vegetable Broth 354g\n1/2 C Garlic and Herb Feta crumbled (Leave off for Vegan Option), 84g\n\nFor the Dressing:\n2 Tbs Extra Virgin Olive Oil 24g\n1 Tbs Lemon juiced, about 2\n1/2 tsp Sea Salt\n1/4 tsp Black Pepper ground\n\nFor the Garnish:\n2-3 Tbs Chopped Fresh Basil\n2-3 Tbs Chopped Fresh Parsley",
+        "Directions": "Cook the Veggies on the stovetop.\n\nCook the Orzo:\nIn a large saute pan, heat 1 Tbs of Olive Oil on medium heat until shimmering. Add the orzo and stir, coating the orzo throughly. Stir occasionally for about 3 minutes or until the orzo is toasty and golden. Add the vegetable broth. Be careful here because the broth will spit and sputter. Bring to a simmer, turn down the heat to low, cover and cook for about 15 minutes or until all the liquid is absorbed. Stir. Remove from heat, cover and set aside.\n\nMake the Dressing:\nIn a small bowl add the olive oil, lemon juice, salt and pepper. Whisk until all the ingredients are emulsified.\n\nPutting it all Together:\nIn the large saute pan, to the orzo, add the veggies and all their juices, stir in the dressing, and feta. Garnish generously with basil and parsley. Serve immediately.",
+        "Rating": 10,
+        "Cooking Time": 20,
+        "Preparation Time": 30,
+        "Total Time": 40
+      },
+      "createdTime": "2018-08-24T11:30:08.000Z"
+    },
+    {
+      "id": "recYb9BsRJs5LIlZn",
+      "fields": {
+        "Name": "Lemon Spaghetti",
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recBjrNbe28tTF2ps"],
+        "URL": "http://www.foodnetwork.com/recipes/giada-de-laurentiis/lemon-spaghetti-recipe-1915566.amp",
+        "Last Made": "2017-12-12",
+        "Ingredients": "1 pound spaghetti,\n2/3 cup olive oil,\n2/3 cup grated Parmesan,\n1/2 cup fresh lemon juice (about 3 lemons),\nSalt and freshly ground black pepper,\n1 tablespoon lemon zest,\n1/3 cup chopped fresh basil leaves",
+        "Directions": "Cook the pasta in a large pot of boiling salted water until tender but still firm to the bite, stirring occasionally, about 8 minutes. Meanwhile, whisk the oil, Parmesan, and lemon juice in a large bowl to blend.\n\n\nDrain the pasta, reserving 1 cup of the cooking liquid. Toss the pasta with the lemon sauce, and the reserved cooking liquid, adding 1/4 cup at a time as needed to moisten. Season with salt and pepper. Garnish with lemon zest and chopped basil.",
+        "Rating": 5,
+        "Cooking Time": 10,
+        "Preparation Time": 8,
+        "Total Time": 18
+      },
+      "createdTime": "2017-06-24T21:24:48.000Z"
+    },
+    {
+      "id": "reczLTzhF6fMGDoWA",
+      "fields": {
+        "Name": "Macaroni and Cheese with Broccoli and Chicken",
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recniMtrdNRfRP8VF"],
+        "Ingredients": "4 oz dry whole wheat macroni (is 3 cups cooked),\n4 tsp organic grass-fed butter (coconut oil),\n2 Tbsp unbleached whole wheat flour,\n1 1/2 cups [12 oz] unsweetened almond milk,\n1 1/4 cups [10 oz] grated extra-sharp cheddar cheese,\n3 cups [~1.5 lbs] cooked chopped chicken breast; boneless; skinless,\n6 cups [~2 1/2 lbs] chopped broccoli florest; steamed,\n1 tsp sea salt,\n1/2 tsp ground black peppe",
+        "Directions": "See Fixate book.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:48:38.000Z"
+    },
+    {
+      "id": "rec7YeVvIOmjDcJ3b",
+      "fields": {
+        "Name": "Mediterranean Fajitas",
+        "Attachments": [
+          {
+            "id": "attY5xY0xDEV8yXLL",
+            "url": "https://dl.airtable.com/uibplUFaR4KHh9DGSKNF_14791.jpg",
+            "filename": "14791.jpg",
+            "size": 62469,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/r0CRTcCOToaZCyxvGBSd_small_14791.jpg",
+                "width": 36,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/ikOHM6NVSFecom36E3ig_large_14791.jpg",
+                "width": 500,
+                "height": 500
+              },
+              "full": {
+                "url": "https://dl.airtable.com/QJvdB2nQMGOaofbbbMKp_full_14791.jpg",
+                "width": 500,
+                "height": 500
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["rec9snLVeEx7oiCVf"],
+        "URL": "http://shop.wildtree.com/MyWildTree/myWildTree_RecipeDetails.cfm?RecipeID=1479",
+        "Ingredients": "2 pounds chicken breasts; boneless & skinless,\n2 tablespoons Wildtree Natural Grapeseed Oil,\n2 tablespoons Wildtree Mediterranean Dry Rub,\n1 cup olives (an variety) diced,\n2 garlic cloves; minced,\n1 teaspoon Wildtree Roasted Garlic Grapeseed Oil,\n8 (6 inch) flour tortillas (may use flatbread if preferred),\n½ cup hummus,\n1 cup cherry tomatoes; halved,\n½ cup roasted red peppers; diced",
+        "Directions": "Add the chicken, Grapeseed Oil, and Mediterranean Rub in a large re-sealable bag. Use your hands to coat all the chicken breasts with the Grapeseed Oil and Mediterranean Rub. Preheat grill to medium high. Remove the chicken from the bag and place on the grill. Cook the chicken for about 4 minutes on each side or until completely cooked through. Meanwhile prepare an olive tapenade but combining the olives, garlic, and Garlic Grapeseed Oil; set aside. Transfer the chicken to a cutting board, slice into strips for serving. Enjoy on a tortilla with the olive tapenade, hummus, tomatoes, and roasted red peppers.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:49:16.000Z"
+    },
+    {
+      "id": "recPl2N6c6ynredxX",
+      "fields": {
+        "Name": "Mexican Shells",
+        "Attachments": [
+          {
+            "id": "attCcJX6tOAXUVm1h",
+            "url": "https://dl.airtable.com/vaFnmzdeTXmY4jegGAAA_mexi-shells.jpg",
+            "filename": "mexi-shells.jpg",
+            "size": 51808,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/bmW0mSYQKGiQyz7lqRww_small_mexi-shells.jpg",
+                "width": 36,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/Iw0VW2vESKWXQdUNlG7R_large_mexi-shells.jpg",
+                "width": 500,
+                "height": 500
+              },
+              "full": {
+                "url": "https://dl.airtable.com/gWXoCR2TQpqgKYpNRAp9_full_mexi-shells.jpg",
+                "width": 500,
+                "height": 500
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY", "recIZsc1O8MPFFDPL"],
+        "Style": ["recKoIeSobZsci1G1"],
+        "Ingredients": "1 pound ground beef (or ground turkey),\n1 package low-sodium taco seasoning,\n4 ounces cream cheese,\n16 jumbo pasta shells,\n1 1/2 cups salsa,\n1 cup taco sauce,\n1 cup cheddar cheese,\n1 cup Monterrey jack cheese,\n3 green onions,\nSour cream",
+        "Directions": "Preheat oven to 350°.\n\n\nIn a pan brown the ground beef; add taco seasoning and prepare according to package directions. Add cream cheese, cover and simmer until cheese is melted. Stir together and mix well. Set aside and cool completely.\n\nWhile ground beef is cooking, cook the pasta shells according to package directions; drain. Set shells out individually on cutting board or baking sheet so that they don’t stick together.\n\nPour salsa on bottom of a 9×13 baking dish. Stuff each shell with 1-2 tablespoons of the meat mixture. Place shells in 9×13 pan open side up. Evenly cover shells with taco sauce. Cover dish with foil and bake for 30 minutes.\n\nAfter 30 minutes, add shredded cheese and bake for 10-15 more minutes with the foil removed. Top with green onions or olives if desired. Serve with sour cream and/or more salsa.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:39:13.000Z"
+    },
+    {
+      "id": "recFVYHo6cAGWpEtH",
+      "fields": {
+        "Name": "Nearly Famous Chicken Tortilla Soup",
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recKoIeSobZsci1G1"],
+        "URL": "http://www.food.com/recipe/nearly-famous-chicken-tortilla-soup-447472",
+        "Ingredients": "2 tablespoons olive oil,\n1 small onion; chopped,\n2⁄3 cup fresh cilantro; chopped,\n3 minced garlic cloves,\n1 (14 1/2 ounce) can diced tomatoes,\n4 cups chicken broth,\n3⁄4 tablespoon cumin,\n1⁄2 tablespoon chili powder,\n1⁄4 teaspoon cayenne pepper,\n1 -2 bay leaf,\n2 carrots; thinly sliced,\n2 skinless chicken breasts; halved and thinly sliced,\n3⁄4 teaspoon salt,\npepper,\n1⁄2 cup shredded monterey jack cheese,\n1 -2 avocado; diced,\n16 ounces tortilla chips",
+        "Directions": "In a large stock pot, heat the oil over high. Add onions, 1/3 cup cilantro and garlic, sauté 3 minutes.\n\n\nStir in tomatoes and spices, then bring to a boil.\n\nAdd the broth, carrots and chicken. Return to a boil, then reduce heat to medium and cook another 10-12 minutes.\n\nStir in half the cheese and 1 cup crushed tortilla chips.\n\nLadle into bowls and top with remaining cheese, fresh cilantro, fresh avocado, and more tortilla chip pieces. Serves 4+.\n\n*This is a great recipe for leftover chicken or a rotisserie chicken. Just add it in at the very end to warm it up!",
+        "Rating": 5,
+        "Cooking Time": 15,
+        "Preparation Time": 15,
+        "Total Time": 30
+      },
+      "createdTime": "2017-06-24T21:29:58.000Z"
+    },
+    {
+      "id": "recKIMusQZPRR7T1C",
+      "fields": {
+        "Name": "One-Pan Pesto Chicken and Veggies",
+        "Attachments": [
+          {
+            "id": "attVZQLouZcqAch5R",
+            "url": "https://dl.airtable.com/kpJNs9ogRkmqKBa4ig5o_27153582940_abfa2e07b4_z.jpg",
+            "filename": "27153582940_abfa2e07b4_z.jpg",
+            "size": 225874,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/SOcmCRjpReO7fhhnEBo0_small_27153582940_abfa2e07b4_z.jpg",
+                "width": 54,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/YzGIHWUOQpCVAmFeMrp5_large_27153582940_abfa2e07b4_z.jpg",
+                "width": 640,
+                "height": 429
+              },
+              "full": {
+                "url": "https://dl.airtable.com/NtEj4Mi3RdqXFjPcvmQ0_full_27153582940_abfa2e07b4_z.jpg",
+                "width": 640,
+                "height": 429
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recvonGdIKUkK1AmX"],
+        "URL": "https://juliasalbum.com/one-pan-pesto-chicken-and-veggies/",
+        "Last Made": "2018-03-07",
+        "Ingredients": "2 tablespoons olive oil,\n1 pound chicken thighs boneless and skinless; sliced into strips,\n1/3 cup sun-dried tomatoes drained of oil; chopped,\n1 pound asparagus ends trimmed; cut in half; if large,\n1/4 cup basil pesto,\n1 cup cherry tomatoes yellow and red; halved",
+        "Directions": "Heat a large skillet on medium heat, add 2 tablespoons olive oil, add sliced chicken thighs, season chicken generously with salt, add half of chopped sun-dried tomatoes - and cook everything on medium heat for 5-10 minutes, flipping a couple of times, until the chicken is completely cooked through. Remove the chicken and sun-dried from the skillet, leaving oil in.\n\n\nAdd asparagus (ends trimmed), seasoned generously with salt, remaining half of sun-dried tomatoes, and cook on medium heat for 5-10 minutes until the asparagus cooked through. Remove asparagus to serving plate.\n\nAdd chicken back to the skillet, add pesto, stir to coat on low-medium heat until chicken is reheated, 1 or 2 minutes. Remove from heat. Add halved cherry tomatoes, mix with the pesto and the chicken. Add chicken and tomatoes to the serving plate with asparagus.",
+        "Rating": 10,
+        "Cooking Time": 20,
+        "Preparation Time": 10,
+        "Total Time": 30
+      },
+      "createdTime": "2018-03-04T16:33:39.000Z"
+    },
+    {
+      "id": "recNh9gBvGTnH8aYH",
+      "fields": {
+        "Name": "Paprika Parmesan Chicken",
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recniMtrdNRfRP8VF"],
+        "URL": "http://www.getinmybelly.com/paprika-parmesan-chicken/",
+        "Ingredients": "4 Skinless boneless chicken breasts trimmed,\n1/2 CUP Parmesan cheese grated,\n2 tsp Paprika,\n1/4 CUP All-purpose flour,\n1/2 tsp Salt,\n1/2 tsp Pepper,\n1/2 tsp Garlic powder,\n2 Eggs beaten,\n1/4 CUP Butter melted",
+        "Directions": "Preheat oven to 400°F.\n\n\nSet up 2 medium sized bowls.\n\nBeat 2 eggs in first bowl.\n\nMix flour, parmesan, paprika, garlic powder, salt, and pepper in a second bowl.\n\nDip chicken, 1 breast at a time, in egg mixture, then in parmesan/paprika mixture, turning to evenly coat both sides of each breast with each ingredient.\n\nPlace on prepared baking sheet, in a single layer.\n\nPour the melted butter evenly over the chicken.\n\nBake for about 40-45 minutes in the preheated oven, until the cheese has browned, and the chicken has cooked.\n\nServe with broccoli or vegetable of choice.",
+        "Rating": 5,
+        "Cooking Time": 45,
+        "Preparation Time": 15,
+        "Total Time": 45
+      },
+      "createdTime": "2017-07-23T03:26:36.000Z"
+    },
+    {
+      "id": "rec3Qwwvlg4TAWl0X",
+      "fields": {
+        "Name": "Potato Soup",
+        "Attachments": [
+          {
+            "id": "att4oZFF4hnLhyg8k",
+            "url": "https://dl.airtable.com/Js5WVJsTYiKGx7zWcuAf_Image%2028%20September%202018%2006%3A59%20PM.jpg",
+            "filename": "Image 28 September 2018 06:59 PM.jpg",
+            "size": 2245765,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/2RNTHgWRSgSiRLBeRBai_small_Image%2028%20September%202018%2006%3A59%20PM.jpg",
+                "width": 48,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/gJcr3jCoSGKgauaaNkaA_large_Image%2028%20September%202018%2006%3A59%20PM.jpg",
+                "width": 683,
+                "height": 512
+              },
+              "full": {
+                "url": "https://dl.airtable.com/Io3udYfNQIqowKPPb8Zs_full_Image%2028%20September%202018%2006%3A59%20PM.jpg",
+                "width": 3000,
+                "height": 2250
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recnSWbG6ch3i3jkX"],
+        "URL": "https://www.gimmesomeoven.com/potato-soup-recipe/",
+        "Last Made": "2018-09-28",
+        "Ingredients": "5 slices bacon; diced,\n3 tablespoons bacon grease (reserved) or butter,\n1 cup diced white or yellow onion,\n1/4 cup all-purpose flour,\n2 cups chicken stock,\n2 cups milk; warmed,\n1.5 pounds potatoes; peeled (if desired) and diced (I recommend Yukon gold potatoes),\n1 cup shredded sharp cheddar cheese,\n1/2 cup plain Greek yogurt or sour cream,\n1 teaspoon Kosher salt; or more to taste,\n1/2 teaspoon freshly-cracked black pepper,\noptional toppings: thinly-sliced green onions or chives; extra shredded cheese; extra bacon; sour cream,",
+        "Directions": "Heat a large stockpot over medium-high heat.  Add diced bacon and cook until crispy, stirring occasionally.  Transfer the bacon to a separate plate, using a slotted spoon, reserving about 3 tablespoons of bacon grease in the stockpot.  (Discard any extra grease, or you can substitute butter in place of the 3 tablespoons of bacon grease.  Also, if you are short on time, you can dice the potatoes and onion while the bacon cooks to save time.)\n\n\nAdd onion and saute for 5 minutes, stirring occasionally, until soft.  Sprinkle the flour on top of the onion, and stir until combined.  Saute for an additional minute to cook the flour, stirring occasionally.  Then stir in the chicken stock until combined.  Stir in the milk and potatoes until combined.  Continue cooking until the mixture reaches a simmer, but is not boiling.\n\nReduce heat to medium-low, cover, and simmer for about 10-15 minutes or until the potatoes are soft, stirring occasionally every few minutes so that the bottom does not burn.  (The smaller you dice your potatoes, the faster they will cook.)\n\nWhen the potatoes are soft, stir in the cheddar cheese and Greek yogurt (or sour cream), salt, pepper and cooked bacon bits.  Taste and see if it needs more salt or pepper or cheese.\n\nServe warm, garnished with desired toppings.  Or, transfer to a sealed container and refrigerate for up to 3 days.",
+        "Rating": 5,
+        "Cooking Time": 20,
+        "Preparation Time": 10,
+        "Total Time": 30
+      },
+      "createdTime": "2018-01-10T01:44:31.000Z"
+    },
+    {
+      "id": "recaRABsMRLt5p2ll",
+      "fields": {
+        "Name": "Quinoa and Black Bean Salad",
+        "Attachments": [
+          {
+            "id": "attVhKxa9m7VeUonC",
+            "url": "https://dl.airtable.com/6bTkviiNTzOnaWHBlkIY_IMG_20160901_185050.jpg",
+            "filename": "IMG_20160901_185050.jpg",
+            "size": 2561265,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/CnM0kY8BSwyOfDPMUESU_small_IMG_20160901_185050.jpg",
+                "width": 48,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/xrdvt75TTPmppy3hexGp_large_IMG_20160901_185050.jpg",
+                "width": 684,
+                "height": 512
+              },
+              "full": {
+                "url": "https://dl.airtable.com/wyJAiNFATwWmdYPNSz9R_full_IMG_20160901_185050.jpg",
+                "width": 3000,
+                "height": 2244
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recvonGdIKUkK1AmX"],
+        "Ingredients": "1/3 [2.7 oz] cup fresh lime juice,\n1 Tbsp ground cumin,\n1 Tbsp sea salt,\n1/3 [2.7 oz] cup olive oil,\n(2) 15oz cans black beans; drained; rinsed,\n4 1/2 tsp red wine vinegar,\n4 cups water,\n2 cups [16 oz] dry quinoa; rinsed,\n1 each medium red|orange|yellow bell pepper; finely chopped,\n1 (10 oz) bag frozen corn; thawed,\n1 bunch cilantro; finely chopped",
+        "Directions": "See Fixate book.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:51:08.000Z"
+    },
+    {
+      "id": "reclLpkJ3t2i2fPwx",
+      "fields": {
+        "Name": "Sausage, Pepper, Onion and Potato Hash",
+        "Attachments": [
+          {
+            "id": "attcu1KUKZwyEdtTK",
+            "url": "https://dl.airtable.com/1QPoUrFQQzK3YTMZiuPA_Image%2028%20September%202018%2006%3A57%20PM.jpg",
+            "filename": "Image 28 September 2018 06:57 PM.jpg",
+            "size": 3712039,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/30ufAcIyQ0SJD40vUuP6_small_Image%2028%20September%202018%2006%3A57%20PM.jpg",
+                "width": 48,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/fzKY5YnQCxRX0iT1OzKw_large_Image%2028%20September%202018%2006%3A57%20PM.jpg",
+                "width": 683,
+                "height": 512
+              },
+              "full": {
+                "url": "https://dl.airtable.com/Zawc8LpfTRuMUiFsuxsK_full_Image%2028%20September%202018%2006%3A57%20PM.jpg",
+                "width": 3000,
+                "height": 2250
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["rec2Tl0ohj9ignvhe"],
+        "URL": "http://www.thetwobiteclub.com/2014/05/kielbasa-pepper-onion-and-potato-hash.html",
+        "Last Made": "2018-09-18",
+        "Ingredients": "1 (14 ounce) package turkey kielbasa; cut into 1/4 inch rounds,\n1 green bell pepper; diced,\n1 yellow, red or orange bell pepper; diced,\n1 onion; diced,\n3 small or 2 large potatoes; peeled and diced,\nolive oil,\nsalt and pepper",
+        "Directions": "1) In a heavy bottomed skillet (I like to use my cast iron), heat 2 tbsp of olive oil over medium-high heat.  Add the potatoes to the skillet and season with salt and pepper. Fry until golden brown and cooked through, around 8-10 minutes, stirring a few times to ensure even browning.  \n2) In a separate skillet, brown the sliced kielbasa for around 5 minutes in 1 tbsp of olive oil over medium high heat.  Remove the kielbasa from the pan and set aside.  Add the peppers and onions to the skillet and season with a pinch of salt and pepper.  Cook for 5 minutes, or until softened, stirring occasionally.  \n3) Add the cooked potatoes and kielbasa to the skillet with the onions and peppers and mix everything together.  Serve nice and hot!\n\nNotes:\nI use two skillets to make this recipe.  I used to make it in one, but something always came out wrong.  I've learned that when I cook my potatoes in a separate skillet they cook more evenly and stay nice any crispy when they're added to the other ingredients right before serving.\nSometimes I'll add some minced garlic to the peppers and onions, but it tastes just as good without it.",
+        "Rating": 5
+      },
+      "createdTime": "2017-03-26T18:12:51.000Z"
+    },
+    {
+      "id": "recsCsBahKwh6CQQe",
+      "fields": {
+        "Name": "Skillet Chicken with Creamy Cilantro Lime Sauce",
+        "Attachments": [
+          {
+            "id": "attp6S50hC5Uxh2B4",
+            "url": "https://dl.airtable.com/B5B8LtpKT1WnqiKsKuBh_Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg",
+            "filename": "Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg",
+            "size": 124632,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/jGJfSl4Qxe73JA7tvSIn_small_Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/xcE3S7dtSTqkBdK1wvm6_large_Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/1biAtJq1S6eStd7ZTeR3_full_Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg",
+                "width": 540,
+                "height": 810
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recniMtrdNRfRP8VF"],
+        "URL": "https://sallysbakingaddiction.com/2015/07/08/skillet-chicken-with-creamy-cilantro-lime-sauce/",
+        "Last Made": "2018-06-11",
+        "Ingredients": "4 skinless boneless chicken breasts\n1/4 teaspoon salt\n1/4 teaspoon freshly ground black pepper\n1 Tablespoon olive oil\n1 cup chicken broth (I recommend reduced sodium)\n1 Tablespoon fresh lime juice (I use closer to 1.5 Tbsp)\n1/4 cup finely chopped onion\n1 Tablespoon chopped cilantro\n1/2 teaspoon red pepper flakes\n3 Tablespoons heavy cream\n2 Tablespoons unsalted butter, cubed\noptional: lime wedges and more cilantro for garnish, steamed asparagus for serving",
+        "Directions": "Preheat oven to 375°F (190°C).\n\n\nIf the chicken breasts are uneven in thickness, pound them down so they're all even. This way all the breasts will cook through similtaneously. Sprinkle each with salt and pepper.\n\nIn a large ovenproof skillet, heat the oil over medium-high heat. Add the chicken and cook for 6-7 minutes, turning once. You want the chicken nice and browned on the outside. (It doesn't have to be cooked all the way through yet.) Set chicken on a plate and cover tightly with foil until step 5.\n\nRemove skillet from heat and add the broth, lime juice, onion, cilantro, and red pepper. Return to heat. Cook and stir to scrape up the browned bits from the bottom of the skillet. Bring to a boil. Allow to boil gently, uncovered, for 10 minutes or until the liquid is reduced to around 1/4 cup. (During this time you can steam some veggies to have on the side, like asparagus.) Reduce heat to medium-low, then add the cream and butter. Stir until butter has melted.\n\nAdd chicken to the sauce and place the skillet in the preheated oven. Bake uncovered until the chicken is completely cooked through, about 5-10 minutes.\n\nServe chicken with sauce spooned on top and any of the listed optional garnishes. Leftovers keep well in the refrigerator for a few days. Reheat to your liking.",
+        "Rating": 9,
+        "Cooking Time": 10,
+        "Preparation Time": 30,
+        "Total Time": 40
+      },
+      "createdTime": "2018-06-14T12:10:16.000Z"
+    },
+    {
+      "id": "recSNkwSIzvG3thOo",
+      "fields": {
+        "Name": "Smothered Chicken Queso Casserole",
+        "Attachments": [
+          {
+            "id": "attjjS6Yk7QAWkDpq",
+            "url": "https://dl.airtable.com/85wweuobSOKi7LK98kIQ_smothered-chicken-queso-casserole_06.jpg",
+            "filename": "smothered-chicken-queso-casserole_06.jpg",
+            "size": 97171,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/oeCS1gLQJK60nj4aTseQ_small_smothered-chicken-queso-casserole_06.jpg",
+                "width": 64,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/YLhNBDFyTx1X5GF1SzVv_large_smothered-chicken-queso-casserole_06.jpg",
+                "width": 725,
+                "height": 408
+              },
+              "full": {
+                "url": "https://dl.airtable.com/iodRm4TcTXehblBNz3yL_full_smothered-chicken-queso-casserole_06.jpg",
+                "width": 725,
+                "height": 408
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recKoIeSobZsci1G1"],
+        "URL": "https://www.bettycrocker.com/how-to/tipslibrary/baking-tips/currently-craving-smothered-chicken-queso-casserole",
+        "Ingredients": "1 tablespoon oil,\n3 large boneless skinless chicken breasts; cut in half lengthwise,\n1 package (1 oz) Old El Paso™ taco seasoning mix,\n1 jar (15 oz) Tostito's™ salsa con queso,\n3/4 cups half-and-half,\n1 can (4.5 oz) Old El Paso™ chopped green chiles,\n1 medium red or orange bell pepper; seeded; chopped,\n2 1/2 cups cooked white rice,\n1 cup shredded Mexican cheese blend (4 oz),\nChopped tomatoes and chopped fresh cilantro; if desired",
+        "Directions": "Heat oven to 350°F. Spray 13 x 9-inch baking dish or 2 1/2-quart casserole with cooking spray.\n\nIn 12-inch skillet, heat oil over medium-high heat. Sprinkle chicken with taco seasoning mix. Cook chicken in oil 6 to 8 minutes, turning once, until golden brown on both sides. Depending on thickness of chicken, it may not be cooked all the way through at this point but will finish baking in the oven.\n\nIn large bowl, stir together salsa con queso, half-and-half and chopped green chiles; stir in bell pepper. Reserve one-fourth of the sauce mixture. Stir rice into remaining sauce mixture.\n\nPlace rice mixture in casserole; top with chicken. Top with reserved sauce mixture, then shredded cheese. Cover with foil.\n\nBake 20 minutes; uncover and bake 10 to 15 minutes longer or until sauce bubbles and juice of chicken is clear when center of thickest part is cut (at least 165°F).\n\nCool 10 minutes. Garnish with tomatoes and cilantro.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:31:30.000Z"
+    },
+    {
+      "id": "recFdmLkJbQVmNNVZ",
+      "fields": {
+        "Name": "Southwest Chicken Pasta",
+        "Attachments": [
+          {
+            "id": "attTXeQQ9i6uVm4Vn",
+            "url": "https://dl.airtable.com/ZVYDXiBPQym7huOZXmqQ_18031.JPG",
+            "filename": "18031.JPG",
+            "size": 39712,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/OWIqFKz8SmqKqRACRtpP_small_18031.JPG",
+                "width": 54,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/bPP1m05rSDWWp0sRElcs_large_18031.JPG",
+                "width": 500,
+                "height": 333
+              },
+              "full": {
+                "url": "https://dl.airtable.com/EbSqv8XS9CTCINurGiMw_full_18031.JPG",
+                "width": 500,
+                "height": 333
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recrCSj36nF4DahvD"],
+        "URL": "http://shop.wildtree.com/MyWildTree/myWildTree_RecipeDetails.cfm?RecipeID=1803",
+        "Ingredients": "1 tablespoon Wildtree Natural Grapeseed Oil,\n½ onion; diced,\n½ bell pepper; diced,\n½ cup back beans; drained and rinsed,\n½ cup corn,\n¾ cup heavy cream,\n2 teaspoons Wildtree Spicy Carne Asada; divided,\n8 ounce dry pasta, prepared according to package directions,\n2 cups shredded; cooked chicken",
+        "Directions": "Heat Grapeseed Oil in a nonstick skillet over medium heat. Add the onion and bell peppers. Sauté until tender, about 7 minutes. Add the beans and corns; continue cooking 2-3 minute more until heated through. Reduce heat to low. Add the heavy cream and whisk in 1 teaspoon Carne Asada. Simmer until slightly thickened, about 1 minute. Toss the cooked chicken with the remaining 1 teaspoon Carne Asada and add to the skillet along with the cooked pasta. Toss to coat everything in the cream sauce. Serve with diced avocado if desired.",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:19:58.000Z"
+    },
+    {
+      "id": "recQ5RBwZgxld8vqr",
+      "fields": {
+        "Name": "Taco Peppers",
+        "Cooking Method": ["recIZsc1O8MPFFDPL"],
+        "Style": ["recKoIeSobZsci1G1"],
+        "Ingredients": "6-8 Medium/Large Bell Peppers - ensure they have a flat base so they will stand up when cooking,\n1 lb Ground Beef,\n1 Medium Yellow Onion - Diced,\n1 Can Black Beans - Drained,\n1 Cup Cooked Brown Rice,\n1 Cup Frozen Corn,\n1 Jar Medium Chunky Salsa,\n1 Packet (about 2 Tbsp.) of Taco Seasoning Mix*,\n1 1/2 - 2 Cups Grated Cheddar/Mexican Blend Cheese,\nOptional: Guacamole and Sour Cream to finish,\n\n*To make your own Taco Seasoning at home: (note: makes more than needed for this recipe),\n1 Tbsp. Chili Powder,\n1 1/2 tsp Ground Cumin,\n1 tsp Salt,\n1 tsp Black Pepper,\n1 tsp Corn Starch,\n1/2 tsp Paprika,\n1/2 tsp Garlic Powder,\n1/2 tsp Onion Powder,\n1/4 tsp Cayenne Pepper,\n1/4 tsp Oregano",
+        "Directions": "Cut off the top and remove the seeds from each pepper. Place in a baking dish and bake for 20 minutes in a preheated oven at 350˚F (175˚C).\n\nWhile the Peppers are roasting - heat oil in a large skillet over medium/high heat. Add ground beef and season with entire taco seasoning packet. Allow beef to brown on all sides. Add diced onion - continuing to cook until softened. Reduce heat to Medium. Mix in the black beans, brown rice, corn, and salsa. Add in 1 cup of cheese and stir until incorporated and the cheese has melted. Remove from heat.\n\nRemove peppers from oven and fill each with the taco mixture. Top with additional cheese and return to the oven for 15 minutes until the cheese has melted. Top each pepper with a generous scoop of guacamole and sour cream. Enjoy!",
+        "Rating": 5
+      },
+      "createdTime": "2017-09-30T23:41:57.000Z"
+    },
+    {
+      "id": "recO9Ge2GZy1Df869",
+      "fields": {
+        "Name": "Tuscan Chicken Mac And Cheese",
+        "Attachments": [
+          {
+            "id": "attEUeX5VCSWOpWx3",
+            "url": "https://dl.airtable.com/Vb2eeGDcR8uodPpoJBHn_One-Pot-Garlic-Tuscan-Chicken-Mac-And-Cheese-IMAGE-119.jpg",
+            "filename": "One-Pot-Garlic-Tuscan-Chicken-Mac-And-Cheese-IMAGE-119.jpg",
+            "size": 264688,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/NIH2aDyGRWqkBsF65oxO_small_One-Pot-Garlic-Tuscan-Chicken-Mac-And-Cheese-IMAGE-119.jpg",
+                "width": 24,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/QueBa8CRMKha07jcxFa1_large_One-Pot-Garlic-Tuscan-Chicken-Mac-And-Cheese-IMAGE-119.jpg",
+                "width": 512,
+                "height": 768
+              },
+              "full": {
+                "url": "https://dl.airtable.com/ISOCkPUnQpm7jFSFFLf1_full_One-Pot-Garlic-Tuscan-Chicken-Mac-And-Cheese-IMAGE-119.jpg",
+                "width": 1560,
+                "height": 2340
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recBjrNbe28tTF2ps", "recniMtrdNRfRP8VF"],
+        "URL": "https://cafedelites.com/tuscan-chicken-mac-and-cheese/",
+        "Last Made": "2018-01-02",
+        "Ingredients": "2 large skinless boneless chicken breasts pounded to 1-inch thickness (or 4 boneless and skinless chicken thigh fillets),\nSalt and pepper; to season,\n1/2 teaspoon paprika (sweet or smokey),\n1/2 teaspoon dried parsley,\n1 tablespoon oil; divided (use olive or canola oil),\n2 tablespoons butter,\n1 small yellow onion chopped,\n6 cloves garlic finely diced,\n1/3 cup white wine OPTIONAL (use chicken broth instead if you wish),\n9 oz (250g) jarred sun dried tomato strips in oil (reserve 2 tablespoons of oil and drain the rest),\n3 level tablespoons flour,\n2 cups chicken broth,\n3 cups milk OR light cream* or half and half; divided,\n2 teaspoons dried Italian herbs,\n10 ounces (300g) elbow macaroni uncooked (3 cups!),\n3 cups baby spinach leaves,\n1 cup fresh grated Parmesan cheese,\n3/4 cup mozzarella cheese shredded,\n1/2 cup grated cheese Cheddar or Gruyere,\n2 tablespoons fresh parsley chopped",
+        "Directions": "Season chicken with salt, pepper, paprika, dried parsley and 2 teaspoons of the oil. Heat the remaining oil in a large (30cm or 12-inch) pot or pan over medium-high heat. Add the chicken and sear on both sides until golden brown, cooked through and no longer pink in the middle. Transfer chicken to a warm plate, tent with foil and set aside.\n\nTo the same pan, add the butter and fry the onion and garlic until the onion becomes transparent, stirring occasionally (about 2 minutes). Pour in the white wine and allow to simmer for 5 minutes, or until beginning to reduce down.\n\nAdd the sun dried tomatoes with 2 tablespoons of the sun dried tomato oil from the jar and cook for 1-2 minutes to release as much flavour as possible.\n\nStir the flour into the pot and allow to cook for a further minute. Then, add the broth, 2 1/2 cups of milks (or cream/half and half), herbs, salt and pepper, and bring to a very low simmer (lower the heat if you need to). \n\nAdd the dry macaroni and stir occasionally as it comes to a simmer. Reduce heat down to medium low and stir regularly while it cooks (for about 9 - 10 minutes), or until the sauce thickens and the macaroni is just cooked (al dente: tender but still firm). Add the spinach and stir through until wilted. \n\nTake the pot off the stove and stir all of the cheese in quickly. Adjust salt and pepper to taste. If the sauce it too thick, add the remaining 1/2 cup milk (or cream) in 1/4 cup increments, until reaching desired thickness. Keep in mind the sauce will continue to thicken as it cools. \n\nSlice the chicken into strips and stir through the pasta (pour in any juices left from the chicken). Sprinkle with parsley, and stir through. Serve immediately!",
+        "Rating": 5,
+        "Cooking Time": 30,
+        "Preparation Time": 10,
+        "Total Time": 40
+      },
+      "createdTime": "2018-01-10T01:50:13.000Z"
+    },
+    {
+      "id": "reczR9Rw2FCG4ymbv",
+      "fields": {
+        "Name": "One Pot Cheesy Mexican Lentils, Black Beans and Rice",
+        "Attachments": [
+          {
+            "id": "attnFfCCQ7xBiXX8l",
+            "url": "https://dl.airtable.com/PxSytMF4SkCGmamPk9Gv_Image%2007%20October%202018%2006%3A00%20PM.jpg",
+            "filename": "Image 07 October 2018 06:00 PM.jpg",
+            "size": 3239487,
+            "type": "image/jpeg",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/C7VgopVKQzmKamnNrawn_small_Image%2007%20October%202018%2006%3A00%20PM.jpg",
+                "width": 48,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/jvs4zvSRHmbHWEXl41iQ_large_Image%2007%20October%202018%2006%3A00%20PM.jpg",
+                "width": 683,
+                "height": 512
+              },
+              "full": {
+                "url": "https://dl.airtable.com/YnGGqsfxS4G2ieoDqN7c_full_Image%2007%20October%202018%2006%3A00%20PM.jpg",
+                "width": 3000,
+                "height": 2250
+              }
+            }
+          }
+        ],
+        "Cooking Method": ["recwE7GSDT3BBhDHY"],
+        "Style": ["recY6nqbyn6VwHOOr", "recKoIeSobZsci1G1"],
+        "URL": "https://reciperunner.com/one-pot-cheesy-mexican-lentils-black-beans-and-rice/",
+        "Last Made": "2018-09-27",
+        "Ingredients": "1/2 of a yellow onion, diced\n1 clove of garlic minced\n1/2 cup uncooked long grain brown rice\n1/2 cup uncooked French green lentils, rinsed\n2-3 cups low sodium vegetable stock\n1 teaspoon chili powder\n1/2 teaspoon ground cumin\n1/4 teaspoon ground chipotle powder (optional)\nKosher salt and fresh ground black pepper to taste\n15 ounce can black beans, rinsed and drained\n1/2 cup fire roasted tomatoes, drained\n4 ounce can diced green chiles\n1 small zucchini, shredded\n1/2 cup defrosted frozen corn\n1 cup red enchilada sauce\n3/4 cup shredded cheese, I used sharp cheddar and part skim mozzarella\nCilantro for garnish (optional)",
+        "Directions": "Heat a large pot or saucepan over medium high heat.\n\nWhen the pot is heated spray with cooking oil and add in the onion and garlic.\n\nSauté for a couple minutes then add in the brown rice and lentils.\n\nAdd in the vegetable stock, stir and bring to a boil.\n\nOnce boiling, cover and reduce the heat to low.\nSimmer for 30-40 minutes, or until lentils and rice are tender.\n\nIf there is any excess liquid drain it.\n\nSeason the rice and lentils with salt, pepper, chili powder, cumin and chipotle powder.\n\nAdd in all of the remaining ingredients except 1/4 cup of the cheese and stir together.\n\nHeat the mixture until the cheese is melted.\n\nTop with the remaining cheese and cover with a lid.\n\nHeat on low until the cheese is melted and the mixture is bubbly.",
+        "Rating": 10,
+        "Cooking Time": 50,
+        "Preparation Time": 10,
+        "Total Time": 60
+      },
+      "createdTime": "2018-10-07T22:57:24.000Z"
+    }
+  ]
+}
