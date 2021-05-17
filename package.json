@@ -4,9 +4,17 @@
   "version": "2.1.1",
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
+  "license": "MIT",
   "main": "index.js",
   "files": [
     "/gatsby-node.js"
+  ],
+  "keywords": [
+    "airtable",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source",
+    "gatsby-source-airtable"
   ],
   "scripts": {
     "c": "all-contributors",
@@ -26,13 +34,6 @@
   "peerDependencies": {
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
   },
-  "keywords": [
-    "airtable",
-    "gatsby",
-    "gatsby-plugin",
-    "gatsby-source",
-    "gatsby-source-airtable"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn format"
@@ -42,5 +43,8 @@
     "proseWrap": "always",
     "trailingComma": "all"
   },
-  "license": "MIT"
+  "volta": {
+    "node": "14.17.0",
+    "npm": "7.13.0"
+  }
 }
