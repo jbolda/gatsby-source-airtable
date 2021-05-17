@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/stale@v1
+    - uses: actions/stale@v3
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'This issue has been automatically marked as stale because it has not had any recent activity for 30 days. It will be closed if no further activity occurs within 7 days. Remove stale label, comment, and/or apply "ongoing issue" label to prevent this from being closed. Thank you for your contributions.'
