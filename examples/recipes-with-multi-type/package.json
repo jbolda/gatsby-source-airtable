@@ -33,7 +33,7 @@
     "lazy": "cp ../../gatsby-node.js ./node_modules/gatsby-source-airtable && yarn dev:hard"
   },
   "devDependencies": {
-    "nock": "^13.0.11",
+    "nock": "13.0.11",
     "prettier": "2.1.2"
   },
   "volta": {
