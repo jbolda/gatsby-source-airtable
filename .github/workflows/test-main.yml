@@ -1,0 +1,42 @@
+name: integration test
+on:
+  push:
+    branches:
+      - main
+      - staging
+      - trying
+
+jobs:
+  test:
+    name: ${{ matrix.example }} on ${{ matrix.os }} with node@${{ matrix.node }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+        example:
+          [
+            "examples/recipes-with-photos",
+            "examples/recipes-with-multi-type",
+            "examples/markdown-docs",
+            "examples/testing-options",
+          ]
+        node: ["14", "16"]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+        with:
+          node-version: ${{ matrix.node }}
+          npm-version: "7"
+      - run: npm ci
+        working-directory: ${{ matrix.example }}
+      - run: npm run build
+        working-directory: ${{ matrix.example }}
+
+  report:
+    name: examples-passed
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "passed!"
