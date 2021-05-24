@@ -34,7 +34,6 @@
     "prettier": "2.1.2"
   },
   "volta": {
-    "node": "14.17.0",
-    "npm": "7.13.0"
+    "extends": "../../package.json"
   }
 }

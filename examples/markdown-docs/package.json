@@ -1,5 +1,7 @@
 {
   "name": "markdown-docs-example",
+  "version": "0.0.0",
+  "private": true,
   "dependencies": {
     "gatsby": "2.24.69",
     "gatsby-source-airtable": "2.1.1",
@@ -23,7 +25,6 @@
     "prettier": "2.1.2"
   },
   "volta": {
-    "node": "14.17.0",
-    "npm": "7.13.0"
+    "extends": "../../package.json"
   }
 }

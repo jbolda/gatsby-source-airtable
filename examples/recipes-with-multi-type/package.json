@@ -1,7 +1,8 @@
 {
   "name": "gatsby-starter-default",
   "description": "Gatsby default starter",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": true,
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "dependencies": {
@@ -37,7 +38,6 @@
     "prettier": "2.1.2"
   },
   "volta": {
-    "node": "14.17.0",
-    "npm": "7.13.0"
+    "extends": "../../package.json"
   }
 }
