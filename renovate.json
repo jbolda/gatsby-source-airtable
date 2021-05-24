@@ -1,6 +1,6 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "ignorePaths": []
+  "extends": ["config:base"],
+  "ignorePaths": [],
+  "rebaseWhen": "never",
+  "lockFileMaintenance": { "enabled": true }
 }
