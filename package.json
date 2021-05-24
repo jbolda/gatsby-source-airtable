@@ -19,7 +19,9 @@
   "scripts": {
     "c": "all-contributors",
     "format": "prettier --write \"{gatsby-node.js,README.md,package.json}\"",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "covector": "covector",
+    "prepare": "husky install"
   },
   "dependencies": {
     "airtable": "^0.8.0",
@@ -28,16 +30,12 @@
   },
   "devDependencies": {
     "all-contributors-cli": "6.20.0",
+    "covector": "0.5.3",
     "husky": "6.0.0",
     "prettier": "2.1.2"
   },
   "peerDependencies": {
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format"
-    }
   },
   "prettier": {
     "proseWrap": "always",
@@ -45,6 +43,6 @@
   },
   "volta": {
     "node": "14.17.0",
-    "npm": "7.13.0"
+    "npm": "7.14.0"
   }
 }

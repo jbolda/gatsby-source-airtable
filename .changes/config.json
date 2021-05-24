@@ -1,0 +1,13 @@
+{
+  "gitSiteUrl": "https://github.com/jbolda/gatsby-source-airtable/",
+  "additionalBumpTypes": ["housekeeping"],
+  "packages": {
+    "gatsby-source-airtable": {
+      "path": ".",
+      "manager": "javascript",
+      "version": true,
+      "getPublishedVersion": "npm view ${ pkg.pkg } version",
+      "publish": "npm publish --access public"
+    }
+  }
+}
