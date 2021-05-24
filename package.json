@@ -24,7 +24,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "airtable": "^0.8.0",
+    "airtable": "^0.11.1",
     "bluebird": "^3.5.4",
     "mime": "^2.4.4"
   },
