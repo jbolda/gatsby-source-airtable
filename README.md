@@ -118,6 +118,25 @@ Get all records from `YOUR_TABLE_NAME` where `Field_1 === YOUR_VALUE`:
 }
 ```
 
+Get all records ordered according selected `tableView`:
+
+```graphql
+{
+  allAirtable(
+    sort: {
+      fields: rowIndex
+    }
+  ) {
+    edges {
+      node {
+        data {
+          Field_1
+        }
+      }
+    }
+  }
+}
+
 ## How it works
 
 When running `gatsby develop` or `gatsby build`, this plugin will fetch all data
