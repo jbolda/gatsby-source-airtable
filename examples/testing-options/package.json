@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "gatsby": "2.24.69",
+    "gatsby": "3.6.2",
     "gatsby-source-airtable": "2.1.1",
-    "gatsby-source-filesystem": "2.3.33",
-    "gatsby-transformer-remark": "2.8.38",
+    "gatsby-source-filesystem": "3.6.0",
+    "gatsby-transformer-remark": "4.3.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "remark-html": "13.0.1"
