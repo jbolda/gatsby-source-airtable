@@ -23,6 +23,7 @@ Airtable base tables
   - [The power of views](#the-power-of-views)
   - [Naming conflicts](#naming-conflicts)
   - [Column Names](#column-names)
+    - [Known exception](#known-exception)
   - [API Keys](#api-keys)
   - [Columns without any values (yet)](#columns-without-any-values-yet)
 - [History](#history)
@@ -122,11 +123,7 @@ Get all records ordered according selected `tableView`:
 
 ```graphql
 {
-  allAirtable(
-    sort: {
-      fields: rowIndex
-    }
-  ) {
+  allAirtable(sort: { fields: rowIndex }) {
     edges {
       node {
         data {
@@ -136,6 +133,7 @@ Get all records ordered according selected `tableView`:
     }
   }
 }
+```
 
 ## How it works
 
