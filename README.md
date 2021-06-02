@@ -23,6 +23,7 @@ Airtable base tables
   - [The power of views](#the-power-of-views)
   - [Naming conflicts](#naming-conflicts)
   - [Column Names](#column-names)
+    - [Known exception](#known-exception)
   - [API Keys](#api-keys)
   - [Columns without any values (yet)](#columns-without-any-values-yet)
 - [History](#history)
@@ -120,13 +121,9 @@ Get all records from `YOUR_TABLE_NAME` where `Field_1 === YOUR_VALUE`:
 
 Get all records ordered according selected `tableView`:
 
-````graphql
+```graphql
 {
-  allAirtable(
-    sort: {
-      fields: rowIndex
-    }
-  ) {
+  allAirtable(sort: { fields: rowIndex }) {
     edges {
       node {
         data {
@@ -136,6 +133,7 @@ Get all records ordered according selected `tableView`:
     }
   }
 }
+```
 
 ## How it works
 
@@ -285,7 +283,7 @@ plugins: [
     },
   },
 ];
-````
+```
 
 You can either use a node tool like "dotenv" to load secrets like your Airtable
 API key from a .env file, or you can specify it in your command line such as
