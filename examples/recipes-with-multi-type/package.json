@@ -14,7 +14,7 @@
     "gatsby-plugin-mdx": "1.2.45",
     "gatsby-plugin-react-helmet": "3.3.13",
     "gatsby-plugin-sharp": "2.6.39",
-    "gatsby-source-airtable": "2.1.1",
+    "gatsby-source-airtable": "2.2.0",
     "gatsby-source-filesystem": "2.3.33",
     "gatsby-transformer-sharp": "2.5.17",
     "react": "16.14.0",

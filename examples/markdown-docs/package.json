@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "gatsby": "2.24.69",
-    "gatsby-source-airtable": "2.1.1",
+    "gatsby-source-airtable": "2.2.0",
     "gatsby-source-filesystem": "2.3.33",
     "gatsby-transformer-remark": "2.8.38",
     "react": "16.14.0",
