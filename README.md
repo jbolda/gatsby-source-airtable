@@ -120,7 +120,7 @@ Get all records from `YOUR_TABLE_NAME` where `Field_1 === YOUR_VALUE`:
 
 Get all records ordered according selected `tableView`:
 
-```graphql
+````graphql
 {
   allAirtable(
     sort: {
@@ -285,7 +285,7 @@ plugins: [
     },
   },
 ];
-```
+````
 
 You can either use a node tool like "dotenv" to load secrets like your Airtable
 API key from a .env file, or you can specify it in your command line such as
