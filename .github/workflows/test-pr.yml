@@ -23,7 +23,10 @@ jobs:
         with:
           node-version: "14"
           npm-version: "7"
-      - run: npm ci
+      - name: install in root
+        run: npm ci
+      - name: install in example
+        run: npm ci
         working-directory: ${{ matrix.example }}
       - run: npm run build
         working-directory: ${{ matrix.example }}
