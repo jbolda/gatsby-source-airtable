@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-source-airtable",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Jacob Bolda <me@jacobbolda.com>",
+  "main": "index.js",
+  "files": [
+    "/gatsby-node.js"
+  ],
+  "keywords": [
+    "airtable",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source",
+    "gatsby-source-airtable"
+  ],
+  "dependencies": {
+    "airtable": "^0.11.1",
+    "bluebird": "^3.5.4",
+    "mime": "^2.4.4"
+  },
+  "peerDependencies": {
+    "gatsby-source-filesystem": ">=2.0.0-rc.0"
+  }
+}

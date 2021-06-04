@@ -545,48 +545,6 @@
       "createdTime": "2017-09-30T23:34:41.000Z"
     },
     {
-      "id": "recNCOhMzAtIjvh4N",
-      "fields": {
-        "Name": "Healthy Baked Chicken Parmesan",
-        "Attachments": [
-          {
-            "id": "atth8GdWdAYDe4ASf",
-            "url": "https://dl.airtable.com/1l4cM4uUSbSsh5yc0xX2_chickenparm8.jpg",
-            "filename": "chickenparm8.jpg",
-            "size": 236632,
-            "type": "image/jpeg",
-            "thumbnails": {
-              "small": {
-                "url": "https://dl.airtable.com/y1hjmuQ2Qk6Ry4ggc0Rx_small_chickenparm8.jpg",
-                "width": 24,
-                "height": 36
-              },
-              "large": {
-                "url": "https://dl.airtable.com/nYEmRr4uQ4aMg1ItIrhT_large_chickenparm8.jpg",
-                "width": 512,
-                "height": 768
-              },
-              "full": {
-                "url": "https://dl.airtable.com/oIz7xwRSmaMBTtLYrksw_full_chickenparm8.jpg",
-                "width": 700,
-                "height": 1050
-              }
-            }
-          }
-        ],
-        "Cooking Method": ["recIZsc1O8MPFFDPL"],
-        "Style": ["recBjrNbe28tTF2ps"],
-        "Last Made": "2018-01-23",
-        "Ingredients": "½ cup unseasoned wholegrain breadcrumbs,\n2 tablespoons grated parmesan (or romano) cheese,\n1 teaspoon Italian seasoning,\n½ teaspoon granulated garlic,\n½ teaspoon onion powder,\n½ teaspoon salt,\n½ teaspoon ground pepper,\n1 tablespoon olive oil,\n2lbs chicken cutlets,\n¾ cup sauce,\n¾ cup mozzarella cheese",
-        "Directions": "Preheat oven to 375 degrees.\n\nIn a medium bowl mix together the breadcrumbs, parmesan cheese, granulated garlic, onion powder, salt, and pepper.\n\nCoat a sheet pan with the olive oil.\n\nDredge each chicken cutlet in the breadcrumb mixture and place on the sheet pan. Discard the rest of the breadcrumb mixture.\nBake the chicken for 15 minutes. Turn over and bake for another 15 minutes.\n\nRemove the pan from the oven and spread 2 tablespoons of sauce and 2 tablespoons of shredded mozzarella cheese on each chicken cutlet.\nPlace back in the oven and cook for 10 - 15 minutes or until sauce is hot and cheese is melted.\n\nServe hot.",
-        "Rating": 5,
-        "Cooking Time": 45,
-        "Preparation Time": 10,
-        "Total Time": 55
-      },
-      "createdTime": "2017-09-30T23:07:16.000Z"
-    },
-    {
       "id": "recIiArUGk4bh24c9",
       "fields": {
         "Name": "Instant Pot Beef Stew",

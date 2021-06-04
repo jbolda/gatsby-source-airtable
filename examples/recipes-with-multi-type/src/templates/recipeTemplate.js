@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 
 class SimpleRecipe extends React.Component {
@@ -28,12 +28,12 @@ class SimpleRecipe extends React.Component {
                 recipe.data.Attachments.localFiles !== 0 ? (
                   <div className="card-image">
                     <figure className="image">
-                      <Img
-                        alt="Recipe"
-                        fluid={
+                      <GatsbyImage
+                        image={
                           recipe.data.Attachments.localFiles[0].childImageSharp
-                            .fluid
+                            .gatsbyImageData
                         }
+                        alt="Recipe"
                       />
                     </figure>
                   </div>
@@ -74,7 +74,7 @@ class SimpleRecipe extends React.Component {
                       <div>
                         <p className="heading">Prep Time</p>
                         <p className="">{`Prep: ${checkBlankTime(
-                          recipe.data.Preparation_Time
+                          recipe.data.Preparation_Time,
                         )}`}</p>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ class SimpleRecipe extends React.Component {
                       <div>
                         <p className="heading">Cook Time</p>
                         <p className="">{`Cooking: ${checkBlankTime(
-                          recipe.data.Cooking_Time
+                          recipe.data.Cooking_Time,
                         )}`}</p>
                       </div>
                     </div>
@@ -90,7 +90,7 @@ class SimpleRecipe extends React.Component {
                       <div>
                         <p className="heading">Total Time</p>
                         <p className="">{`Total: ${checkBlankTime(
-                          recipe.data.Total_Time
+                          recipe.data.Total_Time,
                         )}`}</p>
                       </div>
                     </div>
@@ -162,9 +162,7 @@ export const pageQuery = graphql`
         Attachments {
           localFiles {
             childImageSharp {
-              fluid(maxWidth: 256) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
+              gatsbyImageData(width: 200)
             }
           }
         }
@@ -176,5 +174,5 @@ export const pageQuery = graphql`
   }
 `;
 
-let checkBlank = value => (value ? value : `--`);
-let checkBlankTime = value => (value ? `${value}m` : `--`);
+let checkBlank = (value) => (value ? value : `--`);
+let checkBlankTime = (value) => (value ? `${value}m` : `--`);
