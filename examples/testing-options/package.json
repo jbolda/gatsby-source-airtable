@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "gatsby": "2.24.69",
-    "gatsby-source-airtable": "2.1.1",
-    "gatsby-source-filesystem": "2.3.33",
-    "gatsby-transformer-remark": "2.8.38",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "gatsby": "3.6.2",
+    "gatsby-source-airtable": "file:../__fixtures__",
+    "gatsby-source-filesystem": "3.6.0",
+    "gatsby-transformer-remark": "4.3.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "remark-html": "13.0.1"
   },
   "keywords": [
@@ -17,6 +17,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "clean": "gatsby clean",
     "dev:next": "cp -f ../../gatsby-node.js ./node_modules/gatsby-source-airtable && gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"

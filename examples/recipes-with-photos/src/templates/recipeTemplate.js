@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from "../components/layout.js";
 
 class SimpleRecipe extends React.Component {
@@ -28,13 +28,9 @@ class SimpleRecipe extends React.Component {
                 recipe.data.Attachments.localFiles !== 0 ? (
                   <div className="card-image">
                     <figure className="image">
-                      <Img
-                        alt="Recipe"
-                        fluid={
-                          recipe.data.Attachments.localFiles[0].childImageSharp
-                            .fluid
-                        }
-                      />
+                      <GatsbyImage
+                        image={recipe.data.Attachments.localFiles[0].childImageSharp.gatsbyImageData}
+                        alt="Recipe" />
                     </figure>
                   </div>
                 ) : (
@@ -137,35 +133,32 @@ class SimpleRecipe extends React.Component {
 
 export default SimpleRecipe;
 
-export const pageQuery = graphql`
-  query SimpleRecipeBySlug($name: String!) {
-    airtable(table: { eq: "Recipes" }, data: { Name: { eq: $name } }) {
-      id
-      data {
-        Name
-        Directions
-        URL
-        Cooking_Time
-        Preparation_Time
-        Total_Time
-        Last_Made
-        Rating
-        Ingredients
-        Attachments {
-          localFiles {
-            childImageSharp {
-              fluid(maxWidth: 256) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
+export const pageQuery = graphql`query SimpleRecipeBySlug($name: String!) {
+  airtable(table: {eq: "Recipes"}, data: {Name: {eq: $name}}) {
+    id
+    data {
+      Name
+      Directions
+      URL
+      Cooking_Time
+      Preparation_Time
+      Total_Time
+      Last_Made
+      Rating
+      Ingredients
+      Attachments {
+        localFiles {
+          childImageSharp {
+            gatsbyImageData(width: 256, placeholder: TRACED_SVG, layout: CONSTRAINED)
           }
         }
       }
     }
-    placeholder: file(relativePath: { eq: "placeholder.png" }) {
-      publicURL
-    }
   }
+  placeholder: file(relativePath: {eq: "placeholder.png"}) {
+    publicURL
+  }
+}
 `;
 
 let checkBlank = value => (value ? value : `--`);
