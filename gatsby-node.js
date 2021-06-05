@@ -8,7 +8,7 @@ exports.sourceNodes = async (
   { actions, createNodeId, store, cache },
   { apiKey, tables, concurrency },
 ) => {
-  // tables contain baseId, tableName, tableView, queryName, mapping, tableLinks
+  // tables contain baseId, tableName, tableView, fields, queryName, mapping, tableLinks
   const { createNode, setPluginStatus } = actions;
 
   try {
@@ -54,10 +54,14 @@ exports.sourceNodes = async (
     let table = base(tableOptions.tableName);
 
     let view = tableOptions.tableView || "";
+    
+    let fields = tableOptions.fields || []
 
-    let query = table.select({
-      view: view,
-    });
+    let selectOptions = { view: view };
+    if (fields.length) {
+      select.fields = fields;
+    }
+    let query = table.select(selectOptions);
 
     // confirm that the user is using the clean keys
     // if they are not, warn them and change it for them
