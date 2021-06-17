@@ -15,9 +15,9 @@
     "gatsby-source-airtable"
   ],
   "dependencies": {
-    "airtable": "^0.11.1",
-    "bluebird": "^3.5.4",
-    "mime": "^2.4.4"
+    "airtable": "0.11.1",
+    "bluebird": "3.7.2",
+    "mime": "2.5.2"
   },
   "peerDependencies": {
     "gatsby-source-filesystem": ">=2.0.0-rc.0"
