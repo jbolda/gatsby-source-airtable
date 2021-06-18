@@ -1,5 +1,8 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges"
+  ],
   "ignorePaths": [],
   "rebaseWhen": "never",
   "lockFileMaintenance": { "enabled": true }
