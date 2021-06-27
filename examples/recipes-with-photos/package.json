@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "nock": "13.1.0",
-    "prettier": "2.3.1"
+    "prettier": "2.3.2"
   },
   "volta": {
     "extends": "../../package.json"
