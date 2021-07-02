@@ -147,6 +147,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mabhub",
+      "name": "mab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1846633?v=4",
+      "profile": "https://github.com/mabhub",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
