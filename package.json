@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "all-contributors-cli": "6.20.0",
-    "covector": "0.6.0",
+    "covector": "0.7.0",
     "husky": "6.0.0",
     "prettier": "2.3.2"
   },
@@ -42,7 +42,7 @@
     "trailingComma": "all"
   },
   "volta": {
-    "node": "14.17.1",
+    "node": "14.17.2",
     "npm": "7.14.0"
   }
 }
