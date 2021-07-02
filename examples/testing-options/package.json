@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "gatsby": "3.8.0",
+    "gatsby": "3.8.1",
     "gatsby-source-airtable": "file:../__fixtures__",
     "gatsby-source-filesystem": "3.8.0",
     "gatsby-transformer-remark": "4.5.0",

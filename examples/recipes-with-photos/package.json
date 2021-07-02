@@ -5,7 +5,7 @@
   "repository": "git@github.com:jbolda/gatsby-source-airtable.git",
   "author": "Jacob Bolda <me@jacobbolda.com>",
   "dependencies": {
-    "gatsby": "3.8.0",
+    "gatsby": "3.8.1",
     "gatsby-link": "3.8.0",
     "gatsby-plugin-image": "1.8.0",
     "gatsby-plugin-react-helmet": "4.8.0",
