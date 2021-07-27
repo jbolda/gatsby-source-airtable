@@ -137,6 +137,7 @@ exports.sourceNodes = async (
       }, []);
     })
     .catch((e) => {
+      console.warn("Error fetching tables: " + e);
       throw e;
       return;
     });
