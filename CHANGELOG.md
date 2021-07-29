@@ -1,5 +1,10 @@
 # Changelog
 
+## \[2.2.1]
+
+- Add logging statement
+  - [3c53464](https://github.com/jbolda/gatsby-source-airtable/commit/3c53464f075d8931da91d6762d0b6949d703f897) Add logging message in catch on 2021-07-11
+
 ## \[2.2.0]
 
 - Initialize covector to perform versioning and publishing of `gatsby-source-airtable`.
