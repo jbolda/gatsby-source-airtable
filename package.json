@@ -42,7 +42,7 @@
     "trailingComma": "all"
   },
   "volta": {
-    "node": "14.17.5",
+    "node": "14.17.6",
     "npm": "7.20.3"
   }
 }
