@@ -305,6 +305,10 @@ const localFileCheck = async (
       // the cleanKey here
       data[key].forEach((attachment) => {
         const ext = mime.getExtension(attachment.type); // unknown type returns null
+        if (ext === 'mpga') {
+          // mpga files are not digested by filesystem, as it creates an ext mismatch between airtable and the local file
+          ext = "mp3"
+        }
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
           store,
