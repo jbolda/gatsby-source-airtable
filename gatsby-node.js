@@ -304,7 +304,7 @@ const localFileCheck = async (
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
       data[key].forEach((attachment) => {
-        const ext = mime.getExtension(attachment.type); // unknown type returns null
+        let ext = mime.getExtension(attachment.type); // unknown type returns null
         if (ext === 'mpga') {
           // mpga files are not digested by filesystem, as it creates an ext mismatch between airtable and the local file
           ext = "mp3"
