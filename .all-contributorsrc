@@ -157,6 +157,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "ryan-talus",
+      "name": "Ryan Zimmerman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61983809?v=4",
+      "profile": "https://github.com/ryan-talus",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
