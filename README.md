@@ -367,6 +367,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://griko.id"><img src="https://avatars1.githubusercontent.com/u/8220954?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Griko Nibras</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=grikomsn" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/mabhub"><img src="https://avatars.githubusercontent.com/u/1846633?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mab</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=mabhub" title="Code">💻</a> <a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=mabhub" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ryan-talus"><img src="https://avatars.githubusercontent.com/u/61983809?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Zimmerman</b></sub></a><br /><a href="https://github.com/jbolda/gatsby-source-airtable/commits?author=ryan-talus" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
