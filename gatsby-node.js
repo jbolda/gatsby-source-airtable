@@ -3,6 +3,7 @@ const crypto = require("crypto");
 const { createRemoteFileNode } = require("gatsby-source-filesystem");
 const { map } = require("bluebird");
 const mime = require("mime/lite");
+const path = require("path");
 
 exports.sourceNodes = async (
   { actions, createNodeId, store, cache },
@@ -304,9 +305,17 @@ const localFileCheck = async (
       // `data` is direct from Airtable so we don't use
       // the cleanKey here
       data[key].forEach((attachment) => {
-        const ext = mime.getExtension(attachment.type); // unknown type returns null
+        // get the filename from the airtable metadata instead of the remote file
+        const airtableFile = path.parse(attachment.filename);
+        // console.log(airtableFile);
+        let ext = airtableFile.ext;
+        if (!ext) {
+          const deriveExt = mime.getExtension(attachment.type); // unknown type returns null
+          ext = !!deriveExt ? `.${deriveExt}` : undefined;
+        }
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
+          name: airtableFile.name.replace(/[/\\?%*:|"<>]/g, ""),
           store,
           cache,
           createNode,
