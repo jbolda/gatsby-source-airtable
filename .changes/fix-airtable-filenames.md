@@ -1,5 +1,5 @@
 ---
-"gatsby-source-airtable": patch
+"gatsby-source-airtable": minor
 ---
 
 This makes the fileNode pull `name` from the airtable metadata instead of the
