@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0 # required for use of git history
       - uses: volta-cli/action@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           registry-url: "https://registry.npmjs.org"
       - name: git config
