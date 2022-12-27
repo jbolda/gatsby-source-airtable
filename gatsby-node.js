@@ -67,9 +67,9 @@ exports.sourceNodes = async (
     const cleanMapping = !tableOptions.mapping
       ? null
       : Object.keys(tableOptions.mapping).reduce((cleaned, key) => {
-          let useKey = cleanKey(key);
-          if (useKey !== key)
-            console.warn(`
+        let useKey = cleanKey(key);
+        if (useKey !== key)
+          console.warn(`
         Field names within graphql cannot have spaces. We do not want you to change your column names
         within Airtable, but in "Gatsby-land" you will need to always use the "cleaned" key.
         On the ${tableOptions.tableName} base ${tableOptions.baseId} 'mapping', we modified the supplied key of
@@ -77,16 +77,16 @@ exports.sourceNodes = async (
         to use ${useKey} to make this warning go away. See https://github.com/jbolda/gatsby-source-airtable#column-names
         for more information.
       `);
-          cleaned[useKey] = tableOptions.mapping[key];
-          return cleaned;
-        }, {});
+        cleaned[useKey] = tableOptions.mapping[key];
+        return cleaned;
+      }, {});
 
     const cleanLinks = !tableOptions.tableLinks
       ? null
       : tableOptions.tableLinks.map((key) => {
-          let useKey = cleanKey(key);
-          if (useKey !== key)
-            console.warn(`
+        let useKey = cleanKey(key);
+        if (useKey !== key)
+          console.warn(`
         Field names within graphql cannot have spaces. We do not want you to change your column names
         within Airtable, but in "Gatsby-land" you will need to always use the "cleaned" key.
         On the ${tableOptions.tableName} base ${tableOptions.baseId} 'tableLinks', we modified the supplied key of
@@ -94,8 +94,8 @@ exports.sourceNodes = async (
         to use ${useKey} to make this warning go away. See https://github.com/jbolda/gatsby-source-airtable#column-names
         for more information.
       `);
-          return useKey;
-        });
+        return useKey;
+      });
 
     // query.all() returns a promise, pass an array for each table with
     // both our promise and the queryName and then map reduce at the
@@ -187,9 +187,8 @@ exports.sourceNodes = async (
         rowIndex: row.rowIndex,
         children: [],
         internal: {
-          type: `Airtable${
-            row.separateNodeType ? cleanType(row.queryName) : ""
-          }`,
+          type: `Airtable${row.separateNodeType ? cleanType(row.queryName) : ""
+            }`,
           contentDigest: crypto
             .createHash("md5")
             .update(JSON.stringify(row))
@@ -315,7 +314,7 @@ const localFileCheck = async (
         }
         let attachmentNode = createRemoteFileNode({
           url: attachment.url,
-          name: airtableFile.name.replace(/[/\\?%*:|"<>]/g, ""),
+          name: airtableFile.name.replace(/[/\\?%*:|"<>]/g, "").replace(/\s/g, "-").toLowerCase(),
           store,
           cache,
           createNode,
