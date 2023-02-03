@@ -1,3 +1,8 @@
+> **Warning**
+> # Future Maintenance
+> 
+> This repo is no longer the maintenance source for `gatsby-source-airtable`. It has been moved to [gatsby-uc/plugins](https://github.com/gatsby-uc/plugins). Please open all pull requests and issues at that repo.
+
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
 
